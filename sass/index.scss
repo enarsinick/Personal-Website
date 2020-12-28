@@ -1,4 +1,10 @@
-h1 {
-    color: blue;
-    font-size: 20px;
-}
+///-----------------------------------------------------------------------------///
+/// Imports                                                                     ///
+///-----------------------------------------------------------------------------///
+
+@import 'global';
+@import 'navigation';
+@import 'homepage';
+@import 'variables';
+@import 'typography';
+@import 'buttons';

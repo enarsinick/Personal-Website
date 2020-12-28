@@ -1,0 +1,39 @@
+@import 'variables';
+
+.intro-section {
+    height: calc(100vh - 195px - 53px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 $mobileOuterPadding;
+}
+
+.feature-image {
+    height: 300px;
+    width: 100%;
+    background-image: url("../images/stroud-valley.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.content-outer {
+    padding: 100px $mobileOuterPadding;
+
+    h2 {
+        margin-bottom: 20px;
+        max-width: 220px;
+    }
+
+    p {
+        margin-bottom: 30px;
+    }
+
+    .about-me-home-image {
+        width: 100%;
+        margin-top: 50px;
+        border-radius: 6px;
+    }
+}

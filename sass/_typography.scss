@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Gilroy-Regular';
+    src: url('../../fonts/webFonts/Gilroy-Regular/font.woff2') format('woff2'), url('webFonts/Gilroy-Regular/font.woff') format('woff');
+  }
+  
+  @font-face {
+    font-family: 'Gilroy-Medium';
+    src: url('../../fonts/webFonts/Gilroy-Medium/font.woff2') format('woff2'), url('webFonts/Gilroy-Medium/font.woff') format('woff');
+  }
+  
+  @font-face {
+    font-family: 'Gilroy-SemiBold';
+    src: url('../../fonts/webFonts/Gilroy-SemiBold/font.woff2') format('woff2'), url('webFonts/Gilroy-SemiBold/font.woff') format('woff');
+  }
+
+  h1 {
+      font-family: $main-font-semibold;
+      font-size: 28px;
+      line-height: 35px;
+      color: $headerColour;
+  }
+
+  h2 {
+      font-family: $main-font-semibold;
+      font-size: 25px;
+      line-height: 31px;
+      color: $headerColour;
+  }
+
+  p {
+      font-family: $main-font-regular;
+      color: $bodyCopyColour;
+      font-size: 16px;
+      line-height: 22px;
+  }
+  

@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  height: 100%; }
+
+body {
+  height: 100%; }
+
+header {
+  padding: 35px 25px 0; }
+  header nav {
+    display: flex;
+    justify-content: space-between; }
+    header nav .logo {
+      width: 60px; }
+
+.intro-section {
+  height: calc(100vh - 195px - 53px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 25px; }
+
+.feature-image {
+  height: 300px;
+  width: 100%;
+  background-image: url("../images/stroud-valley.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+.content-outer {
+  padding: 100px 25px; }
+  .content-outer h2 {
+    margin-bottom: 20px;
+    max-width: 220px; }
+  .content-outer p {
+    margin-bottom: 30px; }
+  .content-outer .about-me-home-image {
+    width: 100%;
+    margin-top: 50px;
+    border-radius: 6px; }
+
+@font-face {
+  font-family: 'Gilroy-Regular';
+  src: url("../../fonts/webFonts/Gilroy-Regular/font.woff2") format("woff2"), url("webFonts/Gilroy-Regular/font.woff") format("woff"); }
+
+@font-face {
+  font-family: 'Gilroy-Medium';
+  src: url("../../fonts/webFonts/Gilroy-Medium/font.woff2") format("woff2"), url("webFonts/Gilroy-Medium/font.woff") format("woff"); }
+
+@font-face {
+  font-family: 'Gilroy-SemiBold';
+  src: url("../../fonts/webFonts/Gilroy-SemiBold/font.woff2") format("woff2"), url("webFonts/Gilroy-SemiBold/font.woff") format("woff"); }
+
+h1 {
+  font-family: "Gilroy-SemiBold", Helvetica, sans-serif;
+  font-size: 28px;
+  line-height: 35px;
+  color: #204B44; }
+
+h2 {
+  font-family: "Gilroy-SemiBold", Helvetica, sans-serif;
+  font-size: 25px;
+  line-height: 31px;
+  color: #204B44; }
+
+p {
+  font-family: "Gilroy-Regular", Helvetica, sans-serif;
+  color: #B4B4B4;
+  font-size: 16px;
+  line-height: 22px; }
+
+.primary-btn {
+  border: none;
+  background: none;
+  font-size: 16px;
+  font-family: "Gilroy-SemiBold", Helvetica, sans-serif;
+  color: #E95E2A;
+  padding-bottom: 3px;
+  border-bottom: solid 2.5px #E95E2A; }

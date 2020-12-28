@@ -3,8 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www",
-    "compile": "node-sass sass/index.scss public/stylesheets/style.css -w"
+    "start": "nodemon ./bin/www"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -12,11 +11,13 @@
     "express": "~4.16.1",
     "hbs": "~4.0.4",
     "http-errors": "~1.6.3",
-    "morgan": "~1.9.1",
-    "node-sass-middleware": "^0.11.0"
+    "morgan": "~1.9.1"
   },
   "devDependencies": {
-    "node-sass": "^5.0.0",
+    "browser-sync": "^2.26.13",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0",
+    "node-sass-middleware": "^0.11.0",
     "nodemon": "^2.0.6"
   }
 }
