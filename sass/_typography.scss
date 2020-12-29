@@ -27,6 +27,13 @@
       color: $headerColour;
   }
 
+  h3 {
+    font-family: $main-font-semibold;
+    font-size: 20px;
+    // line-height: 33px;
+    color: $headerColour;
+}
+
   p {
       font-family: $main-font-regular;
       color: $bodyCopyColour;

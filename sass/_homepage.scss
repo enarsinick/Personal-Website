@@ -17,9 +17,17 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    position: relative;
+
+    img {
+        position: absolute;
+        top: -16px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
 
-.content-outer {
+.about-me-outer {
     padding: 100px $mobileOuterPadding;
 
     h2 {
@@ -36,4 +44,81 @@
         margin-top: 50px;
         border-radius: 6px;
     }
+}
+
+.logo-wall-outer {
+    padding: 0 $mobileOuterPadding 100px;
+    margin: 0 auto;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+
+    img {
+        width: 100%;
+        margin-top: 35px;
+        opacity: 0.2;
+    }
+}
+
+.image-wall-outer {
+
+    .image-wall-mask {
+        height: 275px;
+        width: 100%;
+        background-image: url("../images/stroud-valley.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .image-wall-mask:nth-child(2) {
+        margin-top: 10px;
+    }
+}
+
+.featured-project-outer {
+    padding: 100px $mobileOuterPadding;
+
+    .featured-project-intro-copy {
+        margin-bottom: 50px;
+
+        h2 {
+            margin-bottom: 20px;
+            max-width: 220px;
+        }
+    
+        p {
+            margin-bottom: 30px;
+        }
+    }
+
+    .project-tile-wrapper {
+        position: relative;
+
+        .project-tile-copy {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+
+            h3, p {
+                color: white;
+            }
+
+            p {
+                font-size: 14px;
+            }
+        }
+
+        img {
+            width: 100%;
+            border-radius: 6px;
+        }
+    }
+
+    .project-tile-wrapper:nth-child(3),
+    .project-tile-wrapper:nth-child(4),
+    .project-tile-wrapper:nth-child(5) {
+        margin-top: 15px;
+    }
+    
 }

@@ -17,6 +17,39 @@ header {
     header nav .logo {
       width: 60px; }
 
+footer {
+  background-color: #000;
+  padding-bottom: 30px; }
+  footer .cta-section {
+    text-align: center;
+    padding: 100px 0 70px; }
+    footer .cta-section p:nth-child(1) {
+      color: white;
+      font-size: 30px;
+      font-family: "Gilroy-SemiBold", Helvetica, sans-serif;
+      margin-bottom: 15px; }
+    footer .cta-section p:nth-child(2) {
+      display: inline-block;
+      color: white;
+      font-size: 30px;
+      font-family: "Gilroy-Regular", Helvetica, sans-serif;
+      padding-bottom: 5px;
+      border-bottom: 2px solid white; }
+  footer .footer-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; }
+    footer .footer-bottom img {
+      margin-bottom: 20px; }
+    footer .footer-bottom p {
+      max-width: 230px;
+      color: white;
+      margin-bottom: 35px; }
+    footer .footer-bottom .social-icon-wrapper img {
+      padding: 0;
+      padding: 0 3px; }
+
 .intro-section {
   height: calc(100vh - 195px - 53px);
   display: flex;
@@ -32,19 +65,74 @@ header {
   background-image: url("../images/stroud-valley.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center; }
+  background-position: center;
+  position: relative; }
+  .feature-image img {
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%); }
 
-.content-outer {
+.about-me-outer {
   padding: 100px 25px; }
-  .content-outer h2 {
+  .about-me-outer h2 {
     margin-bottom: 20px;
     max-width: 220px; }
-  .content-outer p {
+  .about-me-outer p {
     margin-bottom: 30px; }
-  .content-outer .about-me-home-image {
+  .about-me-outer .about-me-home-image {
     width: 100%;
     margin-top: 50px;
     border-radius: 6px; }
+
+.logo-wall-outer {
+  padding: 0 25px 100px;
+  margin: 0 auto;
+  width: 75%;
+  display: flex;
+  flex-direction: column; }
+  .logo-wall-outer img {
+    width: 100%;
+    margin-top: 35px;
+    opacity: 0.2; }
+
+.image-wall-outer .image-wall-mask {
+  height: 275px;
+  width: 100%;
+  background-image: url("../images/stroud-valley.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+.image-wall-outer .image-wall-mask:nth-child(2) {
+  margin-top: 10px; }
+
+.featured-project-outer {
+  padding: 100px 25px; }
+  .featured-project-outer .featured-project-intro-copy {
+    margin-bottom: 50px; }
+    .featured-project-outer .featured-project-intro-copy h2 {
+      margin-bottom: 20px;
+      max-width: 220px; }
+    .featured-project-outer .featured-project-intro-copy p {
+      margin-bottom: 30px; }
+  .featured-project-outer .project-tile-wrapper {
+    position: relative; }
+    .featured-project-outer .project-tile-wrapper .project-tile-copy {
+      position: absolute;
+      top: 20px;
+      left: 20px; }
+      .featured-project-outer .project-tile-wrapper .project-tile-copy h3, .featured-project-outer .project-tile-wrapper .project-tile-copy p {
+        color: white; }
+      .featured-project-outer .project-tile-wrapper .project-tile-copy p {
+        font-size: 14px; }
+    .featured-project-outer .project-tile-wrapper img {
+      width: 100%;
+      border-radius: 6px; }
+  .featured-project-outer .project-tile-wrapper:nth-child(3),
+  .featured-project-outer .project-tile-wrapper:nth-child(4),
+  .featured-project-outer .project-tile-wrapper:nth-child(5) {
+    margin-top: 15px; }
 
 @font-face {
   font-family: 'Gilroy-Regular';
@@ -68,6 +156,11 @@ h2 {
   font-family: "Gilroy-SemiBold", Helvetica, sans-serif;
   font-size: 25px;
   line-height: 31px;
+  color: #204B44; }
+
+h3 {
+  font-family: "Gilroy-SemiBold", Helvetica, sans-serif;
+  font-size: 20px;
   color: #204B44; }
 
 p {
