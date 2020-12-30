@@ -88,7 +88,7 @@ footer {
 .logo-wall-outer {
   padding: 0 25px 100px;
   margin: 0 auto;
-  width: 75%;
+  width: 70%;
   display: flex;
   flex-direction: column; }
   .logo-wall-outer img {
@@ -134,6 +134,115 @@ footer {
   .featured-project-outer .project-tile-wrapper:nth-child(5) {
     margin-top: 15px; }
 
+.about-intro {
+  height: calc(100vh - 80px - 53px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 25px; }
+
+.about-feature-image {
+  height: 300px;
+  width: 100%;
+  background-image: url("../images/me2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative; }
+  .about-feature-image img {
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%); }
+
+.location-outer {
+  padding: 100px 25px; }
+  .location-outer h2 {
+    margin-bottom: 20px; }
+  .location-outer img {
+    width: 100%;
+    margin-top: 50px;
+    border-radius: 6px; }
+
+.skills-outer {
+  padding: 0 25px; }
+  .skills-outer h2 {
+    margin-bottom: 20px; }
+  .skills-outer .skill-tile-section {
+    margin: 50px 0 100px; }
+    .skills-outer .skill-tile-section .accordion {
+      background-color: #F1FBF8;
+      font-size: 22px;
+      font-family: "Gilroy-Medium", Helvetica, sans-serif;
+      color: #55CFA7;
+      cursor: pointer;
+      padding: 20px;
+      width: 100%;
+      text-align: left;
+      border: none;
+      border-radius: 6px;
+      outline: none;
+      transition: 0.4s;
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+      .skills-outer .skill-tile-section .accordion:after {
+        content: '\002B';
+        font-size: 28px;
+        color: #55CFA7;
+        float: right;
+        transition: 0.3s; }
+    .skills-outer .skill-tile-section .active:after {
+      transform: rotate(45deg);
+      color: #55CFA7;
+      transition: 0.3s; }
+    .skills-outer .skill-tile-section .active, .skills-outer .skill-tile-section .accordion:hover {
+      border-radius: 6px 6px 0 0; }
+    .skills-outer .skill-tile-section .panel {
+      padding: 0 20px;
+      background-color: #F1FBF8;
+      max-height: 0;
+      margin-bottom: 15px;
+      overflow: hidden;
+      transition: max-height 0.2s ease-in-out; }
+      .skills-outer .skill-tile-section .panel p {
+        padding-bottom: 20px; }
+    .skills-outer .skill-tile-section .accordion:nth-child(3) {
+      background-color: #F1F0FE;
+      color: #6155FF; }
+      .skills-outer .skill-tile-section .accordion:nth-child(3):after {
+        color: #6155FF; }
+    .skills-outer .skill-tile-section .panel:nth-child(4) {
+      background-color: #F1F0FE; }
+    .skills-outer .skill-tile-section .accordion:nth-child(5) {
+      background-color: #FFF6EC;
+      color: #FF8D0F; }
+      .skills-outer .skill-tile-section .accordion:nth-child(5):after {
+        color: #FF8D0F; }
+    .skills-outer .skill-tile-section .panel:nth-child(6) {
+      background-color: #FFF6EC; }
+
+.large-feature-image {
+  height: 100vh;
+  width: 100%;
+  background-image: url("../images/stroud-valley.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+.about-logo-wall-outer {
+  padding: 100px 25px 0;
+  margin: 0 auto;
+  width: 70%;
+  display: flex;
+  flex-direction: column; }
+  .about-logo-wall-outer img {
+    width: 100%;
+    margin: 17.5px 0;
+    opacity: 0.2; }
+
 @font-face {
   font-family: 'Gilroy-Regular';
   src: url("../../fonts/webFonts/Gilroy-Regular/font.woff2") format("woff2"), url("webFonts/Gilroy-Regular/font.woff") format("woff"); }
@@ -150,22 +259,22 @@ h1 {
   font-family: "Gilroy-SemiBold", Helvetica, sans-serif;
   font-size: 28px;
   line-height: 35px;
-  color: #204B44; }
+  color: #000000; }
 
 h2 {
   font-family: "Gilroy-SemiBold", Helvetica, sans-serif;
   font-size: 25px;
   line-height: 31px;
-  color: #204B44; }
+  color: #000000; }
 
 h3 {
   font-family: "Gilroy-SemiBold", Helvetica, sans-serif;
   font-size: 20px;
-  color: #204B44; }
+  color: #000000; }
 
 p {
   font-family: "Gilroy-Regular", Helvetica, sans-serif;
-  color: #B4B4B4;
+  color: rgba(0, 0, 0, 0.45);
   font-size: 16px;
   line-height: 22px; }
 
