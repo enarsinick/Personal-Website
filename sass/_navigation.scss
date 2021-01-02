@@ -1,5 +1,11 @@
+@import 'variables';
+
 header {
     padding: 35px 25px 0;
+
+    @include mq($tabletMediaQuery) {
+        padding: 45px $tabletOuterPadding 0;
+    }
 
     nav {
         display: flex;
@@ -7,6 +13,10 @@ header {
 
         .logo {
             width: 60px;
+
+            @include mq($tabletMediaQuery) {
+                width: 70px;
+            }
         }
     }
 }
