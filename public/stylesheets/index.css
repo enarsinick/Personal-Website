@@ -243,6 +243,93 @@ footer {
     margin: 17.5px 0;
     opacity: 0.2; }
 
+.work-intro {
+  margin: 100px 0 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 25px; }
+
+.featured-project-page-outer {
+  padding: 0 25px 100px; }
+  .featured-project-page-outer .project-tile-wrapper {
+    position: relative; }
+    .featured-project-page-outer .project-tile-wrapper .project-tile-copy {
+      position: absolute;
+      top: 20px;
+      left: 20px; }
+      .featured-project-page-outer .project-tile-wrapper .project-tile-copy h3, .featured-project-page-outer .project-tile-wrapper .project-tile-copy p {
+        color: white; }
+      .featured-project-page-outer .project-tile-wrapper .project-tile-copy p {
+        font-size: 14px; }
+    .featured-project-page-outer .project-tile-wrapper img {
+      width: 100%;
+      border-radius: 6px; }
+  .featured-project-page-outer .project-tile-wrapper:nth-child(2),
+  .featured-project-page-outer .project-tile-wrapper:nth-child(3),
+  .featured-project-page-outer .project-tile-wrapper:nth-child(4) {
+    margin-top: 15px; }
+
+.other-projects-outer {
+  padding: 0 25px 100px; }
+  .other-projects-outer h2 {
+    margin-bottom: 30px; }
+  .other-projects-outer .project-accordion {
+    background-color: #FBFBFB;
+    font-size: 16px;
+    font-family: "Gilroy-SemiBold", Helvetica, sans-serif;
+    color: #000000;
+    cursor: pointer;
+    padding: 18px 15px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+    transition: 0.4s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .other-projects-outer .project-accordion:after {
+      content: '\002B';
+      font-size: 28px;
+      font-family: "Gilroy-Regular", Helvetica, sans-serif;
+      color: #AEBBBA;
+      float: right;
+      transition: 0.3s; }
+  .other-projects-outer .active:after {
+    transform: rotate(45deg);
+    transition: 0.3s; }
+  .other-projects-outer .active {
+    border-radius: 6px 6px 0 0; }
+  .other-projects-outer .project-panel {
+    padding: 0 20px;
+    background-color: #FBFBFB;
+    max-height: 0;
+    margin-bottom: 15px;
+    overflow: hidden;
+    transition: max-height 0.2s ease-in-out;
+    border-radius: 0 0 6px 6px; }
+    .other-projects-outer .project-panel p {
+      padding-bottom: 20px; }
+    .other-projects-outer .project-panel .other-project-btn-section {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 20px; }
+      .other-projects-outer .project-panel .other-project-btn-section button {
+        border: none;
+        background: none;
+        font-size: 16px;
+        font-family: "Gilroy-SemiBold", Helvetica, sans-serif;
+        color: #E95E2A;
+        padding: 15px 0;
+        margin: 5px 0; }
+      .other-projects-outer .project-panel .other-project-btn-section button:nth-child(2) {
+        background-color: #FBEEEA;
+        border-radius: 6px; }
+
 @font-face {
   font-family: 'Gilroy-Regular';
   src: url("../../fonts/webFonts/Gilroy-Regular/font.woff2") format("woff2"), url("webFonts/Gilroy-Regular/font.woff") format("woff"); }
