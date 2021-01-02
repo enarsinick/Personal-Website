@@ -1,0 +1,122 @@
+@import 'variables';
+
+.project-intro-section {
+    height: calc(100vh - 110px - 53px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 $mobileOuterPadding;  
+
+    p {
+        margin-bottom: 10px;
+    }
+}
+
+.project-feature-image {
+    height: 210px;
+    width: 100%;
+    background-image: url("../images/project-feature.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    img {
+        position: absolute;
+        top: -16px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.project-overview-outer {
+    padding: 100px $mobileOuterPadding;
+
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    .project-btn-wrapper {
+        margin-top: 50px;
+
+        .project-btn-primary {
+            border: none;
+            background: none;
+            font-size: 16px;
+            font-family: $main-font-semibold;
+            color: $buttonColour;
+            padding-bottom: 3px;
+            margin-right: 20px;
+            border-bottom: solid 2.5px $buttonColour;
+        }
+
+        .project-btn-secondary {
+            border: none;
+            background: none;
+            font-size: 16px;
+            font-family: $main-font-semibold;
+            color: $buttonColour;
+            padding-bottom: 3px;
+            border-bottom: solid 2.5px $buttonColour;
+        }
+    }
+}
+
+.project-images-outer {
+    padding: 0 0 100px;
+
+    img {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
+
+.other-projects-outer {
+    padding: 100px $mobileOuterPadding;
+
+
+    .featured-project-intro-copy {
+        margin-bottom: 50px;
+
+        h2 {
+            margin-bottom: 20px;
+            max-width: 220px;
+        }
+    
+        p {
+            margin-bottom: 30px;
+        }
+    }
+
+    .project-tile-wrapper {
+        position: relative;
+
+        .project-tile-copy {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+
+            h3, p {
+                color: white;
+            }
+
+            p {
+                font-size: 14px;
+            }
+        }
+
+        img {
+            width: 100%;
+            border-radius: 6px;
+        }
+    }
+
+    .project-tile-wrapper:nth-child(3),
+    .project-tile-wrapper:nth-child(4),
+    .project-tile-wrapper:nth-child(5) {
+        margin-top: 15px;
+    }
+    
+}

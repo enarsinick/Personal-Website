@@ -9,6 +9,11 @@ html {
 body {
   height: 100%; }
 
+.divider-line {
+  margin: 0 25px;
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.1); }
+
 header {
   padding: 35px 25px 0; }
   header nav {
@@ -329,6 +334,88 @@ footer {
       .other-projects-outer .project-panel .other-project-btn-section button:nth-child(2) {
         background-color: #FBEEEA;
         border-radius: 6px; }
+
+.project-intro-section {
+  height: calc(100vh - 110px - 53px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 25px; }
+  .project-intro-section p {
+    margin-bottom: 10px; }
+
+.project-feature-image {
+  height: 210px;
+  width: 100%;
+  background-image: url("../images/project-feature.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative; }
+  .project-feature-image img {
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%); }
+
+.project-overview-outer {
+  padding: 100px 25px; }
+  .project-overview-outer h2 {
+    margin-bottom: 20px; }
+  .project-overview-outer .project-btn-wrapper {
+    margin-top: 50px; }
+    .project-overview-outer .project-btn-wrapper .project-btn-primary {
+      border: none;
+      background: none;
+      font-size: 16px;
+      font-family: "Gilroy-SemiBold", Helvetica, sans-serif;
+      color: #E95E2A;
+      padding-bottom: 3px;
+      margin-right: 20px;
+      border-bottom: solid 2.5px #E95E2A; }
+    .project-overview-outer .project-btn-wrapper .project-btn-secondary {
+      border: none;
+      background: none;
+      font-size: 16px;
+      font-family: "Gilroy-SemiBold", Helvetica, sans-serif;
+      color: #E95E2A;
+      padding-bottom: 3px;
+      border-bottom: solid 2.5px #E95E2A; }
+
+.project-images-outer {
+  padding: 0 0 100px; }
+  .project-images-outer img {
+    width: 100%;
+    margin-bottom: 15px; }
+
+.other-projects-outer {
+  padding: 100px 25px; }
+  .other-projects-outer .featured-project-intro-copy {
+    margin-bottom: 50px; }
+    .other-projects-outer .featured-project-intro-copy h2 {
+      margin-bottom: 20px;
+      max-width: 220px; }
+    .other-projects-outer .featured-project-intro-copy p {
+      margin-bottom: 30px; }
+  .other-projects-outer .project-tile-wrapper {
+    position: relative; }
+    .other-projects-outer .project-tile-wrapper .project-tile-copy {
+      position: absolute;
+      top: 20px;
+      left: 20px; }
+      .other-projects-outer .project-tile-wrapper .project-tile-copy h3, .other-projects-outer .project-tile-wrapper .project-tile-copy p {
+        color: white; }
+      .other-projects-outer .project-tile-wrapper .project-tile-copy p {
+        font-size: 14px; }
+    .other-projects-outer .project-tile-wrapper img {
+      width: 100%;
+      border-radius: 6px; }
+  .other-projects-outer .project-tile-wrapper:nth-child(3),
+  .other-projects-outer .project-tile-wrapper:nth-child(4),
+  .other-projects-outer .project-tile-wrapper:nth-child(5) {
+    margin-top: 15px; }
 
 @font-face {
   font-family: 'Gilroy-Regular';

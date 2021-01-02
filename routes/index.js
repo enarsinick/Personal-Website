@@ -16,4 +16,10 @@ router.get('/work', function(req, res, next) {
   res.render('work');
 });
 
+/* GET specific project page. */
+router.get('/work/:id', function(req, res, next) {
+  res.render('single-project');
+});
+
+
 module.exports = router;
