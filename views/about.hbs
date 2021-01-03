@@ -1,11 +1,13 @@
 {{>header}}
 <main>
-    <section class="about-intro">
-        <h1>Lorem ipsum dolor sit amet consetetur elitr</h1>
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
-    </section>
-    <section class="about-feature-image">
-        <img src="../images/down-arrow.png">
+    <section class="about-intro-container"> 
+        <div class="about-intro-copy">
+            <h1>Lorem ipsum dolor sit amet consetetur elitr</h1>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+        </div>
+        <div class="about-feature-image">
+            <img src="../images/down-arrow.png">
+        </div>
     </section>
     <section class="location-outer">
         <div class="location-copy">
@@ -20,49 +22,74 @@
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.</p>
         </div>
         <div class="skill-tile-section">
-            <button class="accordion">Website Design</button>
-            <div class="panel">
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</p>
+            <div>
+                <button id="accordion" class="accordion">Website Design</button>
+                <div class="panel green-panel">
+                    <img src="../images/green-icon.png">
+                    <h5>Website Design</h5>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</p>
+                </div>
             </div>
-            <button class="accordion">Development</button>
-            <div class="panel">
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</p>
+            <div>
+                <button id="accordion" class="purple-accordion accordion">Website Design</button>
+                <div class="panel purple-panel">
+                    <img src="../images/purple-icon.png">
+                    <h5>Website Design</h5>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</p>
+                </div>
             </div>
-            <button class="accordion">Graphic Design</button>
-            <div class="panel">
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</p>
+            <div>
+                <button id="accordion" class="orange-accordion accordion">Website Design</button>
+                <div class="panel orange-panel">
+                    <img src="../images/orange-icon.png">
+                    <h5>Website Design</h5>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</p>
+                </div>
             </div>
         </div>
     </section>
-    <section class="large-feature-image">
-
+    <section class="large-feature-image-container">
+        <div class="large-feature-image"></div>
     </section>
     <section class="about-logo-wall-outer">
-        <img src="../images/dell.png">
-        <img src="../images/sitecore.png">
-        <img src="../images/telefoncia.png">
-        <img src="../images/microsoft.png">
-        <img src="../images/mediakind.png">
+        <h2>Some of the big name brands I’ve worked on</h2>
+        <div class="logo-wall-container">
+            <img src="../images/dell.png">
+            <img src="../images/sitecore.png">
+            <img src="../images/telefoncia.png">
+            <img src="../images/microsoft.png">
+            <img src="../images/mediakind.png">
+            <img src="../images/telefoncia.png">
+            <img src="../images/sitecore.png">
+            <img src="../images/telefoncia.png">
+            <img src="../images/microsoft.png">
+        </div>
     </section>
-        <section class="featured-project-outer">
+    <section class="featured-project-outer">
         <div class="featured-project-intro-copy">
-            <h2>Lorem ipsum dolor sit amet elitr</h2>
+            <h2>Lorem ipsum dolor sit amet consetetur elitr</h2>
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
             <button class="primary-btn">View all</button>
         </div>
-        <div class="project-tile-wrapper">
-            <div class="project-tile-copy">
-                <h3>Mob Network</h3>
-                <p>Website and Design</p>
+        <div class="project-tile-container">
+            <div class="project-left-col">
+                <div class="project-tile-wrapper">
+                    <div class="project-tile-copy">
+                        <h3>Mob Network</h3>
+                        <p>Website and Design</p>
+                    </div>
+                    <img src="../images/project-image.png">
+                </div>
             </div>
-            <img src="../images/project-image.png">
-        </div>
-        <div class="project-tile-wrapper">
-            <div class="project-tile-copy">
-                <h3>Mob Network</h3>
-                <p>Website and Design</p>
+            <div class="project-right-col">
+                <div class="project-tile-wrapper">
+                    <div class="project-tile-copy">
+                        <h3>Mob Network</h3>
+                        <p>Website and Design</p>
+                    </div>
+                    <img src="../images/project-image.png">
+                </div>
             </div>
-            <img src="../images/project-image.png">
         </div>
     </section>
 </main>

@@ -262,7 +262,11 @@ footer {
         width: 100%;
         border-radius: 6px; }
 
-.about-intro {
+@media (min-width: 768px) {
+  .about-intro-container {
+    padding: 0 32px; } }
+
+.about-intro-container .about-intro-copy {
   height: calc(100vh - 80px - 53px);
   display: flex;
   flex-direction: column;
@@ -270,8 +274,14 @@ footer {
   justify-content: center;
   text-align: center;
   padding: 0 25px; }
+  @media (min-width: 768px) {
+    .about-intro-container .about-intro-copy {
+      padding: 0;
+      height: calc(100vh - 440px - 63px);
+      max-width: 490px;
+      margin: 0 auto; } }
 
-.about-feature-image {
+.about-intro-container .about-feature-image {
   height: 300px;
   width: 100%;
   background-image: url("../images/me2.png");
@@ -279,7 +289,11 @@ footer {
   background-size: cover;
   background-position: center;
   position: relative; }
-  .about-feature-image img {
+  @media (min-width: 768px) {
+    .about-intro-container .about-feature-image {
+      height: 557px;
+      border-radius: 6px; } }
+  .about-intro-container .about-feature-image img {
     position: absolute;
     top: -16px;
     left: 50%;
@@ -287,19 +301,44 @@ footer {
 
 .location-outer {
   padding: 100px 25px; }
-  .location-outer h2 {
+  @media (min-width: 768px) {
+    .location-outer {
+      padding: 125px 32px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center; } }
+  @media (min-width: 768px) {
+    .location-outer .location-copy {
+      width: 40%; } }
+  .location-outer .location-copy h2 {
     margin-bottom: 20px; }
   .location-outer img {
     width: 100%;
-    margin-top: 50px;
-    border-radius: 6px; }
+    margin-top: 50px; }
+    @media (min-width: 768px) {
+      .location-outer img {
+        width: 50%;
+        margin: 0; } }
 
 .skills-outer {
   padding: 0 25px; }
-  .skills-outer h2 {
+  @media (min-width: 768px) {
+    .skills-outer {
+      padding: 0 32px; } }
+  @media (min-width: 768px) {
+    .skills-outer .skills-copy {
+      max-width: 360px; } }
+  .skills-outer .skills-copy h2 {
     margin-bottom: 20px; }
   .skills-outer .skill-tile-section {
     margin: 50px 0 100px; }
+    @media (min-width: 768px) {
+      .skills-outer .skill-tile-section {
+        margin: 50px 0 125px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px; } }
     .skills-outer .skill-tile-section .accordion {
       background-color: #F1FBF8;
       font-size: 22px;
@@ -322,6 +361,9 @@ footer {
         color: #55CFA7;
         float: right;
         transition: 0.3s; }
+      @media (min-width: 768px) {
+        .skills-outer .skill-tile-section .accordion {
+          display: none; } }
     .skills-outer .skill-tile-section .active:after {
       transform: rotate(45deg);
       color: #55CFA7;
@@ -335,41 +377,105 @@ footer {
       margin-bottom: 15px;
       overflow: hidden;
       transition: max-height 0.2s ease-in-out; }
+      @media (min-width: 768px) {
+        .skills-outer .skill-tile-section .panel {
+          max-height: initial;
+          padding: 40px;
+          margin-bottom: 0;
+          border-radius: 6px; } }
+      .skills-outer .skill-tile-section .panel img {
+        display: none; }
+        @media (min-width: 768px) {
+          .skills-outer .skill-tile-section .panel img {
+            display: block;
+            width: 80px;
+            margin-bottom: 20px; } }
+      .skills-outer .skill-tile-section .panel h5 {
+        display: none; }
+        @media (min-width: 768px) {
+          .skills-outer .skill-tile-section .panel h5 {
+            display: block;
+            font-size: 22px;
+            font-family: "Gilroy-Regular", Helvetica, sans-serif;
+            color: #000000;
+            margin-bottom: 12px; } }
       .skills-outer .skill-tile-section .panel p {
         padding-bottom: 20px; }
-    .skills-outer .skill-tile-section .accordion:nth-child(3) {
+        @media (min-width: 768px) {
+          .skills-outer .skill-tile-section .panel p {
+            padding: 0; } }
+    .skills-outer .skill-tile-section .purple-panel,
+    .skills-outer .skill-tile-section .purple-accordion {
       background-color: #F1F0FE;
       color: #6155FF; }
-      .skills-outer .skill-tile-section .accordion:nth-child(3):after {
+      .skills-outer .skill-tile-section .purple-panel:after,
+      .skills-outer .skill-tile-section .purple-accordion:after {
         color: #6155FF; }
-    .skills-outer .skill-tile-section .panel:nth-child(4) {
-      background-color: #F1F0FE; }
-    .skills-outer .skill-tile-section .accordion:nth-child(5) {
+    .skills-outer .skill-tile-section .orange-panel,
+    .skills-outer .skill-tile-section .orange-accordion {
       background-color: #FFF6EC;
       color: #FF8D0F; }
-      .skills-outer .skill-tile-section .accordion:nth-child(5):after {
+      .skills-outer .skill-tile-section .orange-panel:after,
+      .skills-outer .skill-tile-section .orange-accordion:after {
         color: #FF8D0F; }
-    .skills-outer .skill-tile-section .panel:nth-child(6) {
-      background-color: #FFF6EC; }
 
-.large-feature-image {
+@media (min-width: 768px) {
+  .large-feature-image-container {
+    padding: 0 32px; } }
+
+.large-feature-image-container .large-feature-image {
   height: 100vh;
   width: 100%;
   background-image: url("../images/stroud-valley.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; }
+  @media (min-width: 768px) {
+    .large-feature-image-container .large-feature-image {
+      height: 515px;
+      border-radius: 6px; } }
 
 .about-logo-wall-outer {
-  padding: 100px 25px 0;
-  margin: 0 auto;
-  width: 70%;
-  display: flex;
-  flex-direction: column; }
-  .about-logo-wall-outer img {
-    width: 100%;
-    margin: 17.5px 0;
-    opacity: 0.2; }
+  padding: 100px 25px 0; }
+  @media (min-width: 768px) {
+    .about-logo-wall-outer {
+      padding: 125px 32px 0; } }
+  .about-logo-wall-outer h2 {
+    text-align: center;
+    margin-bottom: 35px; }
+    @media (min-width: 768px) {
+      .about-logo-wall-outer h2 {
+        max-width: 408px;
+        margin: 0 auto 50px; } }
+  .about-logo-wall-outer .logo-wall-container {
+    width: 70%;
+    margin: 0 auto; }
+    @media (min-width: 768px) {
+      .about-logo-wall-outer .logo-wall-container {
+        width: 100%;
+        display: grid;
+        grid-gap: 50px;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
+        align-items: center; } }
+    .about-logo-wall-outer .logo-wall-container img {
+      width: 100%;
+      margin: 17.5px 0;
+      opacity: 0.2; }
+      @media (min-width: 768px) {
+        .about-logo-wall-outer .logo-wall-container img {
+          margin: 0; } }
+    .about-logo-wall-outer .logo-wall-container img:nth-child(6),
+    .about-logo-wall-outer .logo-wall-container img:nth-child(7),
+    .about-logo-wall-outer .logo-wall-container img:nth-child(8),
+    .about-logo-wall-outer .logo-wall-container img:nth-child(9) {
+      display: none; }
+      @media (min-width: 768px) {
+        .about-logo-wall-outer .logo-wall-container img:nth-child(6),
+        .about-logo-wall-outer .logo-wall-container img:nth-child(7),
+        .about-logo-wall-outer .logo-wall-container img:nth-child(8),
+        .about-logo-wall-outer .logo-wall-container img:nth-child(9) {
+          display: initial; } }
 
 .work-intro {
   margin: 100px 0 50px;
@@ -559,9 +665,21 @@ h1 {
   color: #000000; }
   @media (min-width: 768px) {
     h1 {
-      font-size: 40px;
+      font-size: 36px;
       max-width: 400px;
-      line-height: 48px; } }
+      line-height: 42px;
+      margin-bottom: 20px; } }
+
+.homepage-header {
+  font-family: "Gilroy-SemiBold", Helvetica, sans-serif !important;
+  font-size: 28px !important;
+  line-height: 35px !important;
+  color: #000000 !important; }
+  @media (min-width: 768px) {
+    .homepage-header {
+      font-size: 40px !important;
+      max-width: 400px !important;
+      line-height: 48px !important; } }
 
 h2 {
   font-family: "Gilroy-SemiBold", Helvetica, sans-serif;

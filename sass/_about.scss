@@ -1,57 +1,114 @@
 
 @import 'variables';
 
-.about-intro {
-    height: calc(100vh - 80px - 53px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 0 $mobileOuterPadding;
-}
+.about-intro-container {
 
-.about-feature-image {
-    height: 300px;
-    width: 100%;
-    background-image: url("../images/me2.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-
-    img {
-        position: absolute;
-        top: -16px;
-        left: 50%;
-        transform: translateX(-50%);
+    @include mq($tabletMediaQuery) {
+        padding: 0 $tabletOuterPadding;
+    }
+    
+    .about-intro-copy {
+        height: calc(100vh - 80px - 53px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0 $mobileOuterPadding;
+    
+        @include mq($tabletMediaQuery) {
+            padding: 0;
+            height: calc(100vh - 440px - 63px);
+            max-width: 490px;
+            margin: 0 auto;
+        }
+    }
+    
+    .about-feature-image {
+        height: 300px;
+        width: 100%;
+        background-image: url("../images/me2.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    
+        @include mq($tabletMediaQuery) {
+            height: 557px;
+            border-radius: 6px;
+        }
+    
+        img {
+            position: absolute;
+            top: -16px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
     }
 }
+
+
 
 .location-outer {
     padding: 100px $mobileOuterPadding;
 
-    h2 {
-        margin-bottom: 20px;
+    @include mq($tabletMediaQuery) {
+        padding: 125px $tabletOuterPadding;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .location-copy {
+
+        @include mq($tabletMediaQuery) {
+            width: 40%;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
     }
 
     img {
         width: 100%;
         margin-top: 50px;
-        border-radius: 6px;
+
+        @include mq($tabletMediaQuery) {
+            width: 50%;
+            margin: 0;
+        }
     }
 }
 
 .skills-outer {
     padding: 0 $mobileOuterPadding;
 
-    h2 {
-        margin-bottom: 20px;
+    @include mq($tabletMediaQuery) {
+        padding: 0 $tabletOuterPadding;
+    }
+
+    .skills-copy {
+
+        @include mq($tabletMediaQuery) {
+            max-width: 360px;
+        }
+        
+        h2 {
+            margin-bottom: 20px;
+        }
     }
 
     .skill-tile-section {
         margin: 50px 0 100px;
 
+        @include mq($tabletMediaQuery) {
+            margin: 50px 0 125px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+        }
 
     .accordion {
         background-color: #F1FBF8;
@@ -77,6 +134,10 @@
             float: right;
             transition: 0.3s;
         }
+
+        @include mq($tabletMediaQuery) {
+            display: none;
+        }
     }
 
     .active:after {
@@ -97,12 +158,46 @@
         overflow: hidden;
         transition: max-height 0.2s ease-in-out;
 
+        @include mq($tabletMediaQuery) {
+            max-height: initial;
+            padding: 40px;
+            margin-bottom: 0;
+            border-radius: 6px;
+        }
+
+        img {
+            display: none;
+
+            @include mq($tabletMediaQuery) {
+                display: block;
+                width: 80px;
+                margin-bottom: 20px;
+            }
+        }
+
+        h5 {
+            display: none;
+
+            @include mq($tabletMediaQuery) {
+                display: block;
+                font-size: 22px;
+                font-family: $main-font-regular;
+                color: $headerColour;
+                margin-bottom: 12px;
+            }
+        }
+
         p {
             padding-bottom: 20px;
+
+            @include mq($tabletMediaQuery) {
+                padding: 0;
+            }
         }
     }
     
-    .accordion:nth-child(3) {
+    .purple-panel, 
+    .purple-accordion {
         background-color: #F1F0FE;
         color: #6155FF;
 
@@ -111,11 +206,8 @@
         }
     }
 
-    .panel:nth-child(4) {
-        background-color: #F1F0FE;
-    }
-
-    .accordion:nth-child(5) {
+    .orange-panel, 
+    .orange-accordion {
         background-color: #FFF6EC;
         color: #FF8D0F;
 
@@ -123,33 +215,83 @@
             color: #FF8D0F
         }
     }
-
-    .panel:nth-child(6) {
-        background-color: #FFF6EC;
-    }
-
     }
 }
 
-.large-feature-image {
-    height: 100vh;
-    width: 100%;
-    background-image: url("../images/stroud-valley.png"); 
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+
+.large-feature-image-container {
+
+    @include mq($tabletMediaQuery) {
+        padding: 0 $tabletOuterPadding;
+    }
+
+    .large-feature-image {
+        height: 100vh;
+        width: 100%;
+        background-image: url("../images/stroud-valley.png"); 
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    
+        @include mq($tabletMediaQuery) {
+            height: 515px;
+            border-radius: 6px;
+        }
+    }
 }
+
 
 .about-logo-wall-outer {
     padding: 100px $mobileOuterPadding 0;
-    margin: 0 auto;
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-
-    img {
-        width: 100%;
-        margin: 17.5px 0;
-        opacity: 0.2;
+    
+    @include mq($tabletMediaQuery) {
+        padding: 125px $tabletOuterPadding 0;
     }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 35px;
+
+        @include mq($tabletMediaQuery) {
+            max-width: 408px;
+            margin: 0 auto 50px;
+        }
+    }
+
+    .logo-wall-container {
+        width: 70%;
+        margin: 0 auto;
+
+        @include mq($tabletMediaQuery) {
+            width: 100%;
+            display: grid;
+            grid-gap: 50px;
+            grid-template-columns: 1fr 1fr 1fr;
+            justify-items: center;
+            align-items: center;
+        }
+
+        img {
+            width: 100%;
+            margin: 17.5px 0;
+            opacity: 0.2;
+
+            @include mq($tabletMediaQuery) {
+                margin: 0;
+            }
+        }
+
+        img:nth-child(6),
+        img:nth-child(7),
+        img:nth-child(8),
+        img:nth-child(9) {
+            display: none;
+
+            @include mq($tabletMediaQuery) {
+                display: initial;
+            }
+        }
+    }
+
+    
 }

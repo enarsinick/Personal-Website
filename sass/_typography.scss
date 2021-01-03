@@ -20,9 +20,23 @@
       color: $headerColour;
 
       @include mq($tabletMediaQuery) {
-        font-size: 40px;
+        font-size: 36px;
         max-width: 400px;
-        line-height: 48px;
+        line-height: 42px;
+        margin-bottom: 20px;
+    }
+  }
+
+  .homepage-header {
+    font-family: $main-font-semibold !important;
+    font-size: 28px !important;
+    line-height: 35px !important;
+    color: $headerColour !important;
+
+    @include mq($tabletMediaQuery) {
+      font-size: 40px !important;
+      max-width: 400px !important;
+      line-height: 48px !important;
     }
   }
 
