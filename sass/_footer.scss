@@ -3,15 +3,29 @@ footer {
     background-color: #000;
     padding-bottom: 30px;
 
+    @include mq($tabletMediaQuery) {
+        padding-bottom: 60px;
+    }
+
     .cta-section {
         text-align: center;
         padding: 100px 0 70px;
+
+        @include mq($tabletMediaQuery) {
+            text-align: left;
+            padding: 110px $tabletOuterPadding;
+        }
 
         p:nth-child(1) {
             color: white;
             font-size: 30px;
             font-family: $main-font-semibold;
             margin-bottom: 15px;
+
+            @include mq($tabletMediaQuery) {
+                font-size: 50px;
+                margin-bottom: 35px;
+            }
         }
 
         p:nth-child(2) {
@@ -21,6 +35,12 @@ footer {
             font-family: $main-font-regular;
             padding-bottom: 5px;
             border-bottom: 2px solid white;
+
+            @include mq($tabletMediaQuery) {
+                font-size: 50px;
+                padding-bottom: 20px;
+                border-bottom: 3px solid white;
+            }
         }
     }
 
@@ -30,19 +50,64 @@ footer {
         align-items: center;
         text-align: center;
 
-        img {
-            margin-bottom: 20px;
+        @include mq($tabletMediaQuery) {
+            flex-direction: row;
+            text-align: left;
+            align-items: initial;
+            justify-content: space-between;
+            padding: 0 $tabletOuterPadding;
         }
 
-        p {
-            max-width: 230px;
-            color: white;
-            margin-bottom: 35px;
+        .footer-bottom-left-col {
+            
+            img {
+                margin-bottom: 20px;
+            }
+    
+            p {
+                max-width: 230px;
+                color: white;
+                margin-bottom: 35px;
+
+                @include mq($tabletMediaQuery) {
+                    margin: 0;
+                }
+            }
         }
 
-        .social-icon-wrapper img {
-            padding: 0;
-            padding: 0 3px;
+        .footer-bottom-right-col {
+
+            nav {
+                display: none;
+
+                @include mq($tabletMediaQuery) {
+                    display: initial;
+
+                    a {
+                        color: white;
+                        font-family: $main-font-medium;
+                        text-decoration: none;
+                        margin-left: 30px;
+                    }
+                }
+            }
+
+            .social-icon-wrapper {
+
+                @include mq($tabletMediaQuery) {
+                    margin-top: 35px;
+                    text-align: right;
+                }
+        
+                img {
+                    padding: 0;
+                    padding: 0 3px;
+
+                    @include mq($tabletMediaQuery) {
+                        padding: 0 6px;
+                    }
+                }
+            }
         }
     }
 }

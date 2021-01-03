@@ -117,8 +117,9 @@
 
     @include mq($tabletMediaQuery) {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         grid-gap: 24px;
+        padding: 50px $tabletOuterPadding 0;
     }
 
     .image-wall-mask {
@@ -139,7 +140,7 @@
         margin-top: 10px;
 
         @include mq($tabletMediaQuery) {
-            margin: 0;
+            margin-top: -50px;
         }
     }
 }
