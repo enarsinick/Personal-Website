@@ -9,13 +9,39 @@
     justify-content: center;
     text-align: center;
     padding: 0 $mobileOuterPadding;
+
+    @include mq($tabletMediaQuery) {
+        margin: 125px 0;
+        text-align: left;
+        padding: 0 $tabletOuterPadding;
+        align-items: flex-start;
+        max-width: 460px;
+    }
 }
 
 .featured-project-page-outer {
     padding: 0 $mobileOuterPadding 100px;
 
+    @include mq($tabletMediaQuery) {
+        padding: 0 $tabletOuterPadding;
+        display: flex;
+        flex-direction: row;
+
+        .project-left-col {
+            width: 50%;
+            margin-right: 10px;
+        }
+
+        .project-right-col {
+            width: 50%;
+            margin-left: 10px;
+            margin-top: -60px;
+        }
+    }
+
     .project-tile-wrapper {
         position: relative;
+        margin-bottom: 20px;
 
         .project-tile-copy {
             position: absolute;
@@ -36,17 +62,15 @@
             border-radius: 6px;
         }
     }
-
-    .project-tile-wrapper:nth-child(2),
-    .project-tile-wrapper:nth-child(3),
-    .project-tile-wrapper:nth-child(4) {
-        margin-top: 15px;
-    }
     
 }
 
 .other-projects-outer {
     padding: 0 $mobileOuterPadding 100px;
+
+    @include mq($tabletMediaQuery) {
+        padding: 0 $tabletOuterPadding;
+    }
 
     h2 {
         margin-bottom: 30px;
@@ -69,6 +93,11 @@
         align-items: center;
         justify-content: space-between;
 
+        @include mq($tabletMediaQuery) {
+            font-size: 22px;
+            padding: 24px 26px;
+        }
+
         &:after {
             content: '\002B';
             font-size: 28px;
@@ -76,6 +105,10 @@
             color: #AEBBBA;
             float: right;
             transition: 0.3s;
+
+            @include mq($tabletMediaQuery) {
+                font-size: 32px;
+            }
         }
     }
 
@@ -97,14 +130,27 @@
         transition: max-height 0.2s ease-in-out;
         border-radius: 0 0 6px 6px;
 
+        @include mq($tabletMediaQuery) {
+            padding: 0 26px;
+        }
+
         p {
             padding-bottom: 20px;
+
+            @include mq($tabletMediaQuery) {
+                width: 90%;
+            }
         }
 
         .other-project-btn-section {
             display: flex;
             flex-direction: column;
             padding-bottom: 20px;
+
+            @include mq($tabletMediaQuery) {
+                flex-direction: row-reverse;
+                justify-content: flex-end;
+            }
 
             button {
                 border: none;
@@ -114,6 +160,10 @@
                 color: #E95E2A;
                 padding: 15px 0;
                 margin: 5px 0;
+
+                @include mq($tabletMediaQuery) {
+                    padding: 15px 25px;
+                }
             }
 
             button:nth-child(2) {
