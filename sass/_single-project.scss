@@ -9,30 +9,67 @@
     text-align: center;
     padding: 0 $mobileOuterPadding;  
 
+    @include mq($tabletMediaQuery) {
+        height: initial;
+        text-align: left;
+        margin: 150px 0;
+        padding: 0 $tabletOuterPadding;
+        align-items: flex-start;
+
+        h1 {
+            max-width: 450px !important;
+        }
+    }
+
     p {
         margin-bottom: 10px;
     }
 }
 
-.project-feature-image {
-    height: 210px;
-    width: 100%;
-    background-image: url("../images/project-feature.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: relative;
+.project-feature-image-outer {
 
-    img {
-        position: absolute;
-        top: -16px;
-        left: 50%;
-        transform: translateX(-50%);
+    @include mq($tabletMediaQuery) {
+        padding: 0 $tabletOuterPadding;
+    }
+
+    .project-feature-image {
+        height: 210px;
+        width: 100%;
+        background-image: url("../images/project-feature.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+
+        @include mq($tabletMediaQuery) {
+            height: 407px;
+            border-radius: 6px;
+        }
+    
+        img {
+            position: absolute;
+            top: -16px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            @include mq($tabletMediaQuery) {
+                display: none;
+            }
+        }
     }
 }
 
+
 .project-overview-outer {
     padding: 100px $mobileOuterPadding;
+
+    @include mq($tabletMediaQuery) {
+        padding: 125px $tabletOuterPadding;
+
+        p {
+            max-width: 80%;
+        }
+    }
 
     h2 {
         margin-bottom: 20px;
@@ -50,6 +87,13 @@
             padding-bottom: 3px;
             margin-right: 20px;
             border-bottom: solid 2.5px $buttonColour;
+
+            @include mq($tabletMediaQuery) {
+                background-color: #FDF0EC;
+                border: none;
+                padding: 15px 25px;
+                border-radius: 6px;
+            }
         }
 
         .project-btn-secondary {
@@ -60,6 +104,10 @@
             color: $buttonColour;
             padding-bottom: 3px;
             border-bottom: solid 2.5px $buttonColour;
+
+            @include mq($tabletMediaQuery) {
+                margin-left: 15px;
+            }
         }
     }
 }
@@ -67,14 +115,27 @@
 .project-images-outer {
     padding: 0 0 100px;
 
+    @include mq($tabletMediaQuery) {
+        padding: 0 $tabletOuterPadding 85px;
+    }
+
     img {
         width: 100%;
         margin-bottom: 15px;
+
+        @include mq($tabletMediaQuery) {
+            border-radius: 6px;
+            margin-bottom: 40px;
+        }
     }
 }
 
 .other-projects-outer {
     padding: 100px $mobileOuterPadding;
+
+    @include mq($tabletMediaQuery) {
+        padding: 125px $tabletOuterPadding;
+    }
 
 
     .featured-project-intro-copy {
