@@ -8,4 +8,22 @@
     color: $buttonColour;
     padding-bottom: 3px;
     border-bottom: solid 2.5px $buttonColour;
+
+    @include mq($laptopMediaQuery) {
+        display: initial;
+        border: none;
+        background: none;
+        font-size: 16px;
+        font-family: $main-font-semibold;
+        color: $buttonColour;
+        margin-right: 40px;
+        background-color: #FDF0EC;
+        padding: 15px 25px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
 }
+
+
+
+                

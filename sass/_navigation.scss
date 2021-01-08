@@ -7,6 +7,10 @@ header {
         padding: 45px $tabletOuterPadding 0;
     }
 
+    @include mq($laptopMediaQuery) {
+        padding: 52px $laptopOuterPadding 0;
+    }
+
     nav {
         display: flex;
         justify-content: space-between;
@@ -16,6 +20,24 @@ header {
 
             @include mq($tabletMediaQuery) {
                 width: 70px;
+            }
+        }
+
+        .menu-contact-btn {
+            display: none;
+
+            @include mq($laptopMediaQuery) {
+                display: initial;
+                border: none;
+                background: none;
+                font-size: 16px;
+                font-family: $main-font-semibold;
+                color: $buttonColour;
+                margin-right: 40px;
+                background-color: #FDF0EC;
+                padding: 15px 25px;
+                border-radius: 10px;
+                cursor: pointer;
             }
         }
     }

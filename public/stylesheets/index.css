@@ -17,20 +17,6 @@ body {
     .divider-line {
       margin: 0 32px; } }
 
-header {
-  padding: 35px 25px 0; }
-  @media (min-width: 768px) {
-    header {
-      padding: 45px 32px 0; } }
-  header nav {
-    display: flex;
-    justify-content: space-between; }
-    header nav .logo {
-      width: 60px; }
-      @media (min-width: 768px) {
-        header nav .logo {
-          width: 70px; } }
-
 footer {
   background-color: #000;
   padding-bottom: 30px; }
@@ -111,6 +97,10 @@ footer {
   .intro-section-outer {
     padding: 0 32px; } }
 
+@media (min-width: 1190px) {
+  .intro-section-outer {
+    padding: 0 46px; } }
+
 .intro-section-outer .intro-section {
   height: calc(100vh - 195px - 53px);
   display: flex;
@@ -122,6 +112,9 @@ footer {
   @media (min-width: 768px) {
     .intro-section-outer .intro-section {
       height: calc(100vh - 534px - 63px); } }
+  @media (min-width: 1190px) {
+    .intro-section-outer .intro-section {
+      height: calc(100vh - 270px - 100px); } }
 
 .intro-section-outer .feature-image {
   height: 300px;
@@ -135,6 +128,10 @@ footer {
     .intro-section-outer .feature-image {
       height: 557px;
       border-radius: 6px; } }
+  @media (min-width: 1190px) {
+    .intro-section-outer .feature-image {
+      height: 708px;
+      border-radius: 10px; } }
   .intro-section-outer .feature-image img {
     position: absolute;
     top: -16px;
@@ -152,14 +149,26 @@ footer {
       .about-me-outer .about-me-home-copy {
         width: 48%;
         margin: auto 0; } }
+  @media (min-width: 1190px) {
+    .about-me-outer {
+      padding: 150px 46px;
+      max-width: 1190px;
+      margin: 0 auto; } }
   .about-me-outer h2 {
     margin-bottom: 20px;
     max-width: 220px; }
     @media (min-width: 768px) {
       .about-me-outer h2 {
         max-width: 260px; } }
+    @media (min-width: 1190px) {
+      .about-me-outer h2 {
+        max-width: 400px; } }
   .about-me-outer p {
     margin-bottom: 30px; }
+    @media (min-width: 1190px) {
+      .about-me-outer p {
+        max-width: 450px;
+        margin-bottom: 40px; } }
   .about-me-outer .about-me-home-image {
     width: 100%;
     margin-top: 50px;
@@ -168,6 +177,9 @@ footer {
       .about-me-outer .about-me-home-image {
         width: 48%;
         margin: 0; } }
+    @media (min-width: 1190px) {
+      .about-me-outer .about-me-home-image {
+        border-radius: 10px; } }
 
 .logo-wall-outer {
   padding: 0 25px 100px;
@@ -799,6 +811,19 @@ p {
   color: #E95E2A;
   padding-bottom: 3px;
   border-bottom: solid 2.5px #E95E2A; }
+  @media (min-width: 1190px) {
+    .primary-btn {
+      display: initial;
+      border: none;
+      background: none;
+      font-size: 16px;
+      font-family: "Gilroy-SemiBold", Helvetica, sans-serif;
+      color: #E95E2A;
+      margin-right: 40px;
+      background-color: #FDF0EC;
+      padding: 15px 25px;
+      border-radius: 10px;
+      cursor: pointer; } }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -1096,3 +1121,35 @@ template {
    */
 [hidden] {
   display: none; }
+
+header {
+  padding: 35px 25px 0; }
+  @media (min-width: 768px) {
+    header {
+      padding: 45px 32px 0; } }
+  @media (min-width: 1190px) {
+    header {
+      padding: 52px 46px 0; } }
+  header nav {
+    display: flex;
+    justify-content: space-between; }
+    header nav .logo {
+      width: 60px; }
+      @media (min-width: 768px) {
+        header nav .logo {
+          width: 70px; } }
+    header nav .menu-contact-btn {
+      display: none; }
+      @media (min-width: 1190px) {
+        header nav .menu-contact-btn {
+          display: initial;
+          border: none;
+          background: none;
+          font-size: 16px;
+          font-family: "Gilroy-SemiBold", Helvetica, sans-serif;
+          color: #E95E2A;
+          margin-right: 40px;
+          background-color: #FDF0EC;
+          padding: 15px 25px;
+          border-radius: 10px;
+          cursor: pointer; } }

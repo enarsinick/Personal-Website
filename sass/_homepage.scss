@@ -5,6 +5,10 @@
     @include mq($tabletMediaQuery) {
         padding: 0 $tabletOuterPadding;
     }
+
+    @include mq($laptopMediaQuery) {
+        padding: 0 $laptopOuterPadding;
+    }
     
     .intro-section {
         height: calc(100vh - 195px - 53px);
@@ -17,6 +21,10 @@
     
         @include mq($tabletMediaQuery) {
             height: calc(100vh - 534px - 63px);
+        }
+
+        @include mq($laptopMediaQuery) {
+            height: calc(100vh - 270px - 100px);
         }
     }
     
@@ -32,6 +40,11 @@
         @include mq($tabletMediaQuery) {
             height: 557px;
             border-radius: 6px;
+        }
+
+        @include mq($laptopMediaQuery) {
+            height: 708px;
+            border-radius: 10px;
         }
     
         img {
@@ -59,6 +72,12 @@
         }
     }
 
+    @include mq($laptopMediaQuery) {
+        padding: 150px $laptopOuterPadding;
+        max-width: 1190px;
+        margin: 0 auto;
+    }
+
     h2 {
         margin-bottom: 20px;
         max-width: 220px;
@@ -66,10 +85,19 @@
         @include mq($tabletMediaQuery) {
             max-width: 260px;
         }
+
+        @include mq($laptopMediaQuery) {
+            max-width: 400px;
+        }
     }
 
     p {
         margin-bottom: 30px;
+
+        @include mq($laptopMediaQuery) {
+            max-width: 450px;
+            margin-bottom: 40px;
+        }
     }
 
     .about-me-home-image {
@@ -80,6 +108,10 @@
         @include mq($tabletMediaQuery) {
             width: 48%;
             margin: 0;
+        }
+
+        @include mq($laptopMediaQuery) {
+            border-radius: 10px;
         }
     }
 }
