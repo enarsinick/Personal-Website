@@ -14,16 +14,27 @@
   }
 
   h1 {
-      font-family: $main-font-semibold;
-      font-size: 28px;
-      line-height: 35px;
-      color: $headerColour;
+    font-family: $main-font-semibold;
+    font-size: 28px;
+    line-height: 35px;
+    color: $headerColour;
 
-      @include mq($tabletMediaQuery) {
-        font-size: 36px;
-        max-width: 400px;
-        line-height: 42px;
-        margin-bottom: 20px;
+    @include mq($tabletMediaQuery) {
+      font-size: 36px;
+      max-width: 400px;
+      line-height: 42px;
+      margin-bottom: 20px;
+    }
+
+    @include mq($laptopMediaQuery) {
+      font-size: 52px;
+      line-height: 58px;
+      max-width: initial;
+    }
+
+    @include mq($desktopMediaQuery) {
+      font-size: 68px;
+      line-height: 77px;
     }
   }
 

@@ -111,6 +111,10 @@
         @include mq($laptopMediaQuery) {
             max-width: 400px;
         }
+
+        @include mq($desktopMediaQuery) {
+            max-width: 450px;
+        }
     }
 
     p {
@@ -240,142 +244,6 @@
 
         @include mq($desktopMediaQuery) {
             margin-top: -100px;
-        }
-    }
-}
-
-.featured-project-outer {
-    padding: 100px $mobileOuterPadding;
-
-    @include mq($tabletMediaQuery) {
-        padding: 125px $tabletOuterPadding;
-    }
-
-    @include mq($laptopMediaQuery) {
-        padding: 150px $laptopOuterPadding;
-    }
-
-    @include mq($laptopMediaQuery) {
-        padding: 170px 0;
-        max-width: $desktopMediaQuery;
-        margin: 0 auto;
-    }
-
-    .featured-project-intro-copy {
-        margin-bottom: 50px;
-
-        @include mq($tabletMediaQuery) {
-            margin-bottom: 60px;
-            max-width: 370px;
-        }
-
-        @include mq($laptopMediaQuery) {
-            max-width: 1190px;
-            margin: 0 auto 170px;
-        }
-
-        h2 {
-            margin-bottom: 20px;
-            max-width: 220px;
-
-            @include mq($tabletMediaQuery) {
-                max-width: initial;
-            }
-
-            @include mq($laptopMediaQuery) {
-                max-width: 550px;
-            }
-        }
-    
-        p {
-            margin-bottom: 30px;
-            
-            @include mq($laptopMediaQuery) {
-                max-width: 500px;
-            }
-        }
-    }
-
-    .project-tile-container {
-        display: flex;
-        flex-direction: column;
-
-        @include mq($tabletMediaQuery) {
-            flex-direction: row;
-
-            .project-left-col {
-                width: 50%;
-                margin-right: 10px;
-
-                @include mq($laptopMediaQuery) {
-                    margin-right: 13px;
-                }
-
-                @include mq($desktopMediaQuery) {
-                    margin-right: 25px;
-                }
-            }
-
-            .project-right-col {
-                width: 50%;
-                margin-left: 10px;
-                margin-top: -60px;
-
-                @include mq($laptopMediaQuery) {
-                    margin-top: -110px;
-                    margin-left: 13px;
-                }
-
-                @include mq($desktopMediaQuery) {
-                    margin-left: 25px;
-                }
-            }
-        }
-
-        .project-tile-wrapper {
-            position: relative;
-            margin-bottom: 20px;
-
-            @include mq($laptopMediaQuery) {
-                margin-bottom: 26px;
-            }
-
-            @include mq($desktopMediaQuery) {
-                margin-bottom: 50px;
-            }
-    
-            .project-tile-copy {
-                position: absolute;
-                top: 20px;
-                left: 20px;
-
-                @include mq($laptopMediaQuery) {
-                    top: 50px;
-                    left: 50px;
-                }
-    
-                h3, p {
-                    color: white;
-                }
-    
-                p {
-                    font-size: 14px;
-
-                    @include mq($laptopMediaQuery) {
-                        font-size: 20px;
-                        margin-top: 3px;
-                    }
-                }
-            }
-    
-            img {
-                width: 100%;
-                border-radius: 6px;
-
-                @include mq($laptopMediaQuery) {
-                    border-radius: 10px;
-                }
-            }
         }
     }
 }

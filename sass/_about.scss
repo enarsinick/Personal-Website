@@ -6,6 +6,14 @@
     @include mq($tabletMediaQuery) {
         padding: 0 $tabletOuterPadding;
     }
+
+    @include mq($laptopMediaQuery) {
+        padding: 0 $laptopOuterPadding;
+    }
+
+    @include mq($desktopMediaQuery) {
+        padding: 0;
+    }
     
     .about-intro-copy {
         height: calc(100vh - 80px - 53px);
@@ -22,27 +30,87 @@
             max-width: 490px;
             margin: 0 auto;
         }
+
+        @include mq($laptopMediaQuery) {
+            text-align: left;
+            height: calc(100vh - 100px - 80px);
+            margin: 0;
+            align-items: flex-start;
+            max-width: 550px;
+        }
+
+        @include mq($desktopMediaQuery) {
+            max-width: $laptopMediaQuery;
+            margin: 0 auto;
+            height: calc(100vh - 100px - 260px);
+
+            h1, p {
+                max-width: 680px;
+            }
+        }
     }
-    
-    .about-feature-image {
-        height: 300px;
-        width: 100%;
-        background-image: url("../images/me2.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        position: relative;
-    
-        @include mq($tabletMediaQuery) {
-            height: 557px;
-            border-radius: 6px;
+
+    .about-feature-image-container {
+
+        @include mq($laptopMediaQuery) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 25px;
+        }
+
+        @include mq($desktopMediaQuery) {
+            max-width: $desktopMediaQuery;
+            margin: 0 auto;
+            grid-gap: 30px;
+        }
+
+
+        .about-feature-image {
+            height: 300px;
+            width: 100%;
+            background-image: url("../images/me2.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        
+            @include mq($tabletMediaQuery) {
+                height: 557px;
+                border-radius: 6px;
+            }
+
+            @include mq($laptopMediaQuery) {
+                border-radius: 10px;
+                height: 581px;
+            }
+
+            @include mq($desktopMediaQuery) {
+                height: 702px;
+            }
+        
+            img {
+                position: absolute;
+                top: -16px;
+                left: 50%;
+                transform: translateX(-50%);
+
+                @include mq($laptopMediaQuery) {
+                    display: none;
+                }
+            }
         }
     
-        img {
-            position: absolute;
-            top: -16px;
-            left: 50%;
-            transform: translateX(-50%);
+        .about-feature-image:nth-child(2) {
+            display: none;
+
+            @include mq($laptopMediaQuery) {
+                display: initial;
+                margin-top: -90px;
+            }
+
+            @include mq($desktopMediaQuery) {
+                margin-top: -100px;
+            }
         }
     }
 }
@@ -60,10 +128,24 @@
         align-items: center;
     }
 
+    @include mq($laptopMediaQuery) {
+        padding: 150px $laptopOuterPadding;
+    }
+
+    @include mq($desktopMediaQuery) {
+        padding: 170px 0;
+        max-width: $laptopMediaQuery;
+        margin: 0 auto;
+    }
+
     .location-copy {
 
         @include mq($tabletMediaQuery) {
             width: 40%;
+        }
+
+        @include mq($desktopMediaQuery) {
+            width: 47%;
         }
 
         h2 {
@@ -79,6 +161,10 @@
             width: 50%;
             margin: 0;
         }
+
+        @include mq($desktopMediaQuery) {
+            width: 47%;
+        }
     }
 }
 
@@ -89,12 +175,26 @@
         padding: 0 $tabletOuterPadding;
     }
 
+    @include mq($laptopMediaQuery) {
+        padding: 0 $laptopOuterPadding;
+    }
+
+    @include mq($desktopMediaQuery) {
+        padding: 0;
+        max-width: $laptopMediaQuery;
+        margin: 0 auto;
+    }
+
     .skills-copy {
 
         @include mq($tabletMediaQuery) {
             max-width: 360px;
         }
-        
+
+        @include mq($laptopMediaQuery) {
+            max-width: 470px;
+        }
+
         h2 {
             margin-bottom: 20px;
         }
@@ -108,6 +208,17 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-gap: 20px;
+        }
+
+        @include mq($laptopMediaQuery) {
+            margin: 50px 0 150px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 30px;
+        }
+
+        @include mq($desktopMediaQuery) {
+            margin: 50px 0 170px;
         }
 
     .accordion {
@@ -163,6 +274,11 @@
             padding: 40px;
             margin-bottom: 0;
             border-radius: 6px;
+        }
+
+        @include mq($laptopMediaQuery) {
+            padding: 50px 40px;
+            border-radius: 10px;
         }
 
         img {
@@ -225,6 +341,14 @@
         padding: 0 $tabletOuterPadding;
     }
 
+    @include mq($laptopMediaQuery) {
+        padding: 0 $laptopOuterPadding;
+    }
+
+    @include mq($desktopMediaQuery) {
+        padding: 0 $desktopOuterPadding;
+    }
+
     .large-feature-image {
         height: 100vh;
         width: 100%;
@@ -237,6 +361,15 @@
             height: 515px;
             border-radius: 6px;
         }
+
+        @include mq($tabletMediaQuery) {
+            height: 600px;
+            border-radius: 10px;
+        }
+        
+        @include mq($tabletMediaQuery) {
+            height: 92vh;
+        }
     }
 }
 
@@ -248,6 +381,16 @@
         padding: 125px $tabletOuterPadding 0;
     }
 
+    @include mq($laptopMediaQuery) {
+        padding: 150px $laptopOuterPadding 0;
+    }
+
+    @include mq($desktopMediaQuery) {
+        padding: 170px 0 0;
+        max-width: $laptopMediaQuery;
+        margin: 0 auto;
+    }
+
     h2 {
         text-align: center;
         margin-bottom: 35px;
@@ -255,6 +398,15 @@
         @include mq($tabletMediaQuery) {
             max-width: 408px;
             margin: 0 auto 50px;
+        }
+
+        @include mq($laptopMediaQuery) {
+            margin: 0 auto 80px;
+        }
+
+        @include mq($desktopMediaQuery) {
+            max-width: 700px;
+            margin: 0 auto 100px;
         }
     }
 
@@ -271,6 +423,15 @@
             align-items: center;
         }
 
+        @include mq($laptopMediaQuery) {
+            grid-gap: 70px 100px;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+
+        @include mq($laptopMediaQuery) {
+            grid-gap: 100px 100px;
+        }
+
         img {
             width: 100%;
             margin: 17.5px 0;
@@ -284,7 +445,10 @@
         img:nth-child(6),
         img:nth-child(7),
         img:nth-child(8),
-        img:nth-child(9) {
+        img:nth-child(9),
+        img:nth-child(10),
+        img:nth-child(11),
+        img:nth-child(12) {
             display: none;
 
             @include mq($tabletMediaQuery) {
@@ -292,6 +456,4 @@
             }
         }
     }
-
-    
 }
