@@ -38,6 +38,12 @@
       max-width: 400px !important;
       line-height: 48px !important;
     }
+
+    @include mq($desktopMediaQuery) {
+      font-size: 68px !important;
+      max-width: 660px !important;
+      line-height: 77px !important;
+    }
   }
 
   h2 {
@@ -50,6 +56,16 @@
         font-size: 30px;
         line-height: 34px;
       }
+
+      @include mq($laptopMediaQuery) {
+        font-size: 36px;
+        line-height: 46px;
+      }
+
+      @include mq($desktopMediaQuery) {
+        font-size: 54px;
+        line-height: 62px;
+      }
   }
 
   h3 {
@@ -61,6 +77,14 @@
     @include mq($tabletMediaQuery) {
       font-size: 22px;
     }
+
+    @include mq($laptopMediaQuery) {
+      font-size: 32px;
+    }
+
+    @include mq($desktopMediaQuery) {
+      font-size: 36px;
+    }
 }
 
   p {
@@ -68,5 +92,10 @@
       color: $bodyCopyColour;
       font-size: 16px;
       line-height: 22px;
+
+      @include mq($laptopMediaQuery) {
+        font-size: 20px;
+        line-height: 28px;
+      }
   }
   

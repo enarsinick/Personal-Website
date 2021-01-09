@@ -24,7 +24,7 @@ body {
     border-top: 1px solid rgba(0,0,0,0.1);
 
     @include mq($tabletMediaQuery) {
-        margin: 0 $tabletOuterPadding ;
+        margin: 0 $tabletOuterPadding;
     }
 }
 
