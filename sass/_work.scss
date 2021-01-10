@@ -17,53 +17,40 @@
         align-items: flex-start;
         max-width: 460px;
     }
+
+    @include mq($laptopMediaQuery) {
+        margin: 160px 0;
+        padding: 0 $laptopOuterPadding;
+        max-width: 610px;
+    }
+
+    @include mq($desktopMediaQuery) {
+        margin: 170px auto 200px;
+        max-width: 1190px;
+        padding: 0;
+
+        h1, p {
+            max-width: 700px;
+        }
+    }
 }
 
-.featured-project-page-outer {
+.work-page-outer {
     padding: 0 $mobileOuterPadding 100px;
 
     @include mq($tabletMediaQuery) {
         padding: 0 $tabletOuterPadding 125px;
-        display: flex;
-        flex-direction: row;
-
-        .project-left-col {
-            width: 50%;
-            margin-right: 10px;
-        }
-
-        .project-right-col {
-            width: 50%;
-            margin-left: 10px;
-            margin-top: -60px;
-        }
     }
 
-    .project-tile-wrapper {
-        position: relative;
-        margin-bottom: 20px;
-
-        .project-tile-copy {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-
-            h3, p {
-                color: white;
-            }
-
-            p {
-                font-size: 14px;
-            }
-        }
-
-        img {
-            width: 100%;
-            border-radius: 6px;
-        }
+    @include mq($laptopMediaQuery) {
+        padding: 0 $laptopOuterPadding 150px;
     }
-    
+
+    @include mq($desktopMediaQuery) {
+        padding: 0 0 170px;
+    }
 }
+
 
 .other-work-outer {
     padding: 0 $mobileOuterPadding 100px;
@@ -72,8 +59,22 @@
         padding: 0 $tabletOuterPadding 125px;
     }
 
+    @include mq($laptopMediaQuery) {
+        padding: 0 $laptopOuterPadding 150px;
+    }
+
+    @include mq($desktopMediaQuery) {
+        padding: 0 0 170px;
+        max-width: 1190px;
+        margin: 0 auto;
+    }
+
     h2 {
         margin-bottom: 30px;
+
+        @include mq($desktopMediaQuery) {
+            margin-bottom: 50px;
+        }
     }
 
     .project-accordion {
@@ -98,6 +99,16 @@
             padding: 24px 26px;
         }
 
+        @include mq($laptopMediaQuery) {
+            font-size: 28px;
+            padding: 35px 50px;
+            border-radius: 10px;
+        }
+
+        @include mq($desktopMediaQuery) {
+            font-size: 36px;
+        }
+
         &:after {
             content: '\002B';
             font-size: 28px;
@@ -109,6 +120,10 @@
             @include mq($tabletMediaQuery) {
                 font-size: 32px;
             }
+
+            @include mq($desktopMediaQuery) {
+                font-size: 40px;
+            }
         }
     }
 
@@ -119,6 +134,10 @@
     
     .active {
         border-radius: 6px 6px 0 0;
+        
+        @include mq($laptopMediaQuery) {
+            border-radius: 10px 10px 0 0;
+        }
     }
     
     .project-panel {
@@ -134,11 +153,20 @@
             padding: 0 26px;
         }
 
+        @include mq($tabletMediaQuery) {
+            padding: 0 50px;
+            margin-bottom: 30px;
+        }
+
         p {
             padding-bottom: 20px;
 
             @include mq($tabletMediaQuery) {
                 width: 90%;
+            }
+
+            @include mq($tabletMediaQuery) {
+                padding-bottom: 35px;
             }
         }
 
@@ -152,6 +180,10 @@
                 justify-content: flex-end;
             }
 
+            @include mq($tabletMediaQuery) {
+                padding-bottom: 50px;
+            }
+
             button {
                 border: none;
                 background: none;
@@ -163,6 +195,10 @@
 
                 @include mq($tabletMediaQuery) {
                     padding: 15px 25px;
+                }
+
+                @include mq($laptopMediaQuery) {
+                    border-radius: 10px;
                 }
             }
 
