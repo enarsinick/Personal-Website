@@ -21,6 +21,15 @@
         }
     }
 
+    @include mq($laptopMediaQuery) {
+        margin: 160px 0;
+        padding: 0 $laptopOuterPadding;
+
+        h1 {
+            max-width: 660px !important;
+        }
+    }
+
     p {
         margin-bottom: 10px;
     }
@@ -30,6 +39,10 @@
 
     @include mq($tabletMediaQuery) {
         padding: 0 $tabletOuterPadding;
+    }
+
+    @include mq($laptopMediaQuery) {
+        padding: 0 $laptopOuterPadding;
     }
 
     .project-feature-image {
@@ -44,6 +57,11 @@
         @include mq($tabletMediaQuery) {
             height: 407px;
             border-radius: 6px;
+        }
+
+        @include mq($laptopMediaQuery) {
+            border-radius: 10px;
+            height: 670px;
         }
     
         img {
@@ -71,6 +89,14 @@
         }
     }
 
+    @include mq($laptopMediaQuery) {
+        padding: 150px $laptopOuterPadding;
+
+        p {
+            max-width: 65%;
+        }
+    }
+
     h2 {
         margin-bottom: 20px;
     }
@@ -93,6 +119,10 @@
                 border: none;
                 padding: 15px 25px;
                 border-radius: 6px;
+            }
+
+            @include mq($laptopMediaQuery) {
+                border-radius: 10px;
             }
         }
 
@@ -119,6 +149,10 @@
         padding: 0 $tabletOuterPadding 85px;
     }
 
+    @include mq($laptopMediaQuery) {
+        padding: 0 $laptopOuterPadding 110px;
+    }
+
     img {
         width: 100%;
         margin-bottom: 15px;
@@ -126,6 +160,10 @@
         @include mq($tabletMediaQuery) {
             border-radius: 6px;
             margin-bottom: 40px;
+        }
+
+        @include mq($laptopMediaQuery) {
+            border-radius: 10px;
         }
     }
 }
