@@ -30,6 +30,16 @@
         }
     }
 
+    @include mq($desktopMediaQuery) {
+        margin: 170px auto;
+        padding: 0;
+        width: $laptopMediaQuery;
+
+        h1 {
+            max-width: 870px !important;
+        }
+    }
+
     p {
         margin-bottom: 10px;
     }
@@ -43,6 +53,12 @@
 
     @include mq($laptopMediaQuery) {
         padding: 0 $laptopOuterPadding;
+    }
+
+    @include mq($desktopMediaQuery) {
+        padding: 0;
+        max-width: $desktopMediaQuery;
+        margin: 0 auto;
     }
 
     .project-feature-image {
@@ -62,6 +78,10 @@
         @include mq($laptopMediaQuery) {
             border-radius: 10px;
             height: 670px;
+        }
+
+        @include mq($desktopMediaQuery) {
+            height: 810px;
         }
     
         img {
@@ -95,6 +115,12 @@
         p {
             max-width: 65%;
         }
+    }
+
+    @include mq($desktopMediaQuery) {
+        padding: 170px 0;
+        max-width: $laptopMediaQuery;
+        margin: 0 auto;
     }
 
     h2 {
@@ -146,11 +172,17 @@
     padding: 0 0 100px;
 
     @include mq($tabletMediaQuery) {
-        padding: 0 $tabletOuterPadding 85px;
+        padding: 0 $tabletOuterPadding 120px;
     }
 
     @include mq($laptopMediaQuery) {
-        padding: 0 $laptopOuterPadding 110px;
+        padding: 0 $laptopOuterPadding 160px;
+    }
+
+    @include mq($desktopMediaQuery) {
+        padding: 0  0 170px;
+        max-width: $desktopMediaQuery;
+        margin: 0 auto;
     }
 
     img {
@@ -165,6 +197,14 @@
         @include mq($laptopMediaQuery) {
             border-radius: 10px;
         }
+
+        @include mq($desktopMediaQuery) {
+            margin-bottom: 80px;
+        }
+    }
+
+    img:last-child {
+        margin-bottom: 0;
     }
 }
 

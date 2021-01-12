@@ -7,7 +7,8 @@ html {
   height: 100%; }
 
 body {
-  height: 100%; }
+  height: 100%;
+  transition: background-color .5s; }
 
 .divider-line {
   margin: 0 25px;
@@ -16,6 +17,13 @@ body {
   @media (min-width: 768px) {
     .divider-line {
       margin: 0 32px; } }
+  @media (min-width: 1190px) {
+    .divider-line {
+      margin: 0 46px; } }
+  @media (min-width: 1434px) {
+    .divider-line {
+      margin: 0 auto;
+      max-width: 1434px; } }
 
 .featured-project-outer {
   padding: 100px 25px; }
@@ -957,6 +965,13 @@ footer {
       padding: 0 46px; }
       .project-intro-section h1 {
         max-width: 660px !important; } }
+  @media (min-width: 1434px) {
+    .project-intro-section {
+      margin: 170px auto;
+      padding: 0;
+      width: 1190px; }
+      .project-intro-section h1 {
+        max-width: 870px !important; } }
   .project-intro-section p {
     margin-bottom: 10px; }
 
@@ -967,6 +982,12 @@ footer {
 @media (min-width: 1190px) {
   .project-feature-image-outer {
     padding: 0 46px; } }
+
+@media (min-width: 1434px) {
+  .project-feature-image-outer {
+    padding: 0;
+    max-width: 1434px;
+    margin: 0 auto; } }
 
 .project-feature-image-outer .project-feature-image {
   height: 210px;
@@ -984,6 +1005,9 @@ footer {
     .project-feature-image-outer .project-feature-image {
       border-radius: 10px;
       height: 670px; } }
+  @media (min-width: 1434px) {
+    .project-feature-image-outer .project-feature-image {
+      height: 810px; } }
   .project-feature-image-outer .project-feature-image img {
     position: absolute;
     top: -16px;
@@ -1005,6 +1029,11 @@ footer {
       padding: 150px 46px; }
       .project-overview-outer p {
         max-width: 65%; } }
+  @media (min-width: 1434px) {
+    .project-overview-outer {
+      padding: 170px 0;
+      max-width: 1190px;
+      margin: 0 auto; } }
   .project-overview-outer h2 {
     margin-bottom: 20px; }
   .project-overview-outer .project-btn-wrapper {
@@ -1043,10 +1072,15 @@ footer {
   padding: 0 0 100px; }
   @media (min-width: 768px) {
     .project-images-outer {
-      padding: 0 32px 85px; } }
+      padding: 0 32px 120px; } }
   @media (min-width: 1190px) {
     .project-images-outer {
-      padding: 0 46px 110px; } }
+      padding: 0 46px 160px; } }
+  @media (min-width: 1434px) {
+    .project-images-outer {
+      padding: 0  0 170px;
+      max-width: 1434px;
+      margin: 0 auto; } }
   .project-images-outer img {
     width: 100%;
     margin-bottom: 15px; }
@@ -1057,6 +1091,11 @@ footer {
     @media (min-width: 1190px) {
       .project-images-outer img {
         border-radius: 10px; } }
+    @media (min-width: 1434px) {
+      .project-images-outer img {
+        margin-bottom: 80px; } }
+  .project-images-outer img:last-child {
+    margin-bottom: 0; }
 
 .other-projects-outer {
   padding: 100px 25px; }
@@ -1512,7 +1551,8 @@ header {
   header nav {
     display: flex;
     justify-content: space-between;
-    align-items: center; }
+    align-items: center;
+    /* The side navigation menu */ }
     header nav .logo {
       width: 60px; }
       @media (min-width: 768px) {
@@ -1533,3 +1573,37 @@ header {
           padding: 15px 25px;
           border-radius: 10px;
           cursor: pointer; } }
+    header nav .sidenav {
+      height: 100%;
+      /* 100% Full-height */
+      width: 0;
+      /* 0 width - change this with JavaScript */
+      position: fixed;
+      /* Stay in place */
+      z-index: 1;
+      /* Stay on top */
+      top: 0;
+      /* Stay at the top */
+      right: 0;
+      background-color: #fff;
+      overflow-x: hidden;
+      /* Disable horizontal scroll */
+      padding-top: 60px;
+      /* Place content 60px from the top */
+      transition: 0.5s;
+      /* 0.5 second transition effect to slide in the sidenav */ }
+      header nav .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s; }
+        header nav .sidenav a:hover {
+          color: #f1f1f1; }
+      header nav .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px; }
