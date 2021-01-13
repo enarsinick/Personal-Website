@@ -1574,10 +1574,8 @@ header {
           border-radius: 10px;
           cursor: pointer; } }
     header nav .sidenav {
-      height: 100%;
-      /* 100% Full-height */
+      height: 100vh;
       width: 0;
-      /* 0 width - change this with JavaScript */
       position: fixed;
       /* Stay in place */
       z-index: 1;
@@ -1591,14 +1589,20 @@ header {
       padding-top: 60px;
       /* Place content 60px from the top */
       transition: 0.5s;
-      /* 0.5 second transition effect to slide in the sidenav */ }
+      /* 0.5 second transition effect to slide in the sidenav */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center; }
       header nav .sidenav a {
-        padding: 8px 8px 8px 32px;
         text-decoration: none;
-        font-size: 25px;
-        color: #818181;
+        font-size: 36px;
         display: block;
-        transition: 0.3s; }
+        transition: 0.3s;
+        font-family: "Gilroy-SemiBold", Helvetica, sans-serif;
+        color: #000000;
+        margin: 10px 0; }
         header nav .sidenav a:hover {
           color: #f1f1f1; }
       header nav .sidenav .closebtn {
@@ -1607,3 +1611,7 @@ header {
         right: 25px;
         font-size: 36px;
         margin-left: 50px; }
+      header nav .sidenav .menu-social-icons {
+        position: absolute; }
+        header nav .sidenav .menu-social-icons img {
+          margin: 0 3px; }

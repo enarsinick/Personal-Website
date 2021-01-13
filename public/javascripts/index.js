@@ -15,7 +15,7 @@ for (i = 0; i < acc.length; i++) {
 
 /* Set the width of the side navigation to 250px */
 function openNav() {
-  document.getElementById("mySidenav").style.width = "562px";
+  document.getElementById("mySidenav").style.width = "100%";
   document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
 }
 

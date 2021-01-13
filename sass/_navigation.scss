@@ -48,8 +48,8 @@ header {
 
         /* The side navigation menu */
         .sidenav {
-            height: 100%; /* 100% Full-height */
-            width: 0; /* 0 width - change this with JavaScript */
+            height: 100vh;
+            width: 0;
             position: fixed; /* Stay in place */
             z-index: 1; /* Stay on top */
             top: 0; /* Stay at the top */
@@ -58,14 +58,20 @@ header {
             overflow-x: hidden; /* Disable horizontal scroll */
             padding-top: 60px; /* Place content 60px from the top */
             transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
 
             a {
-                padding: 8px 8px 8px 32px;
                 text-decoration: none;
-                font-size: 25px;
-                color: #818181;
+                font-size: 36px;
                 display: block;
                 transition: 0.3s;
+                font-family: $main-font-semibold;
+                color: $headerColour;
+                margin: 10px 0;
 
                 &:hover {
                     color: #f1f1f1;
@@ -78,6 +84,14 @@ header {
                 right: 25px;
                 font-size: 36px;
                 margin-left: 50px;
+            }
+
+            .menu-social-icons {
+                position: absolute;
+                
+                img {
+                    margin: 0 3px;
+                }
             }
         }
     }
