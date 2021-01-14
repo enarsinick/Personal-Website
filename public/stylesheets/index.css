@@ -6,9 +6,16 @@
 html {
   height: 100%; }
 
+.stop-scroll {
+  overflow: hidden; }
+
 body {
   height: 100%;
-  transition: background-color .5s; }
+  transition: background-color .5s;
+  -ms-overflow-style: none;
+  scrollbar-width: none; }
+  body::-webkit-scrollbar {
+    display: none; }
 
 .divider-line {
   margin: 0 25px;
@@ -1586,8 +1593,6 @@ header {
       background-color: #fff;
       overflow-x: hidden;
       /* Disable horizontal scroll */
-      padding-top: 60px;
-      /* Place content 60px from the top */
       transition: 0.5s;
       /* 0.5 second transition effect to slide in the sidenav */
       display: flex;
@@ -1595,6 +1600,21 @@ header {
       justify-content: center;
       align-items: center;
       text-align: center; }
+      header nav .sidenav .closebtn {
+        position: absolute;
+        top: 14px;
+        right: 25px;
+        font-size: 36px; }
+        @media (min-width: 768px) {
+          header nav .sidenav .closebtn {
+            font-size: 45px;
+            right: 32px;
+            top: 12px; } }
+        @media (min-width: 1190px) {
+          header nav .sidenav .closebtn {
+            font-size: 54px;
+            right: 46px;
+            top: 24px; } }
       header nav .sidenav a {
         text-decoration: none;
         font-size: 36px;
@@ -1603,15 +1623,28 @@ header {
         font-family: "Gilroy-SemiBold", Helvetica, sans-serif;
         color: #000000;
         margin: 10px 0; }
+        @media (min-width: 768px) {
+          header nav .sidenav a {
+            font-size: 54px;
+            margin: 20px 0; } }
         header nav .sidenav a:hover {
           color: #f1f1f1; }
-      header nav .sidenav .closebtn {
-        position: absolute;
-        top: 0;
-        right: 25px;
-        font-size: 36px;
-        margin-left: 50px; }
       header nav .sidenav .menu-social-icons {
-        position: absolute; }
+        position: absolute;
+        bottom: 30px;
+        right: 0;
+        left: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center; }
+        @media (min-width: 768px) {
+          header nav .sidenav .menu-social-icons {
+            bottom: 60px; } }
         header nav .sidenav .menu-social-icons img {
-          margin: 0 3px; }
+          margin: 0 3px;
+          width: 41px; }
+          @media (min-width: 768px) {
+            header nav .sidenav .menu-social-icons img {
+              width: 50px;
+              margin: 0 5px; } }

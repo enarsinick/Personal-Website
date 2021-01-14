@@ -15,14 +15,20 @@ for (i = 0; i < acc.length; i++) {
 
 /* Set the width of the side navigation to 250px */
 function openNav() {
-  document.getElementById("mySidenav").style.width = "100%";
+  if (window.innerWidth < 1190) {
+    document.getElementById("mySidenav").style.width = "100%";
+  } else {
+    document.getElementById("mySidenav").style.width = "560px";
+  }
   document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+  document.body.classList.add('stop-scroll');
 }
 
 /* Set the width of the side navigation to 0 */
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
   document.body.style.backgroundColor = "white";
+  document.body.classList.remove('stop-scroll');
 }
 
 
