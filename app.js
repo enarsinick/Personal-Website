@@ -7,6 +7,7 @@ var hbs = require('hbs');
 
 
 var indexRouter = require('./routes/index');
+var workRouter = require('./routes/work');
 
 var app = express();
 
@@ -22,6 +23,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/work', workRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
