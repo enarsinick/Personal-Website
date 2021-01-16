@@ -62,7 +62,7 @@ header {
             right: 0;
             background-color: #fff;
             overflow-x: hidden; /* Disable horizontal scroll */
-            transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+            transition: 0.5s ease-in-out; 
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -70,6 +70,7 @@ header {
             text-align: center;
 
             .closebtn {
+                opacity: 0;
                 position: absolute;
                 top: 12px;
                 right: 8px;
@@ -78,7 +79,7 @@ header {
                 height: 62px;
                 margin-right: 0;
                 border-radius: 100%;
-                transition: 0.2s;
+                transition: opacity 1s, background-color 0.2s;
                 cursor: pointer;
                 background: url("../images/menu-icon-closed.svg") center center/18px no-repeat;
 
@@ -103,26 +104,35 @@ header {
                 }
             }
 
-            a {
-                text-decoration: none;
-                font-size: 36px;
-                display: block;
-                transition: 0.3s;
-                font-family: $main-font-semibold;
-                color: $headerColour;
-                margin: 10px 0;
+            .menu-items {
+                transition: 1s;
+                transform: translateX(20px);
+                opacity: 0;
 
-                @include mq($tabletMediaQuery) {
-                    font-size: 54px;
-                    margin: 20px 0;
-                }
-
-                &:hover {
-                    color: #f1f1f1;
+                a {
+                    text-decoration: none;
+                    font-size: 36px;
+                    display: block;
+                    transition: 0.3s;
+                    font-family: $main-font-semibold;
+                    color: $headerColour;
+                    margin: 10px 0;
+    
+                    @include mq($tabletMediaQuery) {
+                        font-size: 54px;
+                        margin: 20px 0;
+                    }
+    
+                    &:hover {
+                        color: #f1f1f1;
+                    }
                 }
             }
 
             .menu-social-icons {
+                opacity: 0;
+                transform: translateX(20px);
+                transition: 1s;
                 position: absolute;
                 bottom: 30px;
                 right: 0;
@@ -141,6 +151,8 @@ header {
                     padding-bottom: 1px;
                     border-bottom: 2px solid $buttonColour;
                     color: $buttonColour;
+                    font-family: $main-font-semibold;
+                    text-decoration: none;
                     margin: 0 0 25px !important;
 
                     @include mq($tabletMediaQuery) {
