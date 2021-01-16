@@ -3,24 +3,29 @@
         <div>
             <a href="/"><img class="logo" src="../images/logo1.svg"></a>
         </div>
-        <div>
+        <div class="menu-container-right">
              <button class="menu-contact-btn">Contact</button>
             <div id="mySidenav" class="sidenav">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                {{!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> --}}
+                <div class="closebtn" onclick="closeNav()"></div>
                 <div class="menu-items">
                     <a href="#">Home</a>
                     <a href="#">About</a>
                     <a href="#">Work</a>
                     <a href="#">Contact</a>
                 </div>
+                
                 <div class="menu-social-icons">
-                    <img src="../images/ig-menu.png">
-                    <img src="../images/dribbble-menu.png">
-                    <img src="../images/linkedin-menu.png">
-                    <img src="../images/github-menu.png"> 
+                    <a class="menu-email-link" href="mailto:nxdmedia@gmail.com">nxdmedia@gmail.com</a>
+                    <div>
+                        <img src="../images/ig-menu.png">
+                        <img src="../images/dribbble-menu.png">
+                        <img src="../images/linkedin-menu.png">
+                        <img src="../images/github-menu.png"> 
+                    </div>
                 </div>
             </div>
-            <img onclick="openNav()" src="../images/menu-icon.png">
+            <div class="menu-button-open" onclick="openNav()"></div>
         </div>
     </nav>
 </header>

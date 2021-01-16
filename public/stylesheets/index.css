@@ -1545,16 +1545,16 @@ template {
   display: none; }
 
 header {
-  padding: 35px 25px 0; }
+  padding: 12px 25px 0; }
   @media (min-width: 768px) {
     header {
-      padding: 45px 32px 0; } }
+      padding: 20px 32px 0; } }
   @media (min-width: 1190px) {
     header {
-      padding: 52px 46px 0; } }
+      padding: 30px 46px 0; } }
   @media (min-width: 1434px) {
     header {
-      padding: 52px 60px 0; } }
+      padding: 40px 60px 0; } }
   header nav {
     display: flex;
     justify-content: space-between;
@@ -1565,6 +1565,10 @@ header {
       @media (min-width: 768px) {
         header nav .logo {
           width: 70px; } }
+    header nav .menu-container-right {
+      display: flex;
+      align-items: center;
+      margin-right: -18px; }
     header nav .menu-contact-btn {
       display: none; }
       @media (min-width: 1190px) {
@@ -1602,19 +1606,31 @@ header {
       text-align: center; }
       header nav .sidenav .closebtn {
         position: absolute;
-        top: 14px;
-        right: 25px;
-        font-size: 36px; }
+        top: 12px;
+        right: 8px;
+        font-size: 36px;
+        width: 62px;
+        height: 62px;
+        margin-right: 0;
+        border-radius: 100%;
+        transition: 0.2s;
+        cursor: pointer;
+        background: url("../images/menu-icon-closed.svg") center center/18px no-repeat; }
         @media (min-width: 768px) {
           header nav .sidenav .closebtn {
-            font-size: 45px;
-            right: 32px;
-            top: 12px; } }
+            top: 21px;
+            right: 15px; } }
         @media (min-width: 1190px) {
           header nav .sidenav .closebtn {
-            font-size: 54px;
-            right: 46px;
-            top: 24px; } }
+            top: 30px;
+            right: 30px; }
+            header nav .sidenav .closebtn:hover {
+              background-color: #EDFAF6; } }
+        @media (min-width: 1434px) {
+          header nav .sidenav .closebtn {
+            top: 40px;
+            right: 42px;
+            background: url("../images/menu-icon-closed.svg") center center/20px no-repeat; } }
       header nav .sidenav a {
         text-decoration: none;
         font-size: 36px;
@@ -1635,12 +1651,21 @@ header {
         right: 0;
         left: 0;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
         align-items: center; }
         @media (min-width: 768px) {
           header nav .sidenav .menu-social-icons {
             bottom: 60px; } }
+        header nav .sidenav .menu-social-icons .menu-email-link {
+          font-size: 16px;
+          padding-bottom: 1px;
+          border-bottom: 2px solid #E95E2A;
+          color: #E95E2A;
+          margin: 0 0 25px !important; }
+          @media (min-width: 768px) {
+            header nav .sidenav .menu-social-icons .menu-email-link {
+              font-size: 20px; } }
         header nav .sidenav .menu-social-icons img {
           margin: 0 3px;
           width: 41px; }
@@ -1648,3 +1673,14 @@ header {
             header nav .sidenav .menu-social-icons img {
               width: 50px;
               margin: 0 5px; } }
+    header nav .menu-button-open {
+      width: 62px;
+      height: 62px;
+      margin-right: 0;
+      border-radius: 100%;
+      transition: 0.2s;
+      cursor: pointer;
+      background: url("../images/menu-icon-open.svg") center center/22px no-repeat; }
+      @media (min-width: 1190px) {
+        header nav .menu-button-open:hover {
+          background-color: #EDFAF6; } }

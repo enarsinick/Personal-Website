@@ -1,18 +1,18 @@
 @import 'variables';
 
 header {
-    padding: 35px 25px 0;
+    padding: 12px 25px 0;
 
     @include mq($tabletMediaQuery) {
-        padding: 45px $tabletOuterPadding 0;
+        padding: 20px $tabletOuterPadding 0;
     }
 
     @include mq($laptopMediaQuery) {
-        padding: 52px $laptopOuterPadding 0;
+        padding: 30px $laptopOuterPadding 0;
     }
 
     @include mq($desktopMediaQuery) {
-        padding: 52px $desktopOuterPadding 0;
+        padding: 40px $desktopOuterPadding 0;
     }
 
     nav {
@@ -26,6 +26,12 @@ header {
             @include mq($tabletMediaQuery) {
                 width: 70px;
             }
+        }
+
+        .menu-container-right {
+            display: flex;
+            align-items: center;
+            margin-right: -18px;
         }
 
         .menu-contact-btn {
@@ -65,20 +71,35 @@ header {
 
             .closebtn {
                 position: absolute;
-                top: 14px;
-                right: 25px;
+                top: 12px;
+                right: 8px;
                 font-size: 36px;
+                width: 62px;
+                height: 62px;
+                margin-right: 0;
+                border-radius: 100%;
+                transition: 0.2s;
+                cursor: pointer;
+                background: url("../images/menu-icon-closed.svg") center center/18px no-repeat;
 
                 @include mq($tabletMediaQuery) {
-                    font-size: 45px;
-                    right: $tabletOuterPadding;
-                    top: 12px;
+                    top: 21px;
+                    right: 15px;
                 }
 
                 @include mq($laptopMediaQuery) {
-                    font-size: 54px;
-                    right: 46px;
-                    top: 24px;
+                    top: 30px;
+                    right: 30px;
+
+                    &:hover {
+                        background-color: #EDFAF6;
+                    }
+                }
+
+                @include mq($desktopMediaQuery) {
+                    top: 40px;
+                    right: 42px;
+                    background: url("../images/menu-icon-closed.svg") center center/20px no-repeat;
                 }
             }
 
@@ -107,12 +128,24 @@ header {
                 right: 0;
                 left: 0;
                 display: flex;
-                flex-direction: row;
+                flex-direction: column;
                 justify-content: center;
                 align-items: center;
 
                 @include mq($tabletMediaQuery) {
                     bottom: 60px;
+                }
+
+                .menu-email-link {
+                    font-size: 16px;
+                    padding-bottom: 1px;
+                    border-bottom: 2px solid $buttonColour;
+                    color: $buttonColour;
+                    margin: 0 0 25px !important;
+
+                    @include mq($tabletMediaQuery) {
+                        font-size: 20px;
+                    }
                 }
                 
                 img {
@@ -123,6 +156,22 @@ header {
                         width: 50px;
                         margin: 0 5px;
                     }
+                }
+            }
+        }
+
+        .menu-button-open {
+            width: 62px;
+            height: 62px;
+            margin-right: 0;
+            border-radius: 100%;
+            transition: 0.2s;
+            cursor: pointer;
+            background: url("../images/menu-icon-open.svg") center center/22px no-repeat;
+
+            @include mq($laptopMediaQuery) {
+                &:hover {
+                    background-color: #EDFAF6;
                 }
             }
         }
