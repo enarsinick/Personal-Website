@@ -51,15 +51,6 @@ header {
             @include mq($laptopMediaQuery) {
                 display: initial;
                 border: none;
-                background: none;
-                font-size: 16px;
-                font-family: $main-font-semibold;
-                color: $buttonColour;
-                margin-right: 40px;
-                background-color: #FDF0EC;
-                padding: 15px 25px;
-                border-radius: 10px;
-                cursor: pointer;
                 z-index: 2; /* Stay on top */
             }
         }
@@ -92,7 +83,7 @@ header {
                 height: 62px;
                 margin-right: 0;
                 border-radius: 100%;
-                transition: opacity 1s, background-color 0.2s;
+                transition: opacity 1s, background-color 0.3s ease-in-out;
                 cursor: pointer;
                 background: url("../images/menu-icon-closed.svg") center center/18px no-repeat;
 
@@ -106,7 +97,7 @@ header {
                     right: 30px;
 
                     &:hover {
-                        background-color: #EDFAF6;
+                        background-color: rgba(0,0,0,0.04);
                     }
                 }
 
@@ -143,7 +134,7 @@ header {
                 }
             }
 
-            .menu-social-icons {
+            .menu-social-icons-container {
                 z-index: 3; /* Stay on top */
                 opacity: 0;
                 transform: translateX(20px);
@@ -174,14 +165,60 @@ header {
                         font-size: 20px;
                     }
                 }
-                
-                img {
-                    margin: 0 3px;
-                    width: 41px;
 
-                    @include mq($tabletMediaQuery) {
-                        width: 50px;
+                .menu-social-icons-wrapper {
+                    display: flex;
+                    flex-direction: row;
+
+                    .menu-social-icon {
                         margin: 0 5px;
+                        height: 41px;
+                        width: 41px;
+                        border-radius: 100%;
+                        background-color: #FDF0EC !important;
+                        cursor: pointer;
+                        transition: background-color 0.2s ease-in-out;
+
+                        @include mq($tabletMediaQuery) {
+                            width: 50px;
+                            height: 50px;
+
+                            &:hover {
+                                background-color: #FBE1D8 !important;
+                            }
+                        }
+                    }
+
+                    .menu-social-icon:nth-child(1) {
+                        background:  url("../images/instagram-menu.svg") center center/15px no-repeat;
+                        
+                        @include mq($tabletMediaQuery) {
+                            background:  url("../images/instagram-menu.svg") center center/17px no-repeat;
+                        }
+                    }
+
+                    .menu-social-icon:nth-child(2) {
+                        background:  url("../images/dribbble-menu.svg") center center/16px no-repeat;
+
+                        @include mq($tabletMediaQuery) {
+                            background:  url("../images/dribbble-menu.svg") center center/19px no-repeat;
+                        }
+                    }
+
+                    .menu-social-icon:nth-child(3) {
+                        background:  url("../images/linkedin-menu.svg") center center/15px no-repeat;
+
+                        @include mq($tabletMediaQuery) {
+                            background:  url("../images/linkedin-menu.svg") center center/17px no-repeat;
+                        }
+                    }
+
+                    .menu-social-icon:nth-child(4) {
+                        background:  url("../images/github-menu.svg") center center/17px no-repeat;
+
+                        @include mq($tabletMediaQuery) {
+                            background:  url("../images/github-menu.svg") center center/19px no-repeat;
+                        }
                     }
                 }
             }
@@ -193,13 +230,13 @@ header {
             height: 62px;
             margin-right: 0;
             border-radius: 100%;
-            transition: 0.2s;
+            transition: 0.3s background-color ease-in-out;
             cursor: pointer;
             background: url("../images/menu-icon-open.svg") center center/22px no-repeat;
 
             @include mq($laptopMediaQuery) {
                 &:hover {
-                    background-color: #EDFAF6;
+                    background-color: rgba(0,0,0,0.04);
                 }
             }
         }

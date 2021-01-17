@@ -1,7 +1,7 @@
 var acc = document.querySelectorAll("#accordion");
 const closebtn = document.querySelector('.closebtn');
 const menuItems = document.querySelector('.menu-items');
-const menuSocialDiv = document.querySelector('.menu-social-icons');
+const menuSocialDiv = document.querySelector('.menu-social-icons-container');
 const menuOverlay = document.querySelector('.menu-overlay');
 const logo = document.querySelector('.logo-wrapper');
 var i;

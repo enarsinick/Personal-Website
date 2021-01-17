@@ -8,6 +8,7 @@
     color: $buttonColour;
     padding-bottom: 3px;
     border-bottom: solid 2.5px $buttonColour;
+    transition: 0.2s;
 
     @include mq($laptopMediaQuery) {
         display: initial;
@@ -21,6 +22,11 @@
         padding: 15px 25px;
         border-radius: 10px;
         cursor: pointer;
+
+        &:hover {
+            background-color: $buttonColour;
+            color: white;
+        }
     }
 }
 

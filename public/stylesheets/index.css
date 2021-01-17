@@ -1236,7 +1236,8 @@ p {
   font-family: "Gilroy-SemiBold", Helvetica, sans-serif;
   color: #E95E2A;
   padding-bottom: 3px;
-  border-bottom: solid 2.5px #E95E2A; }
+  border-bottom: solid 2.5px #E95E2A;
+  transition: 0.2s; }
   @media (min-width: 1190px) {
     .primary-btn {
       display: initial;
@@ -1249,7 +1250,10 @@ p {
       background-color: #FDF0EC;
       padding: 15px 25px;
       border-radius: 10px;
-      cursor: pointer; } }
+      cursor: pointer; }
+      .primary-btn:hover {
+        background-color: #E95E2A;
+        color: white; } }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -1588,15 +1592,6 @@ header {
         header nav .menu-contact-btn {
           display: initial;
           border: none;
-          background: none;
-          font-size: 16px;
-          font-family: "Gilroy-SemiBold", Helvetica, sans-serif;
-          color: #E95E2A;
-          margin-right: 40px;
-          background-color: #FDF0EC;
-          padding: 15px 25px;
-          border-radius: 10px;
-          cursor: pointer;
           z-index: 2;
           /* Stay on top */ } }
     header nav .sidenav {
@@ -1630,7 +1625,7 @@ header {
         height: 62px;
         margin-right: 0;
         border-radius: 100%;
-        transition: opacity 1s, background-color 0.2s;
+        transition: opacity 1s, background-color 0.3s ease-in-out;
         cursor: pointer;
         background: url("../images/menu-icon-closed.svg") center center/18px no-repeat; }
         @media (min-width: 768px) {
@@ -1642,7 +1637,7 @@ header {
             top: 30px;
             right: 30px; }
             header nav .sidenav .closebtn:hover {
-              background-color: #EDFAF6; } }
+              background-color: rgba(0, 0, 0, 0.04); } }
         @media (min-width: 1434px) {
           header nav .sidenav .closebtn {
             top: 40px;
@@ -1668,7 +1663,7 @@ header {
               margin: 20px 0; } }
           header nav .sidenav .menu-items a:hover {
             color: #f1f1f1; }
-      header nav .sidenav .menu-social-icons {
+      header nav .sidenav .menu-social-icons-container {
         z-index: 3;
         /* Stay on top */
         opacity: 0;
@@ -1683,9 +1678,9 @@ header {
         justify-content: center;
         align-items: center; }
         @media (min-width: 768px) {
-          header nav .sidenav .menu-social-icons {
+          header nav .sidenav .menu-social-icons-container {
             bottom: 60px; } }
-        header nav .sidenav .menu-social-icons .menu-email-link {
+        header nav .sidenav .menu-social-icons-container .menu-email-link {
           font-size: 16px;
           padding-bottom: 1px;
           border-bottom: 2px solid #E95E2A;
@@ -1694,15 +1689,45 @@ header {
           text-decoration: none;
           margin: 0 0 25px !important; }
           @media (min-width: 768px) {
-            header nav .sidenav .menu-social-icons .menu-email-link {
+            header nav .sidenav .menu-social-icons-container .menu-email-link {
               font-size: 20px; } }
-        header nav .sidenav .menu-social-icons img {
-          margin: 0 3px;
-          width: 41px; }
-          @media (min-width: 768px) {
-            header nav .sidenav .menu-social-icons img {
-              width: 50px;
-              margin: 0 5px; } }
+        header nav .sidenav .menu-social-icons-container .menu-social-icons-wrapper {
+          display: flex;
+          flex-direction: row; }
+          header nav .sidenav .menu-social-icons-container .menu-social-icons-wrapper .menu-social-icon {
+            margin: 0 5px;
+            height: 41px;
+            width: 41px;
+            border-radius: 100%;
+            background-color: #FDF0EC !important;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out; }
+            @media (min-width: 768px) {
+              header nav .sidenav .menu-social-icons-container .menu-social-icons-wrapper .menu-social-icon {
+                width: 50px;
+                height: 50px; }
+                header nav .sidenav .menu-social-icons-container .menu-social-icons-wrapper .menu-social-icon:hover {
+                  background-color: #FBE1D8 !important; } }
+          header nav .sidenav .menu-social-icons-container .menu-social-icons-wrapper .menu-social-icon:nth-child(1) {
+            background: url("../images/instagram-menu.svg") center center/15px no-repeat; }
+            @media (min-width: 768px) {
+              header nav .sidenav .menu-social-icons-container .menu-social-icons-wrapper .menu-social-icon:nth-child(1) {
+                background: url("../images/instagram-menu.svg") center center/17px no-repeat; } }
+          header nav .sidenav .menu-social-icons-container .menu-social-icons-wrapper .menu-social-icon:nth-child(2) {
+            background: url("../images/dribbble-menu.svg") center center/16px no-repeat; }
+            @media (min-width: 768px) {
+              header nav .sidenav .menu-social-icons-container .menu-social-icons-wrapper .menu-social-icon:nth-child(2) {
+                background: url("../images/dribbble-menu.svg") center center/19px no-repeat; } }
+          header nav .sidenav .menu-social-icons-container .menu-social-icons-wrapper .menu-social-icon:nth-child(3) {
+            background: url("../images/linkedin-menu.svg") center center/15px no-repeat; }
+            @media (min-width: 768px) {
+              header nav .sidenav .menu-social-icons-container .menu-social-icons-wrapper .menu-social-icon:nth-child(3) {
+                background: url("../images/linkedin-menu.svg") center center/17px no-repeat; } }
+          header nav .sidenav .menu-social-icons-container .menu-social-icons-wrapper .menu-social-icon:nth-child(4) {
+            background: url("../images/github-menu.svg") center center/17px no-repeat; }
+            @media (min-width: 768px) {
+              header nav .sidenav .menu-social-icons-container .menu-social-icons-wrapper .menu-social-icon:nth-child(4) {
+                background: url("../images/github-menu.svg") center center/19px no-repeat; } }
     header nav .menu-button-open {
       z-index: 2;
       /* Stay on top */
@@ -1710,9 +1735,9 @@ header {
       height: 62px;
       margin-right: 0;
       border-radius: 100%;
-      transition: 0.2s;
+      transition: 0.3s background-color ease-in-out;
       cursor: pointer;
       background: url("../images/menu-icon-open.svg") center center/22px no-repeat; }
       @media (min-width: 1190px) {
         header nav .menu-button-open:hover {
-          background-color: #EDFAF6; } }
+          background-color: rgba(0, 0, 0, 0.04); } }
