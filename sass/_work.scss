@@ -192,6 +192,8 @@
                 color: #E95E2A;
                 padding: 15px 0;
                 margin: 5px 0;
+                cursor: pointer;
+                transition: 0.2s;
 
                 @include mq($tabletMediaQuery) {
                     padding: 15px 25px;
@@ -205,6 +207,15 @@
             button:nth-child(2) {
                 background-color: #FBEEEA;
                 border-radius: 6px;
+
+                @include mq($laptopMediaQuery) {
+                    border-radius: 10px;
+
+                    &:hover {
+                        background-color: $buttonColour;
+                        color: white;
+                    }
+                }
             }
         }
     }

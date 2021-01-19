@@ -139,6 +139,8 @@
             padding-bottom: 3px;
             margin-right: 20px;
             border-bottom: solid 2.5px $buttonColour;
+            cursor: pointer;
+            
 
             @include mq($tabletMediaQuery) {
                 background-color: #FDF0EC;
@@ -149,6 +151,12 @@
 
             @include mq($laptopMediaQuery) {
                 border-radius: 10px;
+                transition: 0.2s;
+
+                &:hover {
+                    background-color: $buttonColour;
+                    color: white;
+                }
             }
         }
 
@@ -160,6 +168,7 @@
             color: $buttonColour;
             padding-bottom: 3px;
             border-bottom: solid 2.5px $buttonColour;
+            cursor: pointer;
 
             @include mq($tabletMediaQuery) {
                 margin-left: 15px;

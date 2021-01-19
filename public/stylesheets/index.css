@@ -942,7 +942,9 @@ footer {
         font-family: "Gilroy-SemiBold", Helvetica, sans-serif;
         color: #E95E2A;
         padding: 15px 0;
-        margin: 5px 0; }
+        margin: 5px 0;
+        cursor: pointer;
+        transition: 0.2s; }
         @media (min-width: 768px) {
           .other-work-outer .project-panel .other-project-btn-section button {
             padding: 15px 25px; } }
@@ -952,6 +954,12 @@ footer {
       .other-work-outer .project-panel .other-project-btn-section button:nth-child(2) {
         background-color: #FBEEEA;
         border-radius: 6px; }
+        @media (min-width: 1190px) {
+          .other-work-outer .project-panel .other-project-btn-section button:nth-child(2) {
+            border-radius: 10px; }
+            .other-work-outer .project-panel .other-project-btn-section button:nth-child(2):hover {
+              background-color: #E95E2A;
+              color: white; } }
 
 .project-intro-section {
   height: calc(100vh - 110px - 53px);
@@ -1057,7 +1065,8 @@ footer {
       color: #E95E2A;
       padding-bottom: 3px;
       margin-right: 20px;
-      border-bottom: solid 2.5px #E95E2A; }
+      border-bottom: solid 2.5px #E95E2A;
+      cursor: pointer; }
       @media (min-width: 768px) {
         .project-overview-outer .project-btn-wrapper .project-btn-primary {
           background-color: #FDF0EC;
@@ -1066,7 +1075,11 @@ footer {
           border-radius: 6px; } }
       @media (min-width: 1190px) {
         .project-overview-outer .project-btn-wrapper .project-btn-primary {
-          border-radius: 10px; } }
+          border-radius: 10px;
+          transition: 0.2s; }
+          .project-overview-outer .project-btn-wrapper .project-btn-primary:hover {
+            background-color: #E95E2A;
+            color: white; } }
     .project-overview-outer .project-btn-wrapper .project-btn-secondary {
       border: none;
       background: none;
@@ -1074,7 +1087,8 @@ footer {
       font-family: "Gilroy-SemiBold", Helvetica, sans-serif;
       color: #E95E2A;
       padding-bottom: 3px;
-      border-bottom: solid 2.5px #E95E2A; }
+      border-bottom: solid 2.5px #E95E2A;
+      cursor: pointer; }
       @media (min-width: 768px) {
         .project-overview-outer .project-btn-wrapper .project-btn-secondary {
           margin-left: 15px; } }
@@ -1662,7 +1676,7 @@ header {
               font-size: 54px;
               margin: 20px 0; } }
           header nav .sidenav .menu-items a:hover {
-            color: #f1f1f1; }
+            color: rgba(0, 0, 0, 0.6); }
       header nav .sidenav .menu-social-icons-container {
         z-index: 3;
         /* Stay on top */
