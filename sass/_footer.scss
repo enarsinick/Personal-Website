@@ -138,6 +138,13 @@ footer {
                         font-family: $main-font-medium;
                         text-decoration: none;
                         margin-left: 30px;
+
+                        @include mq($tabletMediaQuery) {
+                            transition: 0.3s;
+                            &:hover {
+                                color: rgba(255,255,255,0.7)
+                            } 
+                        }
                     }
                 }
             }

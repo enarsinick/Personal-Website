@@ -53,8 +53,8 @@ function closeNav() {
   }, 900);
 }
 
-
 // Initialise butter.js
 butter.init({
-  wrapperDamper: 0.06
+  wrapperDamper: 0.06,
+  cancelOnTouch: true
 });

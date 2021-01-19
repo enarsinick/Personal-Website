@@ -53,6 +53,34 @@ body {
     transform: translateX(0) !important;
 }
 
+.down-arrow {
+    height: 37px;
+    width: 37px;
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    background-color: #025450 !important;
+    transform: translateX(-50%);
+    border-radius: 6px;
+    background: url("../images/arrow-down.svg") center center/12px no-repeat;
+
+    @include mq($tabletMediaQuery) {
+        height: 40px;
+        width: 40px;
+        background: url("../images/arrow-down.svg") center center/16px no-repeat;
+    }
+
+    @include mq($laptopMediaQuery) {
+        transition: 0.2s ease-in-out;
+        // cursor: pointer;
+        height: 55px;
+        width: 55px;
+        top: -25px;
+        border-radius: 10px;
+        background: url("../images/arrow-down.svg") center center/20px no-repeat;
+    }
+}
+
 
 
 

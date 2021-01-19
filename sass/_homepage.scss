@@ -58,19 +58,6 @@
         @include mq($desktopMediaQuery) {
             height: 92vh;
         }
-    
-        img {
-            position: absolute;
-            top: -16px;
-            left: 50%;
-            transform: translateX(-50%);
-
-            @include mq($desktopMediaQuery) {
-                height: 55px;
-                width: 55px;
-                top: -25px;
-            }
-        }
     }
 }
 
