@@ -150,19 +150,49 @@ footer {
             }
 
             .social-icon-wrapper {
+                display: flex;
+                flex-direction: row;
 
                 @include mq($tabletMediaQuery) {
                     margin-top: 35px;
-                    text-align: right;
+                    justify-content: flex-end;
                 }
         
-                img {
+                .footer-social-icon {
                     padding: 0;
-                    padding: 0 3px;
+                    height: 42px;
+                    width: 42px;
+                    background-color: rgba(255,255,255,0.2) !important;
+                    margin: 0 4px;
+                    border-radius: 6px;
+                    cursor: pointer;
+                    transition: background-color 0.2s ease-in-out;
 
                     @include mq($tabletMediaQuery) {
-                        padding: 0 6px;
+                        margin: 0 5px;
                     }
+
+                    @include mq($laptopMediaQuery) {
+                        &:hover {
+                            background-color: rgba(255,255,255,0.3) !important;
+                        }
+                    }
+                }
+
+                .footer-social-icon:nth-child(1) {
+                    background: url("../images/instagram-white.svg") center center/18px no-repeat;
+                }
+
+                .footer-social-icon:nth-child(2) {
+                    background: url("../images/dribbble-white.svg") center center/18px no-repeat;
+                }
+                
+                .footer-social-icon:nth-child(3) {
+                    background: url("../images/linkedin-white.svg") center center/17px no-repeat;
+                }
+
+                .footer-social-icon:nth-child(4) {
+                    background: url("../images/github-white.svg") center center/18px no-repeat;
                 }
             }
         }
