@@ -24,7 +24,6 @@ html {
 
 body {
     height: 100%;
-    transition: background-color .5s;
     -ms-overflow-style: none; 
     scrollbar-width: none;
 
@@ -32,6 +31,10 @@ body {
         display: none;
     }
 }
+
+// main {
+//     background-color: white;
+// }
 
 .divider-line {
     margin: 0 $mobileOuterPadding;
@@ -55,6 +58,44 @@ body {
 .show-menu-items {
     opacity: 1 !important;
     transform: translateX(0) !important;
+}
+
+.back-to-top {
+    display: none;
+    height: 23px;
+    width: 23px;
+    border-radius: 5px;
+    background-color: rgba(0,0,0,0.4) !important;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    background: url("../images/arrow-up-white.svg") center center/9px no-repeat;
+    transition: 0.2s;
+    cursor: pointer;
+
+    @include mq($tabletMediaQuery) {
+        height: 30px;
+        width: 30px;
+        right: 20px;
+        bottom: 20px;
+        background: url("../images/arrow-up-white.svg") center center/12px no-repeat;
+    }
+
+    @include mq($laptopMediaQuery) {
+        right: 24px;
+        bottom: 24px;
+
+        &:hover {
+            background-color: rgba(0,0,0,1) !important;
+        }
+    }
+
+    @include mq($desktopMediaQuery) {
+        width: 34px;
+        height: 34px;
+        background: url("../images/arrow-up-white.svg") center center/13px no-repeat;
+        border-radius: 8px;
+    }
 }
 
 .down-arrow {

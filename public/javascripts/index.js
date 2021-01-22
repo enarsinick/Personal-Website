@@ -4,9 +4,12 @@ const menuItems = document.querySelector('.menu-items');
 const menuSocialDiv = document.querySelector('.menu-social-icons-container');
 const menuOverlay = document.querySelector('.menu-overlay');
 const logo = document.querySelector('.logo-wrapper');
-var i;
+const backToTop = document.querySelector('.back-to-top');
 
-for (i = 0; i < acc.length; i++) {
+
+
+// Accordian functionality
+for (let i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
     this.classList.toggle("active");
     var panel = this.nextElementSibling;
@@ -53,8 +56,17 @@ function closeNav() {
   }, 900);
 }
 
-// Initialise butter.js
-butter.init({
-  wrapperDamper: 0.06,
-  cancelOnTouch: true
+// If user has scrolled certain distance, display back to top button
+window.addEventListener("scroll", () => {
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    backToTop.style.display = "block";
+  } else {
+    backToTop.style.display = "none";
+  }
+});
+
+// Scroll back to top once user clicks button
+backToTop.addEventListener('click', () => {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 });

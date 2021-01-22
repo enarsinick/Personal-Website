@@ -14,7 +14,6 @@ html {
 
 body {
   height: 100%;
-  transition: background-color .5s;
   -ms-overflow-style: none;
   scrollbar-width: none; }
   body::-webkit-scrollbar {
@@ -38,6 +37,38 @@ body {
 .show-menu-items {
   opacity: 1 !important;
   transform: translateX(0) !important; }
+
+.back-to-top {
+  display: none;
+  height: 23px;
+  width: 23px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.4) !important;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  background: url("../images/arrow-up-white.svg") center center/9px no-repeat;
+  transition: 0.2s;
+  cursor: pointer; }
+  @media (min-width: 768px) {
+    .back-to-top {
+      height: 30px;
+      width: 30px;
+      right: 20px;
+      bottom: 20px;
+      background: url("../images/arrow-up-white.svg") center center/12px no-repeat; } }
+  @media (min-width: 1190px) {
+    .back-to-top {
+      right: 24px;
+      bottom: 24px; }
+      .back-to-top:hover {
+        background-color: black !important; } }
+  @media (min-width: 1434px) {
+    .back-to-top {
+      width: 34px;
+      height: 34px;
+      background: url("../images/arrow-up-white.svg") center center/13px no-repeat;
+      border-radius: 8px; } }
 
 .down-arrow {
   height: 37px;
