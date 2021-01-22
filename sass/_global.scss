@@ -33,6 +33,10 @@ body {
     }
 }
 
+main {
+    background-color: #fff;
+}
+
 .divider-line {
     margin: 0 $mobileOuterPadding;
     border: none;
@@ -58,7 +62,9 @@ body {
 }
 
 .back-to-top {
-    display: none;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    // display: none;
     height: 23px;
     width: 23px;
     border-radius: 5px;

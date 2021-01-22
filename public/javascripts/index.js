@@ -5,8 +5,7 @@ const menuSocialDiv = document.querySelector('.menu-social-icons-container');
 const menuOverlay = document.querySelector('.menu-overlay');
 const logo = document.querySelector('.logo-wrapper');
 const backToTop = document.querySelector('.back-to-top');
-
-
+const footer = document.getElementById('footer');
 
 // Accordian functionality
 for (let i = 0; i < acc.length; i++) {
@@ -59,9 +58,11 @@ function closeNav() {
 // If user has scrolled certain distance, display back to top button
 window.addEventListener("scroll", () => {
   if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-    backToTop.style.display = "block";
+    backToTop.style.opacity = 1;
+    footer.style.opacity = 1;
   } else {
-    backToTop.style.display = "none";
+    backToTop.style.opacity = 0;
+    footer.style.opacity = 0;
   }
 });
 

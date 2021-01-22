@@ -20,6 +20,9 @@ body {
   body::-webkit-scrollbar {
     display: none; }
 
+main {
+  background-color: #fff; }
+
 .divider-line {
   margin: 0 25px;
   border: none;
@@ -40,7 +43,8 @@ body {
   transform: translateX(0) !important; }
 
 .back-to-top {
-  display: none;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
   height: 23px;
   width: 23px;
   border-radius: 5px;
@@ -193,7 +197,13 @@ body {
 
 footer {
   background-color: #000;
-  padding-bottom: 30px; }
+  padding-bottom: 30px;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  opacity: 0; }
   @media (min-width: 768px) {
     footer {
       padding-bottom: 60px; } }
