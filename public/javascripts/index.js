@@ -97,3 +97,31 @@ window.addEventListener("scroll", () => {
   }
 });
 
+
+window.onload = () => {
+  const transitionElement = document.querySelector('.transition');
+  const anchors = document.querySelectorAll('.transition-link')
+  const transitionContent = document.querySelectorAll('.transition-content');
+
+  setTimeout(() => {
+    transitionElement.classList.remove('is-active')
+  }, 360);
+
+  setTimeout(() => {
+    for(let i = 0; i < transitionContent.length; i++) {
+      transitionContent[i].classList.add('content-active')
+    }
+  }, 500);
+
+  for (let i = 0; i < anchors.length; i++) {
+    const anchor = anchors[i]; 
+    anchor.addEventListener('click', e => {
+      e.preventDefault(); 
+      let target = e.target.href;
+      transitionElement.classList.add('is-active');
+      setTimeout(() => {
+        window.location.href = target;
+      }, 360);
+    });
+  }
+};
