@@ -97,7 +97,7 @@ window.addEventListener("scroll", () => {
   }
 });
 
-
+// Page transition element on pageload
 window.onload = () => {
   const transitionElement = document.querySelector('.transition');
   const anchors = document.querySelectorAll('.transition-link')
@@ -117,7 +117,7 @@ window.onload = () => {
     const anchor = anchors[i]; 
     anchor.addEventListener('click', e => {
       e.preventDefault(); 
-      let target = e.target.href;
+      let target = e.target.href || e.target.parentElement.href;
       transitionElement.classList.add('is-active');
       setTimeout(() => {
         window.location.href = target;
