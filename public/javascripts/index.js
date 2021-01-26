@@ -1,11 +1,51 @@
-var acc = document.querySelectorAll("#accordion");
+const acc = document.querySelectorAll("#accordion");
+
+const openBtn = document.querySelector('.menu-button-open');
 const closebtn = document.querySelector('.closebtn');
-const menuItems = document.querySelector('.menu-items');
-const menuSocialDiv = document.querySelector('.menu-social-icons-container');
 const menuOverlay = document.querySelector('.menu-overlay');
 const logo = document.querySelector('.logo-wrapper');
 const backToTop = document.querySelector('.back-to-top');
 const footer = document.getElementById('footer');
+
+
+// Event listener for menu open button
+openBtn.addEventListener('click', () => {
+  let menu_tl_open = gsap.timeline();
+  document.body.classList.add('stop-scroll');
+  
+  // If window is X wide, do certain animation
+  // or do another if window is y width
+  if (window.innerWidth > 1190) {
+    menu_tl_open
+      .to('.sidenav', {width: "560px", duration: 1, ease: "power4.out"})
+      .to(menuOverlay, {opacity: 1, duration: 0.2,},"-=1")
+      .to('.menu-items', {opacity: 1, duration: 1.5},"-=0.8")
+      .to(closebtn, {opacity: 1, duration: 0.6},"-=0.8")
+      .to('.menu-social-icons-container', {opacity: 1,duration: 0.6},"-=0.8");
+  } else {
+    logo.style.zIndex = "4";
+    menu_tl_open
+      .to('.sidenav', {width: "100%", duration: 0.8, ease: "power4.out"})
+      .to(menuOverlay, {opacity: 1, duration: 0.1,},"-=0.8")
+      .to('.menu-items', {opacity: 1, duration: 1.5},"-=0.6")
+      .to(closebtn, {opacity: 1, duration: 0.6},"-=1")
+      .to('.menu-social-icons-container', {opacity: 1,duration: 0.6},"-=1")
+  }
+})
+
+// Event listener for menu close button
+closebtn.addEventListener('click', () => {
+  let menu_tl_close = gsap.timeline();
+  document.body.classList.remove('stop-scroll');
+  logo.style.zIndex = "initial";
+  menu_tl_close
+    .to('.menu-items', {opacity: 0, duration: 0.4})
+    .to(closebtn, {opacity: 0, duration: 0.4},"-=0.4")
+    .to('.menu-social-icons-container', {opacity: 0,duration: 0.4},"-=0.4")
+    .to('.sidenav', {width: "0", duration: 0.5, ease: "power4.out"},"-=0.1")
+    .to(menuOverlay, {opacity: 0, duration: 0.2,},"-=0.8")
+})
+
 
 
 
@@ -22,40 +62,6 @@ for (let i = 0; i < acc.length; i++) {
   });
 }
 
-/* Set the width of the side navigation to 250px */
-function openNav() {
-  if (window.innerWidth < 1190) {
-    document.getElementById("mySidenav").style.width = "100%";
-    logo.style.zIndex = "4";
-  } else {
-    document.getElementById("mySidenav").style.width = "560px";
-  }
-  menuOverlay.style.width = "100%";
-  // wait 250ms for menu and menu overlay to animate out, then reveal overlay
-  setTimeout(() => { menuOverlay.style.opacity = 1; }, 250);
-  document.body.classList.add('stop-scroll');
-  setTimeout(() => {
-    closebtn.classList.add('show-menu-items');
-    menuItems.classList.add('show-menu-items');
-    menuSocialDiv.classList.add('show-menu-items');
-  }, 250);
-}
-
-/* Set the width of the side navigation to 0 */
-function closeNav() {
-    closebtn.classList.remove('show-menu-items');
-    menuItems.classList.remove('show-menu-items');
-    menuSocialDiv.classList.remove('show-menu-items');
-  setTimeout(() => {
-    document.getElementById("mySidenav").style.width = "0";
-    menuOverlay.style.opacity = 0;
-    logo.style.zIndex = "initial";
-    document.body.classList.remove('stop-scroll');
-  }, 400);
-  setTimeout(() => {
-    menuOverlay.style.width = "0"; 
-  }, 900);
-}
 
 // If user has scrolled certain distance, display back to top button
 window.addEventListener("scroll", () => {

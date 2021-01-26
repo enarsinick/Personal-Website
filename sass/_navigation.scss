@@ -40,12 +40,15 @@ header {
         }
 
         .menu-overlay {
+            pointer-events: none;
             transition: 0.6s;
             opacity: 0;
             background-color: rgba(0,0,0,0.7);
             position: absolute;
             top: 0;
             left: 0;
+            right: 0;
+            bottom: 0;
             z-index: 1;
             height: 100%;
         }
@@ -71,7 +74,6 @@ header {
             right: 0;
             background-color: #fff;
             overflow-x: hidden;
-            transition: 0.5s ease-in-out; 
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -89,7 +91,7 @@ header {
                 height: 62px;
                 margin-right: 0;
                 border-radius: 100%;
-                transition: opacity 1s, background-color 0.3s ease-in-out;
+                transition: background-color 0.3s ease-in-out;
                 cursor: pointer;
                 background: url("../images/menu-icon-closed.svg") center center/18px no-repeat;
 
@@ -116,8 +118,6 @@ header {
 
             .menu-items {
                 z-index: 3; /* Stay on top */
-                transition: 1s;
-                transform: translateX(20px);
                 opacity: 0;
 
                 a {
@@ -141,10 +141,8 @@ header {
             }
 
             .menu-social-icons-container {
-                z-index: 3; /* Stay on top */
+                z-index: 3; 
                 opacity: 0;
-                transform: translateX(20px);
-                transition: 1s;
                 position: absolute;
                 bottom: 30px;
                 right: 0;
