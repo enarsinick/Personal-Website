@@ -1,11 +1,11 @@
 const acc = document.querySelectorAll("#accordion");
-
 const openBtn = document.querySelector('.menu-button-open');
 const closebtn = document.querySelector('.closebtn');
 const menuOverlay = document.querySelector('.menu-overlay');
 const logo = document.querySelector('.logo-wrapper');
 const backToTop = document.querySelector('.back-to-top');
-// const footer = document.getElementById('footer');
+
+gsap.registerPlugin(ScrollTrigger);
 
 const getScrollerStart = () => {
   if (window.innerWidth >= 1190) {
@@ -17,12 +17,20 @@ const getScrollerStart = () => {
   }
 }
 
-gsap.registerPlugin(ScrollTrigger);
-
-gsap.to('.footer-inner', {
+// GSAP Timeline for footer animation
+let footer_tl = gsap.timeline();
+footer_tl.to('.footer-inner', {
   scrollTrigger: {
-    trigger: ".featured-project-outer",
-    start: "100% " + getScrollerStart() + "%",
+    trigger: ".footer-trigger",
+    start: () => {
+      if (window.innerWidth >= 1190) {
+        return "100% 75%";
+      } else if(window.innerWidth >= 768) {
+        return "100% 80%";
+      } else {
+        return "100% 90%";
+      }
+    },
     end: () => {
       let viewportHeight = window.innerHeight;
       let scrollStartPercent = getScrollerStart();
@@ -30,12 +38,35 @@ gsap.to('.footer-inner', {
       let scrollStartFromBottom = viewportHeight - (viewportHeight * (scrollStartPercent / 100));
       return "+=" + (footerHeight - scrollStartFromBottom);
     },
-    markers: true,
     scrub: true,
   },
   opacity: 1,
-  y: 0,
+  y: 0
 });
+
+// GSAP timeline for text content animation
+let animate_text = gsap.timeline();
+const animate = gsap.utils.toArray('.animate-text');
+animate.forEach(element => {
+  animate_text.to(element, {
+    scrollTrigger: {
+      trigger: element,
+      start: () => {
+        if (window.innerWidth >= 1190) {
+          return "top 80%";
+        } else if(window.innerWidth >= 768) {
+          return "top 90%";
+        } else {
+          return "top 80%";
+        }
+      },
+    },
+    opacity: 1, 
+    y: 0,
+  });
+});
+
+
 
 // Event listener for menu open button
 openBtn.addEventListener('click', () => {

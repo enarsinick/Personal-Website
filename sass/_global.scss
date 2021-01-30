@@ -88,7 +88,6 @@ main {
 .back-to-top {
     opacity: 0;
     transition: opacity 0.4s ease-in-out;
-    // display: none;
     height: 23px;
     width: 23px;
     border-radius: 5px;
@@ -177,6 +176,12 @@ main {
 .transition-content {
     opacity: 0.01;
     transform: translateY(60px);
+}
+
+.animate-text {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.8s ease;
 }
 
 
