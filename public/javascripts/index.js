@@ -109,28 +109,6 @@ backToTop.addEventListener('click', () => {
   document.documentElement.scrollTop = 0;
 });
 
-// Checks whenever user scrolls to see if they're at the footer yet
-// window.addEventListener("scroll", () => {
-//   let pageHeight = document.body.scrollHeight;
-//   let footerHeight = footer.offsetHeight;
-//   let scrollPosition = window.scrollY;
-//   let halfViewportHeight = window.innerHeight / 2;
-
-//   // Is the user on a tablet or not
-//   if (window.innerWidth < 1190 && window.innerWidth > 728) {
-//     if (((scrollPosition + halfViewportHeight) + 100) > (pageHeight - footerHeight)) {
-//       document.querySelector('.footer-inner').classList.add('show-footer');
-//     } else {
-//       document.querySelector('.footer-inner').classList.remove('show-footer');
-//     }
-//   } else {
-//     if ((scrollPosition + halfViewportHeight) > (pageHeight - footerHeight)) {
-//       document.querySelector('.footer-inner').classList.add('show-footer');
-//     } else {
-//       document.querySelector('.footer-inner').classList.remove('show-footer');
-//     }
-//   }
-// });
 
 // Page transition element on pageload
 window.onload = () => {
