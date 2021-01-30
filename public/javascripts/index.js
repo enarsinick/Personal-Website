@@ -5,8 +5,37 @@ const closebtn = document.querySelector('.closebtn');
 const menuOverlay = document.querySelector('.menu-overlay');
 const logo = document.querySelector('.logo-wrapper');
 const backToTop = document.querySelector('.back-to-top');
-const footer = document.getElementById('footer');
+// const footer = document.getElementById('footer');
 
+const getScrollerStart = () => {
+  if (window.innerWidth >= 1190) {
+    return 75;
+  } else if(window.innerWidth >= 768) {
+    return 80;
+  } else {
+    return 90;
+  }
+}
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.to('.footer-inner', {
+  scrollTrigger: {
+    trigger: ".featured-project-outer",
+    start: "100% " + getScrollerStart() + "%",
+    end: () => {
+      let viewportHeight = window.innerHeight;
+      let scrollStartPercent = getScrollerStart();
+      let footerHeight = document.getElementById('footer').offsetHeight;
+      let scrollStartFromBottom = viewportHeight - (viewportHeight * (scrollStartPercent / 100));
+      return "+=" + (footerHeight - scrollStartFromBottom);
+    },
+    markers: true,
+    scrub: true,
+  },
+  opacity: 1,
+  y: 0,
+});
 
 // Event listener for menu open button
 openBtn.addEventListener('click', () => {
@@ -81,27 +110,27 @@ backToTop.addEventListener('click', () => {
 });
 
 // Checks whenever user scrolls to see if they're at the footer yet
-window.addEventListener("scroll", () => {
-  let pageHeight = document.body.scrollHeight;
-  let footerHeight = footer.offsetHeight;
-  let scrollPosition = window.scrollY;
-  let halfViewportHeight = window.innerHeight / 2;
+// window.addEventListener("scroll", () => {
+//   let pageHeight = document.body.scrollHeight;
+//   let footerHeight = footer.offsetHeight;
+//   let scrollPosition = window.scrollY;
+//   let halfViewportHeight = window.innerHeight / 2;
 
-  // Is the user on a tablet or not
-  if (window.innerWidth < 1190 && window.innerWidth > 728) {
-    if (((scrollPosition + halfViewportHeight) + 100) > (pageHeight - footerHeight)) {
-      document.querySelector('.footer-inner').classList.add('show-footer');
-    } else {
-      document.querySelector('.footer-inner').classList.remove('show-footer');
-    }
-  } else {
-    if ((scrollPosition + halfViewportHeight) > (pageHeight - footerHeight)) {
-      document.querySelector('.footer-inner').classList.add('show-footer');
-    } else {
-      document.querySelector('.footer-inner').classList.remove('show-footer');
-    }
-  }
-});
+//   // Is the user on a tablet or not
+//   if (window.innerWidth < 1190 && window.innerWidth > 728) {
+//     if (((scrollPosition + halfViewportHeight) + 100) > (pageHeight - footerHeight)) {
+//       document.querySelector('.footer-inner').classList.add('show-footer');
+//     } else {
+//       document.querySelector('.footer-inner').classList.remove('show-footer');
+//     }
+//   } else {
+//     if ((scrollPosition + halfViewportHeight) > (pageHeight - footerHeight)) {
+//       document.querySelector('.footer-inner').classList.add('show-footer');
+//     } else {
+//       document.querySelector('.footer-inner').classList.remove('show-footer');
+//     }
+//   }
+// });
 
 // Page transition element on pageload
 window.onload = () => {
