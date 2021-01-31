@@ -7,6 +7,23 @@ const backToTop = document.querySelector('.back-to-top');
 
 gsap.registerPlugin(ScrollTrigger);
 
+
+gsap.utils.toArray(".section-parallax .parallax-image").forEach((section, i) => {
+  const heightDiff = section.offsetHeight - section.parentElement.offsetHeight;
+
+  gsap.fromTo(section,{ 
+    y: -heightDiff
+    }, {
+    scrollTrigger: {
+      trigger: section.parentElement,
+      scrub: true
+    },
+    y: 0,
+    ease: "none"
+  });
+});
+
+
 const getScrollerStart = () => {
   if (window.innerWidth >= 1190) {
     return 75;
@@ -45,28 +62,25 @@ footer_tl.to('.footer-inner', {
 });
 
 // GSAP timeline for text content animation
-let animate_text = gsap.timeline();
-const animate = gsap.utils.toArray('.animate-text');
+let animate_content = gsap.timeline();
+const animate = gsap.utils.toArray('.animate-content');
 animate.forEach(element => {
-  animate_text.to(element, {
+  animate_content.to(element, {
     scrollTrigger: {
       trigger: element,
       start: () => {
-        if (window.innerWidth >= 1190) {
-          return "top 80%";
-        } else if(window.innerWidth >= 768) {
+        if(window.innerWidth >= 768) {
           return "top 90%";
         } else {
-          return "top 80%";
+          return "top 85%";
         }
       },
+      toggleActions: "play none none reset"
     },
     opacity: 1, 
     y: 0,
   });
 });
-
-
 
 // Event listener for menu open button
 openBtn.addEventListener('click', () => {

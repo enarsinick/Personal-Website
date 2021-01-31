@@ -35,28 +35,27 @@
             height: calc(100vh - 350px - 100px);
         }
     }
-    
-    .feature-image {
-        height: 300px;
+
+    .feature-image-wrapper {
         width: 100%;
-        background-image: url("../images/stroud-valley.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        position: relative;
-    
+        height: 50vh;
+        
         @include mq($tabletMediaQuery) {
-            height: 557px;
+            height: 55vh;
             border-radius: 6px;
         }
 
         @include mq($laptopMediaQuery) {
-            height: 708px;
+            height: 80vh;
             border-radius: 10px;
         }
 
         @include mq($desktopMediaQuery) {
             height: 92vh;
+        }
+
+        .home-feature-image {
+            background-image: url("../images/stroud-valley.png");
         }
     }
 }
@@ -113,18 +112,30 @@
         }
     }
 
-    .about-me-home-image {
+    .home-about-image-wrapper {
         width: 100%;
-        margin-top: 50px;
+        height: 60vh;
         border-radius: 6px;
+        margin-top: 50px;
 
         @include mq($tabletMediaQuery) {
             width: 48%;
             margin: 0;
+            height: 45vh;
         }
 
         @include mq($laptopMediaQuery) {
             border-radius: 10px;
+            height: 80vh;
+        }
+
+        @include mq($desktopMediaQuery) {
+            height: 70vh;
+        }
+
+        .home-about-image {
+            background-image: url("../images/me.png");
+            height: 115%;
         }
     }
 }
@@ -200,25 +211,21 @@
     }
 
     .image-wall-mask {
-        height: 275px;
+        height: 45vh;
         width: 100%;
-        background-image: url("../images/stroud-valley.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
 
         @include mq($tabletMediaQuery) {
-            height: 390px;
+            height: 40vh;
             border-radius: 6px;
         }
 
         @include mq($laptopMediaQuery) {
-            height: 580px;
+            height: 65vh;
             border-radius: 10px;
         }
 
-        @include mq($desktopMediaQuery) {
-            height: 700px;
+        .image-wall {
+            background-image: url("../images/stroud-valley.png");
         }
     }
 
