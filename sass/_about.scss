@@ -53,6 +53,7 @@
     }
 
     .about-feature-image-container {
+        position: relative;
 
         @include mq($laptopMediaQuery) {
             display: grid;
@@ -66,52 +67,48 @@
             grid-gap: 30px;
         }
 
+        // img {
+        //     position: absolute;
+        //     top: -16px;
+        //     left: 50%;
+        //     transform: translateX(-50%);
+        //     z-index: 10;
 
-        .about-feature-image {
-            height: 300px;
+        //     @include mq($laptopMediaQuery) {
+        //         display: none;
+        //     }
+        // }
+
+        .about-feature-image-mask {
+            height: 65vh;
             width: 100%;
-            background-image: url("../images/me2.png");
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        
+
             @include mq($tabletMediaQuery) {
-                height: 557px;
+                height: 40vh;
                 border-radius: 6px;
             }
-
-            @include mq($laptopMediaQuery) {
-                border-radius: 10px;
-                height: 581px;
-            }
-
-            @include mq($desktopMediaQuery) {
-                height: 702px;
-            }
-        
-            img {
-                position: absolute;
-                top: -16px;
-                left: 50%;
-                transform: translateX(-50%);
-
-                @include mq($laptopMediaQuery) {
-                    display: none;
-                }
-            }
-        }
     
-        .about-feature-image:nth-child(2) {
-            display: none;
-
             @include mq($laptopMediaQuery) {
-                display: initial;
-                margin-top: -90px;
+                height: 75vh;
+                border-radius: 10px;
             }
 
-            @include mq($desktopMediaQuery) {
-                margin-top: -100px;
+            .about-feature-image {
+                height: 110%;
+                background-image: url("../images/me2.png");
+            }
+
+            &:nth-child(2) {
+                display: none;
+    
+                @include mq($laptopMediaQuery) {
+                    display: initial;
+                    margin-top: -90px;
+                }
+    
+                @include mq($desktopMediaQuery) {
+                    margin-top: -100px;
+                }
             }
         }
     }
