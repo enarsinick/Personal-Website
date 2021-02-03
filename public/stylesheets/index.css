@@ -654,40 +654,52 @@ footer {
       .about-intro-container .about-intro-copy h1, .about-intro-container .about-intro-copy p {
         max-width: 680px; } }
 
-.about-intro-container .about-feature-image-container {
+.about-intro-container .about-feature-wrapper {
   position: relative; }
+  .about-intro-container .about-feature-wrapper .about-down-arrow {
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10; }
+    @media (min-width: 1190px) {
+      .about-intro-container .about-feature-wrapper .about-down-arrow {
+        display: none; } }
   @media (min-width: 1190px) {
-    .about-intro-container .about-feature-image-container {
+    .about-intro-container .about-feature-wrapper .about-feature-image-container {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-gap: 25px; } }
   @media (min-width: 1434px) {
-    .about-intro-container .about-feature-image-container {
+    .about-intro-container .about-feature-wrapper .about-feature-image-container {
       max-width: 1434px;
       margin: 0 auto;
       grid-gap: 30px; } }
-  .about-intro-container .about-feature-image-container .about-feature-image-mask {
+  .about-intro-container .about-feature-wrapper .about-feature-image-container .about-feature-image-mask {
     height: 65vh;
     width: 100%; }
     @media (min-width: 768px) {
-      .about-intro-container .about-feature-image-container .about-feature-image-mask {
-        height: 40vh;
+      .about-intro-container .about-feature-wrapper .about-feature-image-container .about-feature-image-mask {
+        height: 60vh;
         border-radius: 6px; } }
     @media (min-width: 1190px) {
-      .about-intro-container .about-feature-image-container .about-feature-image-mask {
+      .about-intro-container .about-feature-wrapper .about-feature-image-container .about-feature-image-mask {
         height: 75vh;
         border-radius: 10px; } }
-    .about-intro-container .about-feature-image-container .about-feature-image-mask .about-feature-image {
+    .about-intro-container .about-feature-wrapper .about-feature-image-container .about-feature-image-mask .about-feature-image {
       height: 110%;
       background-image: url("../images/me2.png"); }
-    .about-intro-container .about-feature-image-container .about-feature-image-mask:nth-child(2) {
+      @media (min-width: 1434px) {
+        .about-intro-container .about-feature-wrapper .about-feature-image-container .about-feature-image-mask .about-feature-image {
+          height: 120%; } }
+    .about-intro-container .about-feature-wrapper .about-feature-image-container .about-feature-image-mask:nth-child(2) {
       display: none; }
       @media (min-width: 1190px) {
-        .about-intro-container .about-feature-image-container .about-feature-image-mask:nth-child(2) {
+        .about-intro-container .about-feature-wrapper .about-feature-image-container .about-feature-image-mask:nth-child(2) {
           display: initial;
           margin-top: -90px; } }
       @media (min-width: 1434px) {
-        .about-intro-container .about-feature-image-container .about-feature-image-mask:nth-child(2) {
+        .about-intro-container .about-feature-wrapper .about-feature-image-container .about-feature-image-mask:nth-child(2) {
           margin-top: -100px; } }
 
 .location-outer {
@@ -849,35 +861,32 @@ footer {
         color: #FF8D0F; }
 
 @media (min-width: 768px) {
-  .large-feature-image-container {
+  .about-middle-image-wrapper {
     padding: 0 32px; } }
 
 @media (min-width: 1190px) {
-  .large-feature-image-container {
+  .about-middle-image-wrapper {
     padding: 0 46px; } }
 
 @media (min-width: 1434px) {
-  .large-feature-image-container {
+  .about-middle-image-wrapper {
     padding: 0 60px; } }
 
-.large-feature-image-container .large-feature-image {
-  height: 100vh;
-  width: 100%;
-  background-image: url("../images/stroud-valley.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center; }
+.about-middle-image-wrapper .middle-feature-image-container {
+  height: 100vh; }
   @media (min-width: 768px) {
-    .large-feature-image-container .large-feature-image {
+    .about-middle-image-wrapper .middle-feature-image-container {
       height: 515px;
       border-radius: 6px; } }
-  @media (min-width: 768px) {
-    .large-feature-image-container .large-feature-image {
+  @media (min-width: 1190px) {
+    .about-middle-image-wrapper .middle-feature-image-container {
       height: 600px;
       border-radius: 10px; } }
-  @media (min-width: 768px) {
-    .large-feature-image-container .large-feature-image {
+  @media (min-width: 1434px) {
+    .about-middle-image-wrapper .middle-feature-image-container {
       height: 92vh; } }
+  .about-middle-image-wrapper .middle-feature-image-container .middle-feature-image {
+    background-image: url("../images/stroud-valley.png"); }
 
 .about-logo-wall-outer {
   padding: 100px 25px 0; }
@@ -1149,47 +1158,41 @@ footer {
   .project-intro-section p {
     margin-bottom: 10px; }
 
-@media (min-width: 768px) {
-  .project-feature-image-outer {
-    padding: 0 32px; } }
-
-@media (min-width: 1190px) {
-  .project-feature-image-outer {
-    padding: 0 46px; } }
-
-@media (min-width: 1434px) {
-  .project-feature-image-outer {
-    padding: 0;
-    max-width: 1434px;
-    margin: 0 auto; } }
-
-.project-feature-image-outer .project-feature-image {
-  height: 210px;
-  width: 100%;
-  background-image: url("../images/project-feature.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+.project-feature-image-outer {
   position: relative; }
   @media (min-width: 768px) {
-    .project-feature-image-outer .project-feature-image {
-      height: 407px;
-      border-radius: 6px; } }
+    .project-feature-image-outer {
+      padding: 0 32px; } }
   @media (min-width: 1190px) {
-    .project-feature-image-outer .project-feature-image {
-      border-radius: 10px;
-      height: 670px; } }
+    .project-feature-image-outer {
+      padding: 0 46px; } }
   @media (min-width: 1434px) {
-    .project-feature-image-outer .project-feature-image {
-      height: 810px; } }
-  .project-feature-image-outer .project-feature-image img {
+    .project-feature-image-outer {
+      padding: 0;
+      max-width: 1434px;
+      margin: 0 auto; } }
+  .project-feature-image-outer img {
     position: absolute;
     top: -16px;
     left: 50%;
-    transform: translateX(-50%); }
+    transform: translateX(-50%);
+    z-index: 11; }
     @media (min-width: 768px) {
-      .project-feature-image-outer .project-feature-image img {
+      .project-feature-image-outer img {
         display: none; } }
+  .project-feature-image-outer .project-feature-image-wrapper {
+    height: 40vh;
+    width: 100%; }
+    @media (min-width: 768px) {
+      .project-feature-image-outer .project-feature-image-wrapper {
+        height: 40vh;
+        border-radius: 6px; } }
+    @media (min-width: 1190px) {
+      .project-feature-image-outer .project-feature-image-wrapper {
+        height: 90vh;
+        border-radius: 10px; } }
+  .project-feature-image-outer .project-feature-image {
+    background-image: url("../images/project-feature.png"); }
 
 .project-overview-outer {
   padding: 100px 25px; }
@@ -1261,21 +1264,26 @@ footer {
       padding: 0  0 170px;
       max-width: 1434px;
       margin: 0 auto; } }
-  .project-images-outer img {
+  .project-images-outer .project-image-wrapper {
+    height: 40vh;
     width: 100%;
     margin-bottom: 15px; }
     @media (min-width: 768px) {
-      .project-images-outer img {
+      .project-images-outer .project-image-wrapper {
+        height: 40vh;
         border-radius: 6px;
         margin-bottom: 40px; } }
     @media (min-width: 1190px) {
-      .project-images-outer img {
+      .project-images-outer .project-image-wrapper {
+        height: 90vh;
         border-radius: 10px; } }
     @media (min-width: 1434px) {
-      .project-images-outer img {
+      .project-images-outer .project-image-wrapper {
         margin-bottom: 80px; } }
-  .project-images-outer img:last-child {
-    margin-bottom: 0; }
+    .project-images-outer .project-image-wrapper:last-child {
+      margin-bottom: 0; }
+    .project-images-outer .project-image-wrapper .project-image {
+      background-image: url("../images/project-image-3.png"); }
 
 .other-projects-outer {
   padding: 100px 25px; }

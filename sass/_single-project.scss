@@ -46,6 +46,7 @@
 }
 
 .project-feature-image-outer {
+    position: relative;
 
     @include mq($tabletMediaQuery) {
         padding: 0 $tabletOuterPadding;
@@ -61,39 +62,35 @@
         margin: 0 auto;
     }
 
-    .project-feature-image {
-        height: 210px;
-        width: 100%;
-        background-image: url("../images/project-feature.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        position: relative;
+    img {
+        position: absolute;
+        top: -16px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 11;
 
         @include mq($tabletMediaQuery) {
-            height: 407px;
+            display: none;
+        }
+    }
+
+    .project-feature-image-wrapper {
+        height: 40vh;
+        width: 100%;
+
+        @include mq($tabletMediaQuery) {
+            height: 40vh;
             border-radius: 6px;
         }
 
         @include mq($laptopMediaQuery) {
+            height: 90vh;
             border-radius: 10px;
-            height: 670px;
         }
+    }
 
-        @include mq($desktopMediaQuery) {
-            height: 810px;
-        }
-    
-        img {
-            position: absolute;
-            top: -16px;
-            left: 50%;
-            transform: translateX(-50%);
-
-            @include mq($tabletMediaQuery) {
-                display: none;
-            }
-        }
+    .project-feature-image {
+        background-image: url("../images/project-feature.png");
     }
 }
 
@@ -194,26 +191,34 @@
         margin: 0 auto;
     }
 
-    img {
+    .project-image-wrapper {
+        height: 40vh;
         width: 100%;
         margin-bottom: 15px;
 
         @include mq($tabletMediaQuery) {
+            height: 40vh;
             border-radius: 6px;
             margin-bottom: 40px;
         }
 
         @include mq($laptopMediaQuery) {
+            height: 90vh;
             border-radius: 10px;
         }
 
         @include mq($desktopMediaQuery) {
             margin-bottom: 80px;
         }
-    }
 
-    img:last-child {
-        margin-bottom: 0;
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+
+        .project-image {
+            background-image: url("../images/project-image-3.png");
+        }
     }
 }
 
