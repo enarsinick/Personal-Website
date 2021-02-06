@@ -55,7 +55,7 @@
         }
 
         .home-feature-image {
-            background-image: url("../images/stroud-valley.png");
+            background-image: url("../images/stroud-valley.jpg");
         }
     }
 }
@@ -134,8 +134,7 @@
         }
 
         .home-about-image {
-            background-image: url("../images/me.png");
-            height: 115%;
+            background-image: url("../images/me-main-silver.jpg");
         }
     }
 }
@@ -225,7 +224,7 @@
         }
 
         .image-wall {
-            background-image: url("../images/me2.png");
+            background-image: url("../images/me-scotland-1.jpg");
         }
     }
 
@@ -238,6 +237,10 @@
 
         @include mq($desktopMediaQuery) {
             margin-top: -100px;
+        }
+
+        .image-wall {
+            background-image: url("../images/me-silver-desk.jpg");
         }
     }
 }

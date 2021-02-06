@@ -471,7 +471,7 @@ footer {
     .intro-section-outer .feature-image-wrapper {
       height: 92vh; } }
   .intro-section-outer .feature-image-wrapper .home-feature-image {
-    background-image: url("../images/stroud-valley.png"); }
+    background-image: url("../images/stroud-valley.jpg"); }
 
 .about-me-outer {
   padding: 100px 25px; }
@@ -528,8 +528,7 @@ footer {
       .about-me-outer .home-about-image-wrapper {
         height: 70vh; } }
     .about-me-outer .home-about-image-wrapper .home-about-image {
-      background-image: url("../images/me.png");
-      height: 115%; }
+      background-image: url("../images/me-main-silver.jpg"); }
 
 .logo-wall-outer {
   padding: 0 25px 100px;
@@ -602,7 +601,7 @@ footer {
       height: 65vh;
       border-radius: 10px; } }
   .image-wall-outer .image-wall-mask .image-wall {
-    background-image: url("../images/me2.png"); }
+    background-image: url("../images/me-scotland-1.jpg"); }
 
 .image-wall-outer .image-wall-mask:nth-child(2) {
   margin-top: 10px; }
@@ -612,6 +611,8 @@ footer {
   @media (min-width: 1434px) {
     .image-wall-outer .image-wall-mask:nth-child(2) {
       margin-top: -100px; } }
+  .image-wall-outer .image-wall-mask:nth-child(2) .image-wall {
+    background-image: url("../images/me-silver-desk.jpg"); }
 
 @media (min-width: 768px) {
   .about-intro-container {
@@ -684,14 +685,10 @@ footer {
         border-radius: 6px; } }
     @media (min-width: 1190px) {
       .about-intro-container .about-feature-wrapper .about-feature-image-container .about-feature-image-mask {
-        height: 75vh;
+        height: 70vh;
         border-radius: 10px; } }
     .about-intro-container .about-feature-wrapper .about-feature-image-container .about-feature-image-mask .about-feature-image {
-      height: 110%;
-      background-image: url("../images/me2.png"); }
-      @media (min-width: 1434px) {
-        .about-intro-container .about-feature-wrapper .about-feature-image-container .about-feature-image-mask .about-feature-image {
-          height: 120%; } }
+      background-image: url("../images/me-ben-nevis.jpg"); }
     .about-intro-container .about-feature-wrapper .about-feature-image-container .about-feature-image-mask:nth-child(2) {
       display: none; }
       @media (min-width: 1190px) {
@@ -701,6 +698,12 @@ footer {
       @media (min-width: 1434px) {
         .about-intro-container .about-feature-wrapper .about-feature-image-container .about-feature-image-mask:nth-child(2) {
           margin-top: -100px; } }
+      .about-intro-container .about-feature-wrapper .about-feature-image-container .about-feature-image-mask:nth-child(2) .about-feature-image {
+        height: 110%;
+        background-image: url("../images/me-cornwall.jpg"); }
+        @media (min-width: 1434px) {
+          .about-intro-container .about-feature-wrapper .about-feature-image-container .about-feature-image-mask:nth-child(2) .about-feature-image {
+            height: 120%; } }
 
 .location-outer {
   padding: 100px 25px; }
@@ -886,7 +889,7 @@ footer {
     .about-middle-image-wrapper .middle-feature-image-container {
       height: 92vh; } }
   .about-middle-image-wrapper .middle-feature-image-container .middle-feature-image {
-    background-image: url("../images/stroud-valley.png"); }
+    background-image: url("../images/me-scotland-wide.jpg"); }
 
 .about-logo-wall-outer {
   padding: 100px 25px 0; }

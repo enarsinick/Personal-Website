@@ -89,17 +89,12 @@
                 }
         
                 @include mq($laptopMediaQuery) {
-                    height: 75vh;
+                    height: 70vh;
                     border-radius: 10px;
                 }
     
                 .about-feature-image {
-                    height: 110%;
-                    background-image: url("../images/me2.png");
-
-                    @include mq($desktopMediaQuery) {
-                        height: 120%;
-                    }
+                    background-image: url("../images/me-ben-nevis.jpg");
                 }
     
                 &:nth-child(2) {
@@ -112,6 +107,15 @@
         
                     @include mq($desktopMediaQuery) {
                         margin-top: -100px;
+                    }
+
+                    .about-feature-image {
+                        height: 110%;
+                        background-image: url("../images/me-cornwall.jpg");
+    
+                        @include mq($desktopMediaQuery) {
+                            height: 120%;
+                        }
                     }
                 }
             }
@@ -369,7 +373,7 @@
         }
     
         .middle-feature-image {
-            background-image: url("../images/stroud-valley.png"); 
+            background-image: url("../images/me-scotland-wide.jpg"); 
         }
     }
 }
