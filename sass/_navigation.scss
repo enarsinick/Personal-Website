@@ -193,7 +193,7 @@ header {
                         }
                     }
 
-                    .menu-social-icon:nth-child(1) {
+                    .menu-insta {
                         background:  url("../images/instagram-menu.svg") center center/15px no-repeat;
                         
                         @include mq($tabletMediaQuery) {
@@ -201,7 +201,7 @@ header {
                         }
                     }
 
-                    .menu-social-icon:nth-child(2) {
+                    .menu-dribbble {
                         background:  url("../images/dribbble-menu.svg") center center/16px no-repeat;
 
                         @include mq($tabletMediaQuery) {
@@ -209,7 +209,7 @@ header {
                         }
                     }
 
-                    .menu-social-icon:nth-child(3) {
+                    .menu-linked {
                         background:  url("../images/linkedin-menu.svg") center center/15px no-repeat;
 
                         @include mq($tabletMediaQuery) {
@@ -217,7 +217,7 @@ header {
                         }
                     }
 
-                    .menu-social-icon:nth-child(4) {
+                    .menu-github {
                         background:  url("../images/github-menu.svg") center center/17px no-repeat;
 
                         @include mq($tabletMediaQuery) {
