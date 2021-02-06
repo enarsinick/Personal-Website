@@ -50,8 +50,8 @@ footer {
         p:nth-child(1) {
             color: white;
             font-size: 30px;
-            font-family: $main-font-semibold;
-            margin-bottom: 15px;
+            font-family: $main-font-regular;
+            margin-bottom: 10px;
 
             @include mq($tabletMediaQuery) {
                 font-size: 50px;
@@ -60,38 +60,60 @@ footer {
 
             @include mq($laptopMediaQuery) {
                 font-size: 68px;
-                margin-bottom: 50px;
+                margin-bottom: 25px;
             }
 
             @include mq($desktopMediaQuery) {
                 font-size: 80px;
-                margin-bottom: 65px;
+                margin-bottom: 35px;
             }
         }
 
-        p:nth-child(2) {
+        .footer-inline-link {
+            position: relative;
             display: inline-block;
             color: white;
             font-size: 30px;
-            font-family: $main-font-regular;
-            padding-bottom: 5px;
+            font-family: $main-font-semibold !important;
+            padding-bottom: 4px;
             border-bottom: 2px solid white;
 
             @include mq($tabletMediaQuery) {
                 font-size: 50px;
-                padding-bottom: 20px;
-                border-bottom: 3px solid white;
             }
 
             @include mq($laptopMediaQuery) {
                 font-size: 68px;
-                padding-bottom: 30px;
-                border-bottom: 4px solid white;
+                padding-bottom: 7px;
+                border-bottom: 0;
+
+                &:after {
+                    content:'';
+                    position: absolute;
+                    width: 100%;
+                    height: 4px;
+                    bottom: 0;
+                    left: 0;
+                    background-color: white;
+                    transform: scaleX(0);
+                    transform-origin: bottom right;
+                    transition: transform 0.3s;
+
+                    @include mq($desktopMediaQuery) {
+                        height: 4.5px;
+                    }
+                }
+            
+                &:hover {
+                    &:after {
+                        transform-origin: bottom left;
+                        transform: scaleX(1);
+                    }
+                }
             }
 
             @include mq($desktopMediaQuery) {
                 font-size: 80px;
-                padding-bottom: 40px;
             }
         }
     }
