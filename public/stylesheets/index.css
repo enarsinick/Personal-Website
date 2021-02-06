@@ -258,11 +258,7 @@ main {
             height: 45vh; } }
         @media (min-width: 1190px) {
           .featured-project-outer .project-tile-container .project-tile-wrapper .project-image-mask {
-<<<<<<< HEAD
-            height: 85vh;
-=======
             height: 90vh;
->>>>>>> 3c4b322b91f2b433232cd8b1bbb118059267c4c2
             border-radius: 10px; } }
         .featured-project-outer .project-tile-container .project-tile-wrapper .project-image-mask .project-image {
           height: 115%;
@@ -606,7 +602,7 @@ footer {
       height: 65vh;
       border-radius: 10px; } }
   .image-wall-outer .image-wall-mask .image-wall {
-    background-image: url("../images/stroud-valley.png"); }
+    background-image: url("../images/me2.png"); }
 
 .image-wall-outer .image-wall-mask:nth-child(2) {
   margin-top: 10px; }
@@ -649,14 +645,14 @@ footer {
       margin: 160px 0;
       height: initial;
       align-items: flex-start;
-      max-width: 550px; } }
+      max-width: 480px; } }
   @media (min-width: 1434px) {
     .about-intro-container .about-intro-copy {
       max-width: 1190px;
       margin: 170px auto 200px;
       height: initial; }
       .about-intro-container .about-intro-copy h1, .about-intro-container .about-intro-copy p {
-        max-width: 680px; } }
+        max-width: 660px; } }
 
 .about-intro-container .about-feature-wrapper {
   position: relative; }

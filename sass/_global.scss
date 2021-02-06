@@ -342,11 +342,7 @@ main {
                 }
         
                 @include mq($laptopMediaQuery) {
-<<<<<<< HEAD
-                    height: 85vh;
-=======
                     height: 90vh;
->>>>>>> 3c4b322b91f2b433232cd8b1bbb118059267c4c2
                     border-radius: 10px;
                 }
         

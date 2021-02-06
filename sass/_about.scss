@@ -33,21 +33,19 @@
 
         @include mq($laptopMediaQuery) {
             text-align: left;
-            // height: calc(100vh - 100px - 80px);
             margin: 160px 0;
             height: initial;
             align-items: flex-start;
-            max-width: 550px;
+            max-width: 480px;
         }
 
         @include mq($desktopMediaQuery) {
             max-width: $laptopMediaQuery;
             margin: 170px auto 200px;
-            // height: calc(100vh - 100px - 160px);
             height: initial;
 
             h1, p {
-                max-width: 680px;
+                max-width: 660px;
             }
         }
     }
