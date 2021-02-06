@@ -52,66 +52,70 @@
         }
     }
 
-    .about-feature-image-container {
+    .about-feature-wrapper {
+        position: relative;
 
-        @include mq($laptopMediaQuery) {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-gap: 25px;
-        }
-
-        @include mq($desktopMediaQuery) {
-            max-width: $desktopMediaQuery;
-            margin: 0 auto;
-            grid-gap: 30px;
-        }
-
-
-        .about-feature-image {
-            height: 300px;
-            width: 100%;
-            background-image: url("../images/me2.png");
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        
-            @include mq($tabletMediaQuery) {
-                height: 557px;
-                border-radius: 6px;
-            }
+        .about-down-arrow {
+            position: absolute;
+            top: -16px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
 
             @include mq($laptopMediaQuery) {
-                border-radius: 10px;
-                height: 581px;
-            }
-
-            @include mq($desktopMediaQuery) {
-                height: 702px;
-            }
-        
-            img {
-                position: absolute;
-                top: -16px;
-                left: 50%;
-                transform: translateX(-50%);
-
-                @include mq($laptopMediaQuery) {
-                    display: none;
-                }
+                display: none;
             }
         }
+
+        .about-feature-image-container {
+
+            @include mq($laptopMediaQuery) {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 25px;
+            }
     
-        .about-feature-image:nth-child(2) {
-            display: none;
-
-            @include mq($laptopMediaQuery) {
-                display: initial;
-                margin-top: -90px;
-            }
-
             @include mq($desktopMediaQuery) {
-                margin-top: -100px;
+                max-width: $desktopMediaQuery;
+                margin: 0 auto;
+                grid-gap: 30px;
+            }
+    
+            .about-feature-image-mask {
+                height: 65vh;
+                width: 100%;
+    
+                @include mq($tabletMediaQuery) {
+                    height: 60vh;
+                    border-radius: 6px;
+                }
+        
+                @include mq($laptopMediaQuery) {
+                    height: 75vh;
+                    border-radius: 10px;
+                }
+    
+                .about-feature-image {
+                    height: 110%;
+                    background-image: url("../images/me2.png");
+
+                    @include mq($desktopMediaQuery) {
+                        height: 120%;
+                    }
+                }
+    
+                &:nth-child(2) {
+                    display: none;
+        
+                    @include mq($laptopMediaQuery) {
+                        display: initial;
+                        margin-top: -90px;
+                    }
+        
+                    @include mq($desktopMediaQuery) {
+                        margin-top: -100px;
+                    }
+                }
             }
         }
     }
@@ -336,9 +340,7 @@
     }
 }
 
-
-.large-feature-image-container {
-
+.about-middle-image-wrapper {
     @include mq($tabletMediaQuery) {
         padding: 0 $tabletOuterPadding;
     }
@@ -351,29 +353,30 @@
         padding: 0 $desktopOuterPadding;
     }
 
-    .large-feature-image {
+    .middle-feature-image-container {
         height: 100vh;
-        width: 100%;
-        background-image: url("../images/stroud-valley.png"); 
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
     
         @include mq($tabletMediaQuery) {
             height: 515px;
             border-radius: 6px;
         }
-
-        @include mq($tabletMediaQuery) {
+    
+        @include mq($laptopMediaQuery) {
             height: 600px;
             border-radius: 10px;
         }
-        
-        @include mq($tabletMediaQuery) {
+    
+        @include mq($desktopMediaQuery) {
             height: 92vh;
+        }
+    
+        .middle-feature-image {
+            background-image: url("../images/stroud-valley.png"); 
         }
     }
 }
+
+
 
 
 .about-logo-wall-outer {
