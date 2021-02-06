@@ -258,7 +258,7 @@ main {
             height: 45vh; } }
         @media (min-width: 1190px) {
           .featured-project-outer .project-tile-container .project-tile-wrapper .project-image-mask {
-            height: 80vh;
+            height: 85vh;
             border-radius: 10px; } }
         .featured-project-outer .project-tile-container .project-tile-wrapper .project-image-mask .project-image {
           height: 115%;
