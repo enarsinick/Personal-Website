@@ -161,17 +161,60 @@
         }
     }
 
-    img {
+    .map-container {
+        position: relative;
         width: 100%;
         margin-top: 50px;
 
         @include mq($tabletMediaQuery) {
             width: 50%;
-            margin: 0;
+            margin-top: 0;
         }
 
-        @include mq($desktopMediaQuery) {
-            width: 47%;
+        .map-pin {
+            width: 20px;
+            height: 20px;
+            background-color: #55CFA7;
+            border-radius: 100%;
+            position: absolute;
+            top: 50%;
+            left: 33%;
+            z-index: 3;
+
+            @include mq($laptopMediaQuery) {
+                width: 25px;
+                height: 25px;
+            }
+        }
+
+        .map-pin-pulse {
+            background-color: #55CFA7;
+            border-radius: 100%;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 50%;
+            left: 33%;
+            z-index: 2;
+            animation: pulsate 2s ease-out;
+            animation-iteration-count: infinite; 
+            opacity: 0.0;
+
+            @include mq($laptopMediaQuery) {
+                width: 25px;
+                height: 25px;
+            }
+
+            @keyframes pulsate {
+                0% { -webkit-transform: scale(0.1, 0.1); opacity: 0.0; }
+                50% { opacity: 0.3; }
+                100% { -webkit-transform: scale(3, 3); opacity: 0.0; }
+            }
+
+        }
+     
+        img {
+            width: 100%;
         }
     }
 }
