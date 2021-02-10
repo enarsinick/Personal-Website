@@ -461,31 +461,31 @@
     }
 
     .logo-wall-container {
-        width: 70%;
+        width: 80%;
         margin: 0 auto;
 
         @include mq($tabletMediaQuery) {
             width: 100%;
             display: grid;
-            grid-gap: 50px;
+            grid-gap: 40px 50px;
             grid-template-columns: 1fr 1fr 1fr;
             justify-items: center;
             align-items: center;
         }
 
         @include mq($laptopMediaQuery) {
-            grid-gap: 70px 100px;
+            grid-gap: 60px 50px;
             grid-template-columns: 1fr 1fr 1fr 1fr;
         }
 
-        @include mq($laptopMediaQuery) {
-            grid-gap: 100px 100px;
+        @include mq($desktopMediaQuery) {
+            grid-gap: 80px 60px;
         }
 
         img {
             width: 100%;
-            margin: 17.5px 0;
-            opacity: 0.2;
+            margin: 10px 0;
+            opacity: 0.7;
 
             @include mq($tabletMediaQuery) {
                 margin: 0;
