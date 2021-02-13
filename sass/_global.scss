@@ -350,7 +350,7 @@ main {
         
                 .project-image {
                     height: 115%;
-                    background-image: url("../images/project-image.png");
+                    // background-image: url("../images/project-image.jpg");
 
                     @include mq($laptopMediaQuery) {
                         height: 110%;

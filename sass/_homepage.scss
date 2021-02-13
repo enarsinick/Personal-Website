@@ -132,10 +132,6 @@
         @include mq($desktopMediaQuery) {
             height: 75vh;
         }
-
-        .home-about-image {
-            background-image: url("../images/me-main-silver.jpg");
-        }
     }
 }
 
@@ -223,10 +219,6 @@
             height: 65vh;
             border-radius: 10px;
         }
-
-        .image-wall {
-            background-image: url("../images/me-scotland-1.jpg");
-        }
     }
 
     .image-wall-mask:nth-child(2) {
@@ -238,10 +230,6 @@
 
         @include mq($desktopMediaQuery) {
             margin-top: -100px;
-        }
-
-        .image-wall {
-            background-image: url("../images/me-silver-desk.jpg");
         }
     }
 }

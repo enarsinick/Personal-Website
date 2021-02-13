@@ -261,8 +261,7 @@ main {
             height: 90vh;
             border-radius: 10px; } }
         .featured-project-outer .project-tile-container .project-tile-wrapper .project-image-mask .project-image {
-          height: 115%;
-          background-image: url("../images/project-image.png"); }
+          height: 115%; }
           @media (min-width: 1190px) {
             .featured-project-outer .project-tile-container .project-tile-wrapper .project-image-mask .project-image {
               height: 110%; } }
@@ -601,8 +600,6 @@ footer {
     @media (min-width: 1434px) {
       .about-me-outer .home-about-image-wrapper {
         height: 75vh; } }
-    .about-me-outer .home-about-image-wrapper .home-about-image {
-      background-image: url("../images/me-main-silver.jpg"); }
 
 .logo-wall-outer {
   padding: 0 25px 100px;
@@ -675,8 +672,6 @@ footer {
     .image-wall-outer .image-wall-mask {
       height: 65vh;
       border-radius: 10px; } }
-  .image-wall-outer .image-wall-mask .image-wall {
-    background-image: url("../images/me-scotland-1.jpg"); }
 
 .image-wall-outer .image-wall-mask:nth-child(2) {
   margin-top: 10px; }
@@ -686,8 +681,6 @@ footer {
   @media (min-width: 1434px) {
     .image-wall-outer .image-wall-mask:nth-child(2) {
       margin-top: -100px; } }
-  .image-wall-outer .image-wall-mask:nth-child(2) .image-wall {
-    background-image: url("../images/me-silver-desk.jpg"); }
 
 @media (min-width: 768px) {
   .about-intro-container {
@@ -1002,8 +995,6 @@ footer {
   @media (min-width: 1434px) {
     .about-middle-image-wrapper .middle-feature-image-container {
       height: 92vh; } }
-  .about-middle-image-wrapper .middle-feature-image-container .middle-feature-image {
-    background-image: url("../images/me-scotland-wide.jpg"); }
 
 .about-logo-wall-outer {
   padding: 100px 25px 0; }
@@ -1399,8 +1390,6 @@ footer {
         margin-bottom: 80px; } }
     .project-images-outer .project-image-wrapper:last-child {
       margin-bottom: 0; }
-    .project-images-outer .project-image-wrapper .project-image {
-      background-image: url("../images/project-image-3.png"); }
 
 .other-projects-outer {
   padding: 100px 25px; }

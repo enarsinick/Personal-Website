@@ -4,6 +4,44 @@ const closebtn = document.querySelector('.closebtn');
 const menuOverlay = document.querySelector('.menu-overlay');
 const logo = document.querySelector('.logo-wrapper');
 const backToTop = document.querySelector('.back-to-top');
+const images = document.querySelectorAll('[data-src]');
+
+const preloadImage = (img) => {
+  const src = img.getAttribute("data-src");
+  console.log(src);
+  if (!src) {
+    return;
+  }
+  if (img.tagName === 'DIV') {
+    img.style.backgroundImage = `url('${src}')`
+  } else {
+    img.src = src;
+  }
+}
+
+const imgOptions = {
+  threshold: 0, 
+  rootMargin: "0px 0px 600px 0px"
+};
+
+const imgObserver = new IntersectionObserver((entries, imgObserver) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) {
+      return;
+    } else {
+      preloadImage(entry.target);
+      imgObserver.unobserve(entry.target);
+    }
+  })
+}, imgOptions);
+
+images.forEach(image => {
+  imgObserver.observe(image);
+});
+
+
+
+
 
 gsap.registerPlugin(ScrollTrigger);
 
