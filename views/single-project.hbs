@@ -1,47 +1,35 @@
 {{>header}}
 <main class="footer-trigger">
     <section class="project-intro-section transition-content">
-        <p>Mob Network</p>
-        <h1>Lorem ipsum dolor sit amet consetetur elitr sed ut.</h1>
+        <p>{{tile_name}}</p>
+        <h1>{{project_title}}</h1>
     </section>
     <section class="project-feature-image-outer transition-content">
         <a href="#overview"><img src="../images/down-arrow.png"></a> 
         <div class="section-parallax project-feature-image-wrapper">
-            <div class="parallax-image project-feature-image"></div>
+            <div class="parallax-image project-feature-image" style="background-image: url({{feature_image}});"></div>
         </div>
     </section>
     <section id="overview" class="project-overview-outer">
         <div class="animate-content">
             <h2>Overview</h2>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.<br>
-            <br>
-            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+            {{#each project_overview}}
+                <p>{{this}}</p>
+                <br>
+            {{/each}}
             <div class="project-btn-wrapper">
-                <button class="project-btn-primary">Live preview</button>
-                <button class="project-btn-secondary">View code</button>
+                <a target="_blank" href="{{live_link}}"><button class="project-btn-primary">Live preview</button></a>
+                <a target="_blank" href="{{github_link}}"><button class="project-btn-secondary">View code</button></a>
             </div>
         </div>
         
     </section>
     <section class="project-images-outer">
-        <div class="section-parallax project-image-wrapper animate-content">
-            <div class="parallax-image project-image" data-src="../images/project-image-3.png"></div>
-        </div>
-        <div class="section-parallax project-image-wrapper animate-content">
-            <div class="parallax-image project-image" data-src="../images/project-image-3.png"></div>
-        </div>
-        <div class="section-parallax project-image-wrapper animate-content">
-            <div class="parallax-image project-image" data-src="../images/project-image-3.png"></div>
-        </div>
-        <div class="section-parallax project-image-wrapper animate-content">
-            <div class="parallax-image project-image" data-src="../images/project-image-3.png"></div>
-        </div>
-        <div class="section-parallax project-image-wrapper animate-content">
-            <div class="parallax-image project-image" data-src="../images/project-image-3.png"></div>
-        </div>
-        <div class="section-parallax project-image-wrapper animate-content">
-            <div class="parallax-image project-image" data-src="../images/project-image-3.png"></div>
-        </div>
+        {{#each project_images}}
+            <div class="section-parallax project-image-wrapper animate-content">
+                <div class="parallax-image project-image" data-src="{{this}}"></div>
+            </div>
+        {{/each}}
     </section>
     <hr class="divider-line animate-content">
     <section class="featured-project-outer">

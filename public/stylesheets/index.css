@@ -1299,8 +1299,6 @@ footer {
       .project-feature-image-outer .project-feature-image-wrapper {
         height: 90vh;
         border-radius: 10px; } }
-  .project-feature-image-outer .project-feature-image {
-    background-image: url("../images/project-feature.png"); }
 
 .project-overview-outer {
   padding: 100px 25px; }
