@@ -1,7 +1,7 @@
 {
     "featured_projects": [
         {
-            "id": 1,
+            "id": 0,
             "tile_name": "Mob Network",
             "tile_technologies": "Website and Branding",
             "tile_image": "./images/projects/01/tile_image.jpg",
@@ -19,7 +19,7 @@
             ]
         },
         {
-            "id": 2,
+            "id": 1,
             "tile_name": "Silver Agency",
             "tile_technologies": "Branding and Design",
             "tile_image": "./images/projects/02/tile_image.jpg",
@@ -38,7 +38,7 @@
             ]
         },
         {
-            "id": 3,
+            "id": 2,
             "tile_name": "Microsoft",
             "tile_technologies": "Web Design",
             "tile_image": "./images/projects/03/tile_image.jpg",
@@ -56,11 +56,11 @@
             ]
         },
         {
-            "id": 4,
+            "id": 3,
             "tile_name": "Telefonica",
             "tile_technologies": "Branding",
             "tile_image": "./images/projects/04/tile_image.jpg",
-            "project_title": "This is an example title 3",
+            "project_title": "This is an example title 4",
             "feature_image": "../images/projects/04/feature_image.jpg",
             "project_overview": [
                 "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.",

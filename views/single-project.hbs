@@ -1,31 +1,31 @@
 {{>header}}
 <main class="footer-trigger">
     <section class="project-intro-section transition-content">
-        <p>{{tile_name}}</p>
-        <h1>{{project_title}}</h1>
+        <p>{{project.tile_name}}</p>
+        <h1>{{project.project_title}}</h1>
     </section>
     <section class="project-feature-image-outer transition-content">
         <a href="#overview"><img src="../images/down-arrow.png"></a> 
         <div class="section-parallax project-feature-image-wrapper">
-            <div class="parallax-image project-feature-image" style="background-image: url({{feature_image}});"></div>
+            <div class="parallax-image project-feature-image" style="background-image: url({{project.feature_image}});"></div>
         </div>
     </section>
     <section id="overview" class="project-overview-outer">
         <div class="animate-content">
             <h2>Overview</h2>
-            {{#each project_overview}}
+            {{#each project.project_overview}}
                 <p>{{this}}</p>
                 <br>
             {{/each}}
             <div class="project-btn-wrapper">
-                <a target="_blank" href="{{live_link}}"><button class="project-btn-primary">Live preview</button></a>
-                <a target="_blank" href="{{github_link}}"><button class="project-btn-secondary">View code</button></a>
+                <a target="_blank" href="{{project.live_link}}"><button class="project-btn-primary">Live preview</button></a>
+                <a target="_blank" href="{{project.github_link}}"><button class="project-btn-secondary">View code</button></a>
             </div>
         </div>
         
     </section>
     <section class="project-images-outer">
-        {{#each project_images}}
+        {{#each project.project_images}}
             <div class="section-parallax project-image-wrapper animate-content">
                 <div class="parallax-image project-image" data-src="{{this}}"></div>
             </div>
@@ -39,28 +39,17 @@
             <a class="transition-link" href="/work"><button class="primary-btn">View all</button></a>
         </div>
         <div class="project-tile-container">
-            <div class="project-left-col">
+            {{#each related}}
                 <div class="project-tile-wrapper animate-content">
                     <div class="project-tile-copy">
-                        <h3>Mob Network</h3>
-                        <p>Website and Design</p>
+                        <h3>{{this.tile_name}}</h3>
+                        <p>{{this.tile_technologies}}</p>
                     </div>
                     <div class="section-parallax project-image-mask">
-                        <div class="parallax-image project-image" data-src="../images/project-image.jpg"></div>
+                        <div class="parallax-image project-image" data-src=".{{this.tile_image}}"></div>
                     </div>
                 </div>
-            </div>
-            <div class="project-right-col">
-                <div class="project-tile-wrapper animate-content">
-                    <div class="project-tile-copy">
-                        <h3>Mob Network</h3>
-                        <p>Website and Design</p>
-                    </div>
-                    <div class="section-parallax project-image-mask">
-                        <div class="parallax-image project-image" data-src="../images/project-image.jpg"></div>
-                    </div>
-                </div>
-            </div>
+            {{/each}}
         </div>
     </section>
 </main>

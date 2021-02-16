@@ -262,51 +262,37 @@ main {
     }
 
     .project-tile-container {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
 
         @include mq($tabletMediaQuery) {
-            flex-direction: row;
+            grid-template-columns: 1fr 1fr;
+        }
 
-            .project-left-col {
-                width: 50%;
-                margin-right: 10px;
+        @include mq($laptopMediaQuery) {
+            grid-gap: 26px;
+        }
 
-                @include mq($laptopMediaQuery) {
-                    margin-right: 13px;
-                }
-
-                @include mq($desktopMediaQuery) {
-                    margin-right: 25px;
-                }
-            }
-
-            .project-right-col {
-                width: 50%;
-                margin-left: 10px;
-                margin-top: -60px;
-
-                @include mq($laptopMediaQuery) {
-                    margin-top: -110px;
-                    margin-left: 13px;
-                }
-
-                @include mq($desktopMediaQuery) {
-                    margin-left: 25px;
-                }
-            }
+        @include mq($desktopMediaQuery) {
+            grid-gap: 50px;
         }
 
         .project-tile-wrapper {
             position: relative;
-            margin-bottom: 20px;
 
-            @include mq($laptopMediaQuery) {
-                margin-bottom: 26px;
+            @include mq($tabletMediaQuery) {
+                &:nth-child(2),
+                &:nth-child(4) {
+                    margin-top: -60px;
+                }
             }
 
-            @include mq($desktopMediaQuery) {
-                margin-bottom: 50px;
+            @include mq($laptopMediaQuery) {
+                &:nth-child(2),
+                &:nth-child(4) {
+                    margin-top: -110px;
+                }
             }
     
             .project-tile-copy {
@@ -350,7 +336,6 @@ main {
         
                 .project-image {
                     height: 115%;
-                    // background-image: url("../images/project-image.jpg");
 
                     @include mq($laptopMediaQuery) {
                         height: 110%;
