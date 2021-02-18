@@ -5,10 +5,12 @@ const menuOverlay = document.querySelector('.menu-overlay');
 const logo = document.querySelector('.logo-wrapper');
 const backToTop = document.querySelector('.back-to-top');
 const images = document.querySelectorAll('[data-src]');
+gsap.registerPlugin(ScrollTrigger);
+
+
 
 const preloadImage = (img) => {
   const src = img.getAttribute("data-src");
-  console.log(src);
   if (!src) {
     return;
   }
@@ -40,10 +42,6 @@ images.forEach(image => {
 });
 
 
-
-
-
-gsap.registerPlugin(ScrollTrigger);
 
 
 gsap.utils.toArray(".section-parallax .parallax-image").forEach((section, i) => {
@@ -208,6 +206,7 @@ window.onload = () => {
       anchor.addEventListener('click', e => {
         e.preventDefault(); 
         let target = e.target.href || e.target.parentElement.href;
+        console.log(e.target);
 
         page_transition_exit
           .to('.transition', {top: 0, duration: 0.6, ease: "power4.inOut"})

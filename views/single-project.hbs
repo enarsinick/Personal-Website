@@ -40,15 +40,17 @@
         </div>
         <div class="project-tile-container">
             {{#each related}}
-                <div class="project-tile-wrapper animate-content">
-                    <div class="project-tile-copy">
-                        <h3>{{this.tile_name}}</h3>
-                        <p>{{this.tile_technologies}}</p>
+                <a class="transition-link" href="/work/{{this.id}}">
+                    <div class="project-tile-wrapper animate-content">
+                        <div class="project-tile-copy">
+                            <h3>{{this.tile_name}}</h3>
+                            <p>{{this.tile_technologies}}</p>
+                        </div>
+                        <div class="section-parallax project-image-mask">
+                            <div class="parallax-image project-image" data-src=".{{this.tile_image}}"></div>
+                        </div>
                     </div>
-                    <div class="section-parallax project-image-mask">
-                        <div class="parallax-image project-image" data-src=".{{this.tile_image}}"></div>
-                    </div>
-                </div>
+                </a>
             {{/each}}
         </div>
     </section>

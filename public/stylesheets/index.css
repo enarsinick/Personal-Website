@@ -202,22 +202,24 @@ main {
     grid-gap: 20px; }
     @media (min-width: 768px) {
       .featured-project-outer .project-tile-container {
-        grid-template-columns: 1fr 1fr; } }
+        grid-template-columns: 1fr 1fr; }
+        .featured-project-outer .project-tile-container a:nth-child(2),
+        .featured-project-outer .project-tile-container a:nth-child(4) {
+          margin-top: -60px; } }
     @media (min-width: 1190px) {
       .featured-project-outer .project-tile-container {
-        grid-gap: 26px; } }
+        grid-gap: 26px; }
+        .featured-project-outer .project-tile-container a:nth-child(2),
+        .featured-project-outer .project-tile-container a:nth-child(4) {
+          margin-top: -110px; } }
     @media (min-width: 1434px) {
       .featured-project-outer .project-tile-container {
         grid-gap: 50px; } }
     .featured-project-outer .project-tile-container .project-tile-wrapper {
-      position: relative; }
-      @media (min-width: 768px) {
-        .featured-project-outer .project-tile-container .project-tile-wrapper:nth-child(2), .featured-project-outer .project-tile-container .project-tile-wrapper:nth-child(4) {
-          margin-top: -60px; } }
-      @media (min-width: 1190px) {
-        .featured-project-outer .project-tile-container .project-tile-wrapper:nth-child(2), .featured-project-outer .project-tile-container .project-tile-wrapper:nth-child(4) {
-          margin-top: -110px; } }
+      position: relative;
+      pointer-events: none; }
       .featured-project-outer .project-tile-container .project-tile-wrapper .project-tile-copy {
+        pointer-events: none;
         z-index: 10;
         position: absolute;
         top: 20px;
@@ -227,7 +229,8 @@ main {
             top: 50px;
             left: 50px; } }
         .featured-project-outer .project-tile-container .project-tile-wrapper .project-tile-copy h3, .featured-project-outer .project-tile-container .project-tile-wrapper .project-tile-copy p {
-          color: white; }
+          color: white;
+          pointer-events: none; }
         .featured-project-outer .project-tile-container .project-tile-wrapper .project-tile-copy p {
           font-size: 14px; }
           @media (min-width: 1190px) {
@@ -235,6 +238,7 @@ main {
               font-size: 20px;
               margin-top: 3px; } }
       .featured-project-outer .project-tile-container .project-tile-wrapper .project-image-mask {
+        pointer-events: none;
         height: 60vh;
         width: 100%;
         border-radius: 6px; }
@@ -246,6 +250,7 @@ main {
             height: 90vh;
             border-radius: 10px; } }
         .featured-project-outer .project-tile-container .project-tile-wrapper .project-image-mask .project-image {
+          pointer-events: none;
           height: 115%; }
           @media (min-width: 1190px) {
             .featured-project-outer .project-tile-container .project-tile-wrapper .project-image-mask .project-image {

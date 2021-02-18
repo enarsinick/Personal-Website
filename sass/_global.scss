@@ -268,34 +268,33 @@ main {
 
         @include mq($tabletMediaQuery) {
             grid-template-columns: 1fr 1fr;
+
+            a:nth-child(2),
+            a:nth-child(4) {
+                margin-top: -60px;
+            }
         }
 
         @include mq($laptopMediaQuery) {
             grid-gap: 26px;
+
+            a:nth-child(2),
+            a:nth-child(4) {
+                margin-top: -110px;
+            }
         }
 
         @include mq($desktopMediaQuery) {
             grid-gap: 50px;
         }
+        
 
         .project-tile-wrapper {
             position: relative;
-
-            @include mq($tabletMediaQuery) {
-                &:nth-child(2),
-                &:nth-child(4) {
-                    margin-top: -60px;
-                }
-            }
-
-            @include mq($laptopMediaQuery) {
-                &:nth-child(2),
-                &:nth-child(4) {
-                    margin-top: -110px;
-                }
-            }
+            pointer-events: none;
     
             .project-tile-copy {
+                pointer-events: none;
                 z-index: 10;
                 position: absolute;
                 top: 20px;
@@ -308,6 +307,7 @@ main {
     
                 h3, p {
                     color: white;
+                    pointer-events: none;
                 }
     
                 p {
@@ -321,6 +321,7 @@ main {
             }
 
             .project-image-mask {
+                pointer-events: none;
                 height: 60vh;
                 width: 100%;
                 border-radius: 6px;
@@ -335,6 +336,7 @@ main {
                 }
         
                 .project-image {
+                    pointer-events: none;
                     height: 115%;
 
                     @include mq($laptopMediaQuery) {
