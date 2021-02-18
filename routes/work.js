@@ -4,7 +4,14 @@ const { featured_projects } = require('../data/data.json');
 
 /* GET all work page. */
 router.get('/', function(req, res, next) {
-  res.render('work');
+  res.render('work', {
+    "projects": [
+      featured_projects[0],
+      featured_projects[1],
+      featured_projects[2],
+      featured_projects[3]
+    ]
+  });
 });
 
 /* GET specific project page. */
@@ -32,8 +39,10 @@ router.get('/:id', function(req, res, next) {
     }
   }
 
+  // Select project based on URL parameters
   const project = featured_projects[id];
 
+  // Render the page
   res.render('single-project', {
     "project": project,
     "related": relatedProjects
