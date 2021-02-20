@@ -4,14 +4,11 @@ const { featured_projects } = require('../data/data.json');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', {
-    "projects": [
-      featured_projects[0],
-      featured_projects[1],
-      featured_projects[2],
-      featured_projects[3]
-    ]
-  });
+  // Loop over each feature project and add to array
+  // then render that into the index view
+  const projects = [];
+  featured_projects.forEach(project => { projects.push(project)});
+  res.render('index', {projects});
 });
 
 /* GET about page. */
@@ -23,7 +20,7 @@ router.get('/about', function(req, res, next) {
 
   // Pick 2 random projects for JSON file that aren't 
   // the same as the one being viewed
-  while (counter < 2) {
+  while (counter <= 1) {
     index = (Math.floor(Math.random() * featured_projects.length));
     if (index !== prevIndex) {
       relatedProjects.push(featured_projects[index]);
@@ -33,9 +30,7 @@ router.get('/about', function(req, res, next) {
   }
 
   // Render the page
-  res.render('about', {
-    "related": relatedProjects
-  });
+  res.render('about', { "related": relatedProjects });
 });
 
 module.exports = router;

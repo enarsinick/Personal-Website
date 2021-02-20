@@ -12,34 +12,25 @@
     </div>
     <hr class="divider-line transition-content">
     <section class="featured-project-outer">
-        <div class="featured-project-intro-copy transition-content">
-            <h2>Lorem ipsum dolor sit amet consetetur elitr</h2>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+        <div class="featured-project-intro-copy animate-content">
+            <h2>A selection of my favourite projects</h2>
+            <p>I've had the pleasure of working on a number of projects during my career, utilising a wide range of disciplines. If you'd like to see more, visit my projects page.</p>
             <a class="transition-link" href="/work"><button class="primary-btn">View all</button></a>
         </div>
         <div class="project-tile-container">
-            <div class="project-left-col">
-                <div class="project-tile-wrapper animate-content">
-                    <div class="project-tile-copy">
-                        <h3>Mob Network</h3>
-                        <p>Website and Design</p>
+            {{#each related}}
+                <a class="transition-link" href="/work/{{this.id}}">
+                    <div class="project-tile-wrapper animate-content">
+                        <div class="project-tile-copy">
+                            <h3>{{this.tile_name}}</h3>
+                            <p>{{this.tile_technologies}}</p>
+                        </div>
+                        <div class="section-parallax project-image-mask">
+                            <div class="parallax-image project-image" data-src="{{this.tile_image}}"></div>
+                        </div>
                     </div>
-                    <div class="section-parallax project-image-mask">
-                        <div class="parallax-image project-image"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="project-right-col">
-                <div class="project-tile-wrapper animate-content">
-                    <div class="project-tile-copy">
-                        <h3>Mob Network</h3>
-                        <p>Website and Design</p>
-                    </div>
-                    <div class="section-parallax project-image-mask">
-                        <div class="parallax-image project-image"></div>
-                    </div>
-                </div>
-            </div>
+                </a>
+            {{/each}}
         </div>
     </section>
 </main>

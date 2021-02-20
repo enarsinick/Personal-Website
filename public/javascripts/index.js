@@ -7,8 +7,7 @@ const backToTop = document.querySelector('.back-to-top');
 const images = document.querySelectorAll('[data-src]');
 gsap.registerPlugin(ScrollTrigger);
 
-
-
+// Lazy load images into the DOM
 const preloadImage = (img) => {
   const src = img.getAttribute("data-src");
   if (!src) {
@@ -41,9 +40,7 @@ images.forEach(image => {
   imgObserver.observe(image);
 });
 
-
-
-
+// Parallax effect for images using GSAP
 gsap.utils.toArray(".section-parallax .parallax-image").forEach((section, i) => {
   const heightDiff = section.offsetHeight - section.parentElement.offsetHeight;
 
@@ -58,7 +55,6 @@ gsap.utils.toArray(".section-parallax .parallax-image").forEach((section, i) => 
     ease: "none"
   });
 });
-
 
 const getScrollerStart = () => {
   if (window.innerWidth >= 1190) {
@@ -156,9 +152,6 @@ closebtn.addEventListener('click', () => {
     .to(menuOverlay, {opacity: 0, duration: 0.2,},"-=0.8")
 })
 
-
-
-
 // Accordian functionality
 for (let i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
@@ -171,7 +164,6 @@ for (let i = 0; i < acc.length; i++) {
     }
   });
 }
-
 
 // If user has scrolled certain distance, display back to top button
 window.addEventListener("scroll", () => {
@@ -189,7 +181,6 @@ backToTop.addEventListener('click', () => {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 });
-
 
 // Page transition element on pageload
 window.onload = () => {

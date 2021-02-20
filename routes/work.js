@@ -4,14 +4,9 @@ const { featured_projects } = require('../data/data.json');
 
 /* GET all work page. */
 router.get('/', function(req, res, next) {
-  res.render('work', {
-    "projects": [
-      featured_projects[0],
-      featured_projects[1],
-      featured_projects[2],
-      featured_projects[3]
-    ]
-  });
+  const projects = [];
+  featured_projects.forEach(project => { projects.push(project)});
+  res.render('work', {projects});
 });
 
 /* GET specific project page. */

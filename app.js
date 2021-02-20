@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var hbs = require('hbs');
+const { featured_projects } = require('./data/data.json');
 
 
 var indexRouter = require('./routes/index');
@@ -32,13 +33,31 @@ app.use(function(req, res, next) {
 
 // error handler
 app.use(function(err, req, res, next) {
+  let relatedProjects = [];
+  let counter = 0;
+  let index;
+  let prevIndex;
+  
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+
+  // Pick 2 random projects for JSON file that aren't 
+  // the same as the one being viewed
+  while (counter <= 1) {
+    index = (Math.floor(Math.random() * featured_projects.length));
+    if (index !== prevIndex) {
+      relatedProjects.push(featured_projects[index]);
+      counter++;
+      prevIndex = index;
+    }
+  }
+
+  // Render the page
+  res.render('error', { "related": relatedProjects });
 });
 
 module.exports = app;
