@@ -1,18 +1,21 @@
 @import 'variables';
 
 .project-intro-section {
-    height: calc(100vh - 110px - 53px);
+    height: calc(100vh - 25vh - 53px);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 0 $mobileOuterPadding;  
+    padding: 0 $mobileOuterPadding; 
+    
+    @include mq($mobileMediumMediaQuery) {
+        height: calc(100vh - 35vh - 53px);
+    }
 
     @include mq($tabletMediaQuery) {
-        height: initial;
+        height: calc(100vh - 43vh - 82px);
         text-align: left;
-        margin: 150px 0;
         padding: 0 $tabletOuterPadding;
         align-items: flex-start;
 
@@ -22,7 +25,7 @@
     }
 
     @include mq($laptopMediaQuery) {
-        margin: 160px 0;
+        height: calc(100vh - 30vh - 100px);
         padding: 0 $laptopOuterPadding;
 
         h1 {
@@ -31,7 +34,8 @@
     }
 
     @include mq($desktopMediaQuery) {
-        margin: 170px auto;
+        margin: 0 auto;
+        height: calc(100vh - 40vh - 100px);
         padding: 0;
         width: $laptopMediaQuery;
 
@@ -88,10 +92,6 @@
             border-radius: 10px;
         }
     }
-
-    // .project-feature-image {
-    //     background-image: url("../images/project-feature.png");
-    // }
 }
 
 

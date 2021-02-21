@@ -197,12 +197,9 @@ window.onload = () => {
       anchor.addEventListener('click', e => {
         e.preventDefault(); 
         let target = e.target.href || e.target.parentElement.href;
-        console.log(e.target);
-
         page_transition_exit
           .to('.transition', {top: 0, duration: 0.6, ease: "power4.inOut"})
           .to('.transition-logo', {opacity: 1, duration: 0.5},"-=0.2")
-
         setTimeout(() => {
           window.location.href = target;
         }, 950);

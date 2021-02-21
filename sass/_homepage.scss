@@ -15,24 +15,28 @@
     }
     
     .intro-section {
-        height: calc(100vh - 195px - 53px);
+        height: calc(100vh - 30vh - 53px);
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         text-align: center;
         padding: 0 $mobileOuterPadding;
+
+        @include mq($mobileMediumMediaQuery) {
+            height: calc(100vh - 35vh - 53px);
+        }
     
         @include mq($tabletMediaQuery) {
-            height: calc(100vh - 534px - 63px);
+            height: calc(100vh - 50vh - 63px);
         }
 
         @include mq($laptopMediaQuery) {
-            height: calc(100vh - 270px - 100px);
+            height: calc(100vh - 35vh - 100px);
         }
 
         @include mq($desktopMediaQuery) {
-            height: calc(100vh - 350px - 100px);
+            height: calc(100vh - 30vh - 100px);
         }
     }
 
@@ -88,7 +92,7 @@
 
     h2 {
         margin-bottom: 20px;
-        max-width: 220px;
+        max-width: 80vw;
         
         @include mq($tabletMediaQuery) {
             max-width: 260px;
@@ -138,7 +142,7 @@
 .logo-wall-outer {
     padding: 0 $mobileOuterPadding 100px;
     margin: 0 auto;
-    width: 80%;
+    width: 70%;
     display: flex;
     flex-direction: column;
 

@@ -10,6 +10,10 @@
     text-align: center;
     padding: 0 $mobileOuterPadding;
 
+    @include mq($mobileMediumMediaQuery) {
+        margin: 100px 0 60px;
+    }
+
     @include mq($tabletMediaQuery) {
         margin: 125px 0;
         text-align: left;
@@ -93,6 +97,10 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        @include mq($mobileMediumMediaQuery) {
+            font-size: 18px;
+        }
 
         @include mq($tabletMediaQuery) {
             font-size: 22px;

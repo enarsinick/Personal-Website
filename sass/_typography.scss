@@ -20,6 +20,11 @@
     color: $headerColour;
     margin-bottom: 20px;
 
+    @include mq($mobileMediumMediaQuery) {
+      font-size: 34px;
+      line-height: 38px;
+    }
+
     @include mq($tabletMediaQuery) {
       font-size: 36px;
       max-width: 400px;
@@ -44,6 +49,11 @@
     font-size: 28px !important;
     line-height: 35px !important;
     color: $headerColour !important;
+
+    @include mq($mobileMediumMediaQuery) {
+      font-size: 36px !important;;
+      line-height: 40px !important;
+    }
 
     @include mq($tabletMediaQuery) {
       font-size: 40px !important;
