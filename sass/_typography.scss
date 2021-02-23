@@ -19,6 +19,7 @@
     line-height: 35px;
     color: $headerColour;
     margin-bottom: 20px;
+    font-weight: normal;
 
     @include mq($mobileMediumMediaQuery) {
       font-size: 34px;
@@ -49,6 +50,7 @@
     font-size: 28px !important;
     line-height: 35px !important;
     color: $headerColour !important;
+    font-weight: normal !important;
 
     @include mq($mobileMediumMediaQuery) {
       font-size: 36px !important;;
@@ -73,6 +75,7 @@
       font-size: 25px;
       line-height: 31px;
       color: $headerColour;
+      font-weight: normal;
 
       @include mq($tabletMediaQuery) {
         font-size: 30px;
@@ -95,6 +98,7 @@
     font-size: 20px;
     // line-height: 33px;
     color: $headerColour;
+    font-weight: normal;
 
     @include mq($tabletMediaQuery) {
       font-size: 22px;
@@ -114,6 +118,7 @@
       color: $bodyCopyColour;
       font-size: 16px;
       line-height: 22px;
+      font-weight: normal;
 
       @include mq($laptopMediaQuery) {
         font-size: 20px;
