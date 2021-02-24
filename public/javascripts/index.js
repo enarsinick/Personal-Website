@@ -126,16 +126,16 @@ openBtn.addEventListener('click', () => {
       .to('.sidenav', {width: "560px", duration: 1, ease: "power4.out"})
       .to(menuOverlay, {opacity: 1, duration: 0.2,},"-=1")
       .to('.menu-items', {opacity: 1, duration: 1.5},"-=0.8")
-      .to(closebtn, {opacity: 1, duration: 0.6},"-=0.8")
-      .to('.menu-social-icons-container', {opacity: 1,duration: 0.6},"-=0.8");
+      .to(closebtn, {opacity: 1, duration: 0.8},"-=1.3")
+      .to('.menu-social-icons-container', {opacity: 1,duration: 0.8},"-=1.3");
   } else {
     logo.style.zIndex = "4";
     menu_tl_open
       .to('.sidenav', {width: "100%", duration: 0.8, ease: "power4.out"})
       .to(menuOverlay, {opacity: 1, duration: 0.1,},"-=0.8")
       .to('.menu-items', {opacity: 1, duration: 1.5},"-=0.6")
-      .to(closebtn, {opacity: 1, duration: 0.6},"-=1")
-      .to('.menu-social-icons-container', {opacity: 1,duration: 0.6},"-=1")
+      .to(closebtn, {opacity: 1, duration: 0.6},"-=1.3")
+      .to('.menu-social-icons-container', {opacity: 1,duration: 0.6},"-=1.3")
   }
 })
 

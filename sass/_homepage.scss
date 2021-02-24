@@ -46,11 +46,17 @@
         
         @include mq($tabletMediaQuery) {
             height: 55vh;
+            -webkit-border-radius: 6px;
+            -khtml-border-radius: 6px;
+            -moz-border-radius: 6px;
             border-radius: 6px;
         }
 
         @include mq($laptopMediaQuery) {
             height: 80vh;
+            -webkit-border-radius: 10px;
+            -khtml-border-radius: 10px;
+            -moz-border-radius: 10px;
             border-radius: 10px;
         }
 
@@ -119,6 +125,9 @@
     .home-about-image-wrapper {
         width: 100%;
         height: 60vh;
+        -webkit-border-radius: 6px;
+        -khtml-border-radius: 6px;
+        -moz-border-radius: 6px;
         border-radius: 6px;
         margin-top: 50px;
 
@@ -129,6 +138,9 @@
         }
 
         @include mq($laptopMediaQuery) {
+            -webkit-border-radius: 10px;
+            -khtml-border-radius: 10px;
+            -moz-border-radius: 10px;
             border-radius: 10px;
             height: 80vh;
         }
@@ -215,12 +227,18 @@
         width: 100%;
 
         @include mq($tabletMediaQuery) {
-            height: 40vh;
+            height: 40vh;            
+            -webkit-border-radius: 6px;
+            -khtml-border-radius: 6px;
+            -moz-border-radius: 6px;
             border-radius: 6px;
         }
 
         @include mq($laptopMediaQuery) {
             height: 65vh;
+            -webkit-border-radius: 10px;
+            -khtml-border-radius: 10px;
+            -moz-border-radius: 10px;
             border-radius: 10px;
         }
     }
