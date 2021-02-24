@@ -188,8 +188,8 @@ window.onload = () => {
   let page_transition_enter = gsap.timeline();
   let page_transition_exit = gsap.timeline();
   page_transition_enter
-    .to('.transition', {top: "-100%", duration: 1, delay: 0.3, ease: "power4.inOut"})
-    .to('.transition-logo', {opacity: 0},"-=0.6")
+    .to('.transition', {top: "-100%", duration: 1, ease: "power4.inOut"})
+    // .to('.transition-logo', {opacity: 0},"-=0.6")
     .to('.transition-content', {opacity: 1, duration: 1, y: 0, ease: "power4.out"},"-=0.5")
 
     for (let i = 0; i < anchors.length; i++) {
@@ -199,10 +199,10 @@ window.onload = () => {
         let target = e.target.href || e.target.parentElement.href;
         page_transition_exit
           .to('.transition', {top: 0, duration: 0.6, ease: "power4.inOut"})
-          .to('.transition-logo', {opacity: 1, duration: 0.5},"-=0.2")
+          // .to('.transition-logo', {opacity: 1, duration: 0.5},"-=0.2")
         setTimeout(() => {
           window.location.href = target;
-        }, 950);
+        }, 650);
       });
     }
 };
