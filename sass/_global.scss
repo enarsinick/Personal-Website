@@ -328,14 +328,20 @@ main {
                 height: 60vh;
                 width: 100%;
                 border-radius: 6px;
+                max-height: 450px;
+                min-height: 330px;
         
                 @include mq($tabletMediaQuery) {
                     height: 45vh;
+                    min-height: 420px;
+                    max-height: 580px;
                 }
         
                 @include mq($laptopMediaQuery) {
                     height: 90vh;
                     border-radius: 10px;
+                    max-height: 800px;
+                    min-height: 750px;
                 }
         
                 .project-image {

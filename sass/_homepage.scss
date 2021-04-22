@@ -43,9 +43,12 @@
     .feature-image-wrapper {
         width: 100%;
         height: 50vh;
+        min-height: 300px;
         
         @include mq($tabletMediaQuery) {
             height: 55vh;
+            min-height: 550px;
+            max-height: 650px;
             -webkit-border-radius: 6px;
             -khtml-border-radius: 6px;
             -moz-border-radius: 6px;
@@ -54,6 +57,8 @@
 
         @include mq($laptopMediaQuery) {
             height: 80vh;
+            min-height: 640px;
+            max-height: 700px;
             -webkit-border-radius: 10px;
             -khtml-border-radius: 10px;
             -moz-border-radius: 10px;
@@ -62,6 +67,8 @@
 
         @include mq($desktopMediaQuery) {
             height: 92vh;
+            min-height: 1000px;
+            max-height: 1080px;
         }
 
         .home-feature-image {
@@ -125,6 +132,8 @@
     .home-about-image-wrapper {
         width: 100%;
         height: 60vh;
+        max-height: 450px;
+        min-height: 330px;
         -webkit-border-radius: 6px;
         -khtml-border-radius: 6px;
         -moz-border-radius: 6px;
@@ -135,6 +144,8 @@
             width: 48%;
             margin: 0;
             height: 45vh;
+            max-height: 650px;
+            min-height: 480px;
         }
 
         @include mq($laptopMediaQuery) {
@@ -143,10 +154,14 @@
             -moz-border-radius: 10px;
             border-radius: 10px;
             height: 80vh;
+            max-height: 700px;
+            min-height: 640px;
         }
 
         @include mq($desktopMediaQuery) {
             height: 75vh;
+            max-height: 720px;
+            min-height: 680px;
         }
     }
 }
@@ -224,10 +239,14 @@
 
     .image-wall-mask {
         height: 45vh;
+        max-height: 360px;
+        min-height: 275px;
         width: 100%;
 
         @include mq($tabletMediaQuery) {
-            height: 40vh;            
+            height: 40vh;
+            min-height: 405px;
+            max-height: 550px;            
             -webkit-border-radius: 6px;
             -khtml-border-radius: 6px;
             -moz-border-radius: 6px;
@@ -236,10 +255,18 @@
 
         @include mq($laptopMediaQuery) {
             height: 65vh;
+            min-height: 500px;
+            max-height: 600px;   
             -webkit-border-radius: 10px;
             -khtml-border-radius: 10px;
             -moz-border-radius: 10px;
             border-radius: 10px;
+        }
+
+        @include mq($desktopMediaQuery) {
+            height: 70vh;
+            max-height: 700px;
+            min-height: 680px;
         }
     }
 
