@@ -2,11 +2,12 @@
 
 footer {
     background-color: #000;
-    padding-bottom: 50px;
+    // padding-bottom: 50px;
     position: sticky;
     bottom: 0;
     left: 0;
     width: 100%;
+    height: 100%;
     z-index: -1;
     opacity: 0;
 
@@ -21,6 +22,10 @@ footer {
     .footer-inner {
         opacity: 0;
         transform: translateY(80px);
+        height: 100%;
+        position: relative;
+        display: flex;
+        justify-content: center;
     }
 
     .show-footer{
@@ -30,7 +35,9 @@ footer {
 
     .cta-section {
         text-align: center;
-        padding: 100px 0 70px;
+        // padding: 100px 0 70px;
+        position: absolute;
+        bottom: 60%;
 
         @include mq($tabletMediaQuery) {
             text-align: left;
@@ -122,7 +129,10 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         text-align: center;
+        position: absolute;
+        bottom: 50px;
 
         @include mq($tabletMediaQuery) {
             flex-direction: row;
