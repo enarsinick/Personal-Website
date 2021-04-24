@@ -11,14 +11,6 @@ footer {
     z-index: -1;
     opacity: 0;
 
-    @include mq($tabletMediaQuery) {
-        padding-bottom: 60px;
-    }
-
-    @include mq($desktopMediaQuery) {
-        padding-bottom: 100px;
-    }
-
     .footer-inner {
         opacity: 0;
         transform: translateY(80px);
@@ -35,21 +27,22 @@ footer {
 
     .cta-section {
         text-align: center;
-        // padding: 100px 0 70px;
         position: absolute;
         bottom: 60%;
 
         @include mq($tabletMediaQuery) {
             text-align: left;
-            padding: 110px $tabletOuterPadding;
+            padding: 0 $tabletOuterPadding;
+            bottom: 50%;
+            width: 100%;
         }
 
         @include mq($laptopMediaQuery) {
-            padding: 160px $laptopOuterPadding 90px;
+            padding: 0 $laptopOuterPadding;
         }
 
         @include mq($desktopMediaQuery) {
-            padding: 190px 0 170px;
+            padding: 0;
             max-width: $desktopMediaQuery;
             margin: 0 auto;
         }
@@ -61,7 +54,7 @@ footer {
             margin-bottom: 10px;
 
             @include mq($tabletMediaQuery) {
-                font-size: 50px;
+                font-size: 60px;
                 margin-bottom: 35px;
             }
 
@@ -86,7 +79,7 @@ footer {
             border-bottom: 2px solid white;
 
             @include mq($tabletMediaQuery) {
-                font-size: 50px;
+                font-size: 60px;
             }
 
             @include mq($laptopMediaQuery) {
@@ -140,6 +133,7 @@ footer {
             align-items: initial;
             justify-content: space-between;
             padding: 0 $tabletOuterPadding;
+            width: 100%;
         }
 
         @include mq($laptopMediaQuery) {
