@@ -152,7 +152,7 @@ main {
   position: relative;
   overflow: hidden; }
   .section-parallax .parallax-image {
-    height: 130%;
+    height: 120%;
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -833,7 +833,7 @@ footer {
           margin-top: -100px; } }
       .about-intro-container .about-feature-wrapper .about-feature-image-container .about-feature-image-mask:nth-child(2) .about-feature-image {
         height: 110%;
-        background-image: url("../images/me-cornwall.jpg"); }
+        background-image: url("../images/me-dogs-comp.jpg"); }
         @media (min-width: 1434px) {
           .about-intro-container .about-feature-wrapper .about-feature-image-container .about-feature-image-mask:nth-child(2) .about-feature-image {
             height: 120%; } }
