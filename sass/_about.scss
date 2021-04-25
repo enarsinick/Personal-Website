@@ -86,15 +86,26 @@
             .about-feature-image-mask {
                 height: 65vh;
                 width: 100%;
+                max-height: 400px;
+                min-height: 280px;
     
                 @include mq($tabletMediaQuery) {
                     height: 60vh;
                     border-radius: 6px;
+                    min-height: 550px;
+                    max-height: 640px;
                 }
         
                 @include mq($laptopMediaQuery) {
                     height: 70vh;
+                    min-height: 500px;
+                    max-height: 600px; 
                     border-radius: 10px;
+                }
+
+                @include mq($desktopMediaQuery) {
+                    max-height: 700px;
+                    min-height: 680px;
                 }
     
                 .about-feature-image {
@@ -404,9 +415,13 @@
 
     .middle-feature-image-container {
         height: 100vh;
+        min-height: 568px;
+        max-height: 800px;
     
         @include mq($tabletMediaQuery) {
             height: 515px;
+            min-height: initial;
+            max-height: initial;
             border-radius: 6px;
         }
     

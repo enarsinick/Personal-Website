@@ -198,6 +198,7 @@
 
         @include mq($tabletMediaQuery) {
             height: 40vh;
+            min-height: 400px;
             border-radius: 6px;
             margin-bottom: 40px;
         }

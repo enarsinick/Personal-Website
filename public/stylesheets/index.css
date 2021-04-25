@@ -801,15 +801,25 @@ footer {
       grid-gap: 30px; } }
   .about-intro-container .about-feature-wrapper .about-feature-image-container .about-feature-image-mask {
     height: 65vh;
-    width: 100%; }
+    width: 100%;
+    max-height: 400px;
+    min-height: 280px; }
     @media (min-width: 768px) {
       .about-intro-container .about-feature-wrapper .about-feature-image-container .about-feature-image-mask {
         height: 60vh;
-        border-radius: 6px; } }
+        border-radius: 6px;
+        min-height: 550px;
+        max-height: 640px; } }
     @media (min-width: 1190px) {
       .about-intro-container .about-feature-wrapper .about-feature-image-container .about-feature-image-mask {
         height: 70vh;
+        min-height: 500px;
+        max-height: 600px;
         border-radius: 10px; } }
+    @media (min-width: 1434px) {
+      .about-intro-container .about-feature-wrapper .about-feature-image-container .about-feature-image-mask {
+        max-height: 700px;
+        min-height: 680px; } }
     .about-intro-container .about-feature-wrapper .about-feature-image-container .about-feature-image-mask .about-feature-image {
       background-image: url("../images/me-ben-nevis.jpg"); }
     .about-intro-container .about-feature-wrapper .about-feature-image-container .about-feature-image-mask:nth-child(2) {
@@ -1038,10 +1048,14 @@ footer {
     padding: 0 60px; } }
 
 .about-middle-image-wrapper .middle-feature-image-container {
-  height: 100vh; }
+  height: 100vh;
+  min-height: 568px;
+  max-height: 800px; }
   @media (min-width: 768px) {
     .about-middle-image-wrapper .middle-feature-image-container {
       height: 515px;
+      min-height: initial;
+      max-height: initial;
       border-radius: 6px; } }
   @media (min-width: 1190px) {
     .about-middle-image-wrapper .middle-feature-image-container {
@@ -1441,6 +1455,7 @@ footer {
     @media (min-width: 768px) {
       .project-images-outer .project-image-wrapper {
         height: 40vh;
+        min-height: 400px;
         border-radius: 6px;
         margin-bottom: 40px; } }
     @media (min-width: 1190px) {
