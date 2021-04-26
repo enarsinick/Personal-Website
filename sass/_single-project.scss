@@ -84,12 +84,10 @@
 
         @include mq($tabletMediaQuery) {
             height: 40vh;
-            border-radius: 6px;
         }
 
         @include mq($laptopMediaQuery) {
             height: 90vh;
-            border-radius: 10px;
         }
     }
 }
@@ -143,11 +141,9 @@
                 background-color: #FDF0EC;
                 border: none;
                 padding: 15px 25px;
-                border-radius: 6px;
             }
 
             @include mq($laptopMediaQuery) {
-                border-radius: 10px;
                 transition: 0.2s;
 
                 &:hover {
@@ -199,13 +195,11 @@
         @include mq($tabletMediaQuery) {
             height: 40vh;
             min-height: 400px;
-            border-radius: 6px;
             margin-bottom: 40px;
         }
 
         @include mq($laptopMediaQuery) {
             height: 90vh;
-            border-radius: 10px;
         }
 
         @include mq($desktopMediaQuery) {
@@ -263,7 +257,6 @@
 
         img {
             width: 100%;
-            border-radius: 6px;
         }
     }
 

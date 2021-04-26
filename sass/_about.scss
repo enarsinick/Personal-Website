@@ -57,14 +57,8 @@
     .about-feature-wrapper {
         position: relative;
 
-        .about-down-arrow {
-            position: absolute;
-            top: -16px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 10;
-
-            @include mq($laptopMediaQuery) {
+        @include mq($laptopMediaQuery) {
+            .down-arrow {
                 display: none;
             }
         }
@@ -90,8 +84,8 @@
                 min-height: 280px;
     
                 @include mq($tabletMediaQuery) {
-                    height: 60vh;
-                    border-radius: 6px;
+                    // height: 60vh;
+                    // border-radius: 6px;
                     min-height: 550px;
                     max-height: 640px;
                 }
@@ -100,7 +94,7 @@
                     height: 70vh;
                     min-height: 500px;
                     max-height: 600px; 
-                    border-radius: 10px;
+                    // border-radius: 10px;
                 }
 
                 @include mq($desktopMediaQuery) {
@@ -297,7 +291,7 @@
         width: 100%;
         text-align: left;
         border: none;
-        border-radius: 6px;
+        // border-radius: 6px;
         outline: none;
         transition: 0.4s;
         display: flex;
@@ -324,7 +318,7 @@
     }
     
     .active, .accordion:hover {
-        border-radius: 6px 6px 0 0;
+        // border-radius: 6px 6px 0 0;
     }
     
     .panel {
@@ -339,12 +333,12 @@
             max-height: initial;
             padding: 40px;
             margin-bottom: 0;
-            border-radius: 6px;
+            // border-radius: 6px;
         }
 
         @include mq($laptopMediaQuery) {
             padding: 50px 40px;
-            border-radius: 10px;
+            // border-radius: 10px;
             transition: 0.2s ease-out margin;
 
             &:hover {
@@ -428,12 +422,12 @@
             height: 515px;
             min-height: initial;
             max-height: initial;
-            border-radius: 6px;
+            // border-radius: 6px;
         }
     
         @include mq($laptopMediaQuery) {
             height: 600px;
-            border-radius: 10px;
+            // border-radius: 10px;
         }
     
         @include mq($desktopMediaQuery) {

@@ -49,20 +49,20 @@
             height: 55vh;
             min-height: 550px;
             max-height: 650px;
-            -webkit-border-radius: 6px;
-            -khtml-border-radius: 6px;
-            -moz-border-radius: 6px;
-            border-radius: 6px;
+            // -webkit-border-radius: 6px;
+            // -khtml-border-radius: 6px;
+            // -moz-border-radius: 6px;
+            // border-radius: 6px;
         }
 
         @include mq($laptopMediaQuery) {
             height: 80vh;
             min-height: 640px;
             max-height: 700px;
-            -webkit-border-radius: 10px;
-            -khtml-border-radius: 10px;
-            -moz-border-radius: 10px;
-            border-radius: 10px;
+            // -webkit-border-radius: 10px;
+            // -khtml-border-radius: 10px;
+            // -moz-border-radius: 10px;
+            // border-radius: 10px;
         }
 
         @include mq($desktopMediaQuery) {
@@ -134,10 +134,10 @@
         height: 60vh;
         max-height: 450px;
         min-height: 330px;
-        -webkit-border-radius: 6px;
-        -khtml-border-radius: 6px;
-        -moz-border-radius: 6px;
-        border-radius: 6px;
+        // -webkit-border-radius: 6px;
+        // -khtml-border-radius: 6px;
+        // -moz-border-radius: 6px;
+        // border-radius: 6px;
         margin-top: 50px;
 
         @include mq($tabletMediaQuery) {
@@ -149,10 +149,10 @@
         }
 
         @include mq($laptopMediaQuery) {
-            -webkit-border-radius: 10px;
-            -khtml-border-radius: 10px;
-            -moz-border-radius: 10px;
-            border-radius: 10px;
+            // -webkit-border-radius: 10px;
+            // -khtml-border-radius: 10px;
+            // -moz-border-radius: 10px;
+            // border-radius: 10px;
             height: 80vh;
             max-height: 700px;
             min-height: 640px;
@@ -254,20 +254,20 @@
             height: 40vh;
             min-height: 405px;
             max-height: 550px;            
-            -webkit-border-radius: 6px;
-            -khtml-border-radius: 6px;
-            -moz-border-radius: 6px;
-            border-radius: 6px;
+            // -webkit-border-radius: 6px;
+            // -khtml-border-radius: 6px;
+            // -moz-border-radius: 6px;
+            // border-radius: 6px;
         }
 
         @include mq($laptopMediaQuery) {
             height: 65vh;
             min-height: 500px;
             max-height: 600px;   
-            -webkit-border-radius: 10px;
-            -khtml-border-radius: 10px;
-            -moz-border-radius: 10px;
-            border-radius: 10px;
+            // -webkit-border-radius: 10px;
+            // -khtml-border-radius: 10px;
+            // -moz-border-radius: 10px;
+            // border-radius: 10px;
         }
 
         @include mq($desktopMediaQuery) {

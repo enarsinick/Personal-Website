@@ -133,7 +133,7 @@ main {
     left: 50%;
     background-color: #025450 !important;
     transform: translateX(-50%);
-    border-radius: 6px;
+    // border-radius: 6px;
     background: url("../images/arrow-down.svg") center center/12px no-repeat;
 
     @include mq($tabletMediaQuery) {
@@ -147,7 +147,7 @@ main {
         height: 55px;
         width: 55px;
         top: -25px;
-        border-radius: 10px;
+        // border-radius: 10px;
         background: url("../images/arrow-down.svg") center center/20px no-repeat;
 
         &:hover {
@@ -329,7 +329,6 @@ main {
                 pointer-events: none;
                 height: 60vh;
                 width: 100%;
-                border-radius: 6px;
                 max-height: 450px;
                 min-height: 330px;
         
@@ -341,7 +340,6 @@ main {
         
                 @include mq($laptopMediaQuery) {
                     height: 90vh;
-                    border-radius: 10px;
                     max-height: 800px;
                     min-height: 750px;
                 }
@@ -358,11 +356,6 @@ main {
     
             img {
                 width: 100%;
-                border-radius: 6px;
-
-                @include mq($laptopMediaQuery) {
-                    border-radius: 10px;
-                }
             }
         }
     }
