@@ -35,7 +35,7 @@
 
     @include mq($desktopMediaQuery) {
         margin: 0 auto;
-        height: calc(100vh - 40vh - 100px);
+        height: calc(100vh - 30vh - 100px);
         padding: 0;
         width: $laptopMediaQuery;
 

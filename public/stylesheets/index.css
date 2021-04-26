@@ -112,12 +112,14 @@ main {
       background: url("../images/arrow-down.svg") center center/16px no-repeat; } }
   @media (min-width: 1190px) {
     .down-arrow {
-      transition: 0.2s ease-in-out;
+      transition: 0.2s ease-out;
       height: 55px;
       width: 55px;
       top: -25px;
       border-radius: 10px;
-      background: url("../images/arrow-down.svg") center center/20px no-repeat; } }
+      background: url("../images/arrow-down.svg") center center/20px no-repeat; }
+      .down-arrow:hover {
+        background: url("../images/arrow-down.svg") center 60%/20px no-repeat; } }
 
 .transition {
   position: fixed;
@@ -209,8 +211,7 @@ main {
     @media (min-width: 1190px) {
       .featured-project-outer .project-tile-container {
         grid-gap: 26px; }
-        .featured-project-outer .project-tile-container a:nth-child(2),
-        .featured-project-outer .project-tile-container a:nth-child(4) {
+        .featured-project-outer .project-tile-container a:nth-child(even) {
           margin-top: -110px; } }
     @media (min-width: 1434px) {
       .featured-project-outer .project-tile-container {
@@ -666,10 +667,14 @@ footer {
   .logo-wall-outer img {
     width: 100%;
     margin-top: 15px;
-    opacity: 0.7; }
+    opacity: 0.7;
+    transition: 0.2s opacity; }
     @media (min-width: 768px) {
       .logo-wall-outer img {
         margin: 0; } }
+    @media (min-width: 1190px) {
+      .logo-wall-outer img:hover {
+        opacity: 1; } }
   .logo-wall-outer img:nth-child(7),
   .logo-wall-outer img:nth-child(8) {
     display: none; }
@@ -998,7 +1003,11 @@ footer {
       @media (min-width: 1190px) {
         .skills-outer .skill-tile-section .panel {
           padding: 50px 40px;
-          border-radius: 10px; } }
+          border-radius: 10px;
+          transition: 0.2s ease-out margin; }
+          .skills-outer .skill-tile-section .panel:hover {
+            margin-top: -10px;
+            margin-bottom: 10px; } }
       .skills-outer .skill-tile-section .panel img {
         display: none; }
         @media (min-width: 768px) {
@@ -1113,10 +1122,14 @@ footer {
     .about-logo-wall-outer .logo-wall-container img {
       width: 100%;
       margin: 10px 0;
-      opacity: 0.7; }
+      opacity: 0.7;
+      transition: 0.2s opacity; }
       @media (min-width: 768px) {
         .about-logo-wall-outer .logo-wall-container img {
           margin: 0; } }
+      @media (min-width: 1190px) {
+        .about-logo-wall-outer .logo-wall-container img:hover {
+          opacity: 1; } }
     .about-logo-wall-outer .logo-wall-container img:nth-child(6),
     .about-logo-wall-outer .logo-wall-container img:nth-child(7),
     .about-logo-wall-outer .logo-wall-container img:nth-child(8),
@@ -1336,7 +1349,7 @@ footer {
   @media (min-width: 1434px) {
     .project-intro-section {
       margin: 0 auto;
-      height: calc(100vh - 40vh - 100px);
+      height: calc(100vh - 30vh - 100px);
       padding: 0;
       width: 1190px; }
       .project-intro-section h1 {
@@ -2053,7 +2066,6 @@ header {
         header nav .sidenav .menu-social-icons-container .menu-email-link {
           font-size: 16px;
           padding-bottom: 1px;
-          border-bottom: 2px solid #E95E2A;
           color: #E95E2A;
           font-family: "Gilroy-SemiBold", Helvetica, sans-serif;
           text-decoration: none;

@@ -143,13 +143,16 @@ main {
     }
 
     @include mq($laptopMediaQuery) {
-        transition: 0.2s ease-in-out;
-        // cursor: pointer;
+        transition: 0.2s ease-out;
         height: 55px;
         width: 55px;
         top: -25px;
         border-radius: 10px;
         background: url("../images/arrow-down.svg") center center/20px no-repeat;
+
+        &:hover {
+            background: url("../images/arrow-down.svg") center 60%/20px no-repeat;
+        }
     }
 }
 
@@ -276,8 +279,7 @@ main {
         @include mq($laptopMediaQuery) {
             grid-gap: 26px;
 
-            a:nth-child(2),
-            a:nth-child(4) {
+            a:nth-child(even) {
                 margin-top: -110px;
             }
         }

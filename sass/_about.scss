@@ -345,6 +345,12 @@
         @include mq($laptopMediaQuery) {
             padding: 50px 40px;
             border-radius: 10px;
+            transition: 0.2s ease-out margin;
+
+            &:hover {
+                margin-top: -10px;
+                margin-bottom: 10px;
+            }
         }
 
         img {
@@ -433,10 +439,6 @@
         @include mq($desktopMediaQuery) {
             height: 92vh;
         }
-    
-        // .middle-feature-image {
-        //     background-image: url("../images/me-scotland-wide.jpg"); 
-        // }
     }
 }
 
@@ -505,9 +507,16 @@
             width: 100%;
             margin: 10px 0;
             opacity: 0.7;
+            transition: 0.2s opacity;
 
             @include mq($tabletMediaQuery) {
                 margin: 0;
+            }
+
+            @include mq($laptopMediaQuery) {
+                &:hover {
+                    opacity: 1;
+                }
             }
         }
 
