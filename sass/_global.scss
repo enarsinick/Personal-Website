@@ -291,7 +291,11 @@ main {
 
         .project-tile-wrapper {
             position: relative;
-            pointer-events: none;
+            // pointer-events: none;
+
+            &:hover .project-image-mask .project-image {
+                height: 112%;
+            }
     
             .project-tile-copy {
                 pointer-events: none;
@@ -347,15 +351,12 @@ main {
                 .project-image {
                     pointer-events: none;
                     height: 115%;
+                    transition: height 0.3s ease-out;
 
                     @include mq($laptopMediaQuery) {
-                        height: 110%;
+                        height: 110%; 
                     }
                 }
-            }
-    
-            img {
-                width: 100%;
             }
         }
     }

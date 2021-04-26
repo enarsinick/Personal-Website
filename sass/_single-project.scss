@@ -160,7 +160,6 @@
             font-family: $main-font-semibold;
             color: $buttonColour;
             padding-bottom: 3px;
-            border-bottom: solid 2.5px $buttonColour;
             cursor: pointer;
 
             @include mq($tabletMediaQuery) {
