@@ -101,7 +101,7 @@ main {
   position: absolute;
   top: -16px;
   left: 50%;
-  background-color: #025450 !important;
+  background-color: black !important;
   transform: translateX(-50%);
   background: url("../images/arrow-down.svg") center center/12px no-repeat; }
   @media (min-width: 768px) {
