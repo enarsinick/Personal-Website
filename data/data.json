@@ -23,11 +23,11 @@
         },
         {
             "id": 1,
-            "tile_name": "Silver Agency",
-            "tile_technologies": "Branding and Design",
+            "tile_name": "Lockdown Quiz",
+            "tile_technologies": "Design and Development",
             "tile_image": "./images/projects/02/tile_image.jpg",
-            "project_title": "This is an example title 2 sed diam nonumy eirmod",
-            "feature_image": "../images/projects/02/project_feature.jpg",
+            "project_title": "Testing your knowledge during lockdown.",
+            "feature_image": "../images/projects/02/feature_image.jpg",
             "project_overview": [
                 "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.",
                 "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est."
