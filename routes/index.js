@@ -25,7 +25,11 @@ const randProject = (num) => {
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', {projects: randProject(3)});
+  const homepageProjects = [];
+  for (let i = 0; i <= 3; i++) {
+    homepageProjects.push(featured_projects[i]);
+  }
+  res.render('index', {homepageProjects});
 });
 
 /* GET about page. */
