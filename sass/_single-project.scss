@@ -171,6 +171,26 @@
             }
         }
     }
+
+    .project-status-wrapper {
+        margin-top: 20px;
+
+        @include mq($laptopMediaQuery) {
+            margin-top: 40px;
+        }
+
+        p {
+            background-color: #FDF0EC;
+            color: $buttonColour;
+            padding: 15px;
+            display: inline-block;
+            font-family: $main-font-medium;
+
+            @include mq($laptopMediaQuery) {
+                padding: 20px;
+            }
+        }
+    }
 }
 
 .project-images-outer {

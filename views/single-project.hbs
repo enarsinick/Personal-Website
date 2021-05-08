@@ -17,10 +17,24 @@
                 <p>{{this}}</p>
                 <br>
             {{/each}}
-            <div class="project-btn-wrapper">
-                <a target="_blank" href="{{project.live_link}}"><button class="project-btn-primary">Live preview</button></a>
-                <a target="_blank" href="{{project.github_link}}"><button class="project-btn-secondary inline-link">View code</button></a>
-            </div>
+            {{#if project.has_links}}
+                <div class="project-btn-wrapper">
+                    {{#if project.live_link}}
+                        <a target="_blank" href="{{project.live_link}}">
+                            <button class="project-btn-primary">Live preview</button>
+                        </a>
+                    {{/if}}
+                    {{#if project.github_link}}
+                    <a target="_blank" href="{{project.github_link}}">
+                        <button class="project-btn-secondary inline-link">View code</button>
+                    </a>
+                    {{/if}}
+                </div>
+            {{else}}
+                <div class="project-status-wrapper">
+                    <p>Project still in development</p>
+                </div>
+            {{/if}}
         </div>
         
     </section>

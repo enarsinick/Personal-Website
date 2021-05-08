@@ -1397,6 +1397,20 @@ footer {
       @media (min-width: 768px) {
         .project-overview-outer .project-btn-wrapper .project-btn-secondary {
           margin-left: 15px; } }
+  .project-overview-outer .project-status-wrapper {
+    margin-top: 20px; }
+    @media (min-width: 1190px) {
+      .project-overview-outer .project-status-wrapper {
+        margin-top: 40px; } }
+    .project-overview-outer .project-status-wrapper p {
+      background-color: #FDF0EC;
+      color: #E95E2A;
+      padding: 15px;
+      display: inline-block;
+      font-family: "Gilroy-Medium", Helvetica, sans-serif; }
+      @media (min-width: 1190px) {
+        .project-overview-outer .project-status-wrapper p {
+          padding: 20px; } }
 
 .project-images-outer {
   padding: 0 0 100px; }
