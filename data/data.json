@@ -8,8 +8,9 @@
             "project_title": "A brand new design inspiration magazine.",
             "feature_image": "../images/projects/01/feature_image.png",
             "project_overview": [
-                "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.",
-                "1orem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est."
+                "The Mob Mag is a brand new online design inspiration magazine for one of the largest design communities on Instagram, the Mob Network, which boasts an audience of over 1 million like-minded people from across the world.  The website will be a central hub where designers can not only get the inspiration they need, but also get their work seen by some of the industries leading professionals. ",
+                
+                "This project will utilise React for the client side and then will use a headless NodeJS CMS for the backend, called Strapi. Users will be able to browse different projects via the blog posts, and also be able to submit their work through our content submission forms."
             ],
             "has_links": false,
             "live_link": "",
@@ -30,8 +31,9 @@
             "project_title": "Testing your knowledge during lockdown.",
             "feature_image": "../images/projects/02/feature_image.jpg",
             "project_overview": [
-                "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.",
-                "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est."
+                "During the first lockdown of 2020, hosting a quiz over zoom was the next big thing to do. I wanted to create a simple web application that could generate a quiz quickly. Using the Open Trivia Database for the data and jQuery to build everything on the frontend.",
+
+                "Future features for the project is to add the ability to generate a custom quiz based on certain parameters and also create a scoreboard that will allow players to track their score when they’re playing a game."
             ],
             "has_links": true,
             "live_link": "https://www.google.com",
@@ -50,8 +52,9 @@
             "project_title": "Personal portfolio website for all my work.",
             "feature_image": "../images/projects/03/feature_image.jpg",
             "project_overview": [
-                "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.",
-                "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est."
+                "A personal portfolio website for all some of my creative and development projects (the website you’re currently one!). I wanted to make sure this website has a personal touch to it, instead of being a generic portfolio website like any other.",
+
+                "It was built using the web application framework for NodeJS, called Express and then using Handlebars for the templating engine to render out each of the project pages. All of the project data is located inside a JSON file that acts as the database for the website."
             ],
             "has_links": true,
             "live_link": "https://www.google.com",
@@ -70,8 +73,9 @@
             "project_title": "Full stack React and REST API Application.",
             "feature_image": "../images/projects/04/feature_image.jpg",
             "project_overview": [
-                "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.",
-                "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est."
+                "This web application uses React for the client and then a REST API for the database. In a nutshell the application is where users can administer a school database containing information about different courses. They can interact with the database by retrieving a list of courses, viewing details for a specific course, as well as creating, updating and deleting courses in the database.",
+
+                "A login and sign up functionality has also been implemented, in order for users to create and delete their own courses, and not be able to delete another user's course etc. This project was part of the Treehouse Techdegree course that I took, all of the HTML and CSS styling was provided to me and I filled in the rest."
             ],
             "has_links": true,
             "live_link": "https://www.google.com",
@@ -90,8 +94,7 @@
             "project_title": "An employee directory web application.",
             "feature_image": "../images/projects/05/feature_image.jpg",
             "project_overview": [
-                "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.",
-                "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est."
+                "This was one of the first main web development projects that I completed, it retrieves randomly generated user data from a third party API called Random User Generator. This data is then displayed onto the page using vanilla JavaScript, with the ability to also search through each of the users on the frontend."
             ],
             "has_links": true,
             "live_link": "https://www.google.com",
