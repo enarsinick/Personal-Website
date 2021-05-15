@@ -50,3 +50,4 @@ npm start
 * [Express](https://expressjs.com/)
 * [Express Handlebars](https://www.npmjs.com/package/express-handlebars)
 * [SASS](https://sass-lang.com/)
+* [Gulp](https://gulpjs.com/)
