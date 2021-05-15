@@ -37,7 +37,7 @@
             ],
             "has_links": true,
             "live_link": "https://www.google.com",
-            "github_link": "https://www.github.com",
+            "github_link": "https://github.com/enarsinick/Trivia-Application",
             "project_images": [
                 "../images/projects/02/project_image_1.jpg",
                 "../images/projects/02/project_image_2.jpg",
@@ -57,8 +57,8 @@
                 "It was built using the web application framework for NodeJS, called Express and then using Handlebars for the templating engine to render out each of the project pages. All of the project data is located inside a JSON file that acts as the database for the website."
             ],
             "has_links": true,
-            "live_link": "https://www.google.com",
-            "github_link": "https://www.github.com",
+            "live_link": "https://nickcave.co",
+            "github_link": "https://github.com/enarsinick/Personal-Website",
             "project_images": [
                 "../images/projects/03/project_image_1.jpg",
                 "../images/projects/03/project_image_2.jpg",
@@ -79,7 +79,7 @@
             ],
             "has_links": true,
             "live_link": "https://www.google.com",
-            "github_link": "https://www.github.com",
+            "github_link": "https://github.com/enarsinick/Course-Manager",
             "project_images": [
                 "../images/projects/04/project_image_1.jpg",
                 "../images/projects/04/project_image_2.jpg",
@@ -98,7 +98,7 @@
             ],
             "has_links": true,
             "live_link": "https://www.google.com",
-            "github_link": "https://www.github.com",
+            "github_link": "https://github.com/enarsinick/Employee-Directory",
             "project_images": [
                 "../images/projects/05/project_image_1.jpg",
                 "../images/projects/05/project_image_2.jpg",
