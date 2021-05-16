@@ -36,7 +36,7 @@
                 "Future features for the project is to add the ability to generate a custom quiz based on certain parameters and also create a scoreboard that will allow players to track their score when they’re playing a game."
             ],
             "has_links": true,
-            "live_link": "https://www.google.com",
+            "live_link": "https://limitless-thicket-98462.herokuapp.com/",
             "github_link": "https://github.com/enarsinick/Trivia-Application",
             "project_images": [
                 "../images/projects/02/project_image_1.jpg",
