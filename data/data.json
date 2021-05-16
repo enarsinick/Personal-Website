@@ -97,7 +97,7 @@
                 "This was one of the first main web development projects that I completed, it retrieves randomly generated user data from a third party API called Random User Generator. This data is then displayed onto the page using vanilla JavaScript, with the ability to also search through each of the users on the frontend."
             ],
             "has_links": true,
-            "live_link": "https://www.google.com",
+            "live_link": "https://floating-anchorage-02422.herokuapp.com/",
             "github_link": "https://github.com/enarsinick/Employee-Directory",
             "project_images": [
                 "../images/projects/05/project_image_1.jpg",
