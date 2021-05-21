@@ -78,7 +78,7 @@
                 "A login and sign up functionality has also been implemented, in order for users to create and delete their own courses, and not be able to delete another user's course etc. This project was part of the Treehouse Techdegree course that I took, all of the HTML and CSS styling was provided to me and I filled in the rest."
             ],
             "has_links": true,
-            "live_link": "https://www.google.com",
+            "live_link": "https://lit-bayou-71042.herokuapp.com/",
             "github_link": "https://github.com/enarsinick/Course-Manager",
             "project_images": [
                 "../images/projects/04/project_image_1.jpg",
